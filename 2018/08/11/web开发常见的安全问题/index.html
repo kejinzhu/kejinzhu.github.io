@@ -17,8 +17,8 @@
 <meta property="og:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧! Web安全之XSS和CSRFXSSXSS定义跨站脚本攻击，通过客户端脚本语言在一个论坛发帖(其他input类型的输入框也可以)中发布一段恶意的JavaScript代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫XSS！ XSS跨站脚本">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2018/08/11/web开发常见的安全问题/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/images/web.png">
-<meta property="og:updated_time" content="2018-08-11T12:39:49.356Z">
+<meta property="og:image" content="http://yoursite.com/2018/images/web.png">
+<meta property="og:updated_time" content="2018-08-11T12:46:39.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web安全之XSS和CSRF">
 <meta name="twitter:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧! Web安全之XSS和CSRFXSSXSS定义跨站脚本攻击，通过客户端脚本语言在一个论坛发帖(其他input类型的输入框也可以)中发布一段恶意的JavaScript代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫XSS！ XSS跨站脚本">
@@ -249,7 +249,7 @@ var _hmt = _hmt || [];
 <li>CSRF可以是XSS实现，也可以是其他形式来伪造请求，只要是伪造了请求即CSRF。<br><strong>完成CSRF需要两个步骤：</strong> </li>
 <li>1.登陆受信任的网站A，在本地生成 COOKIE </li>
 <li>2.在不登出A的情况下，或者本地 COOKIE 没有过期的情况下，访问危险网站B。(也有可能B要求访问A网站)</li>
-<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
+<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="../../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>攻击者只要引导登录a的用户访问这个b网站，自动提交一个留言，这个提交到a网站的过程中，浏览器会将用户的cookie发送到服务器。</p>
