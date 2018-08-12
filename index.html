@@ -182,6 +182,136 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-新浪APP项目总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/12/新浪APP项目总结/">新浪APP项目总结</a>
+    </h1>
+  
+
+                    
+                        <a href="/2018/08/12/新浪APP项目总结/" class="archive-article-date">
+  	<time datetime="2018-08-12T05:04:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-12</time>
+</a>
+                            
+            </header>
+            
+                <!-- 目录内容 -->
+                
+                        <!-- 目录内容结束 -->
+                        <div class="article-entry" itemprop="articleBody">
+                            
+                                                
+                                                    
+
+                                                        
+        </div>
+        <div class="article-info article-info-index">
+            
+                    
+                        
+
+                            
+                                <p class="article-more-link">
+                                    <a class="article-more-a" href="/2018/08/12/新浪APP项目总结/">
+                                        展开全文 >></a>
+                                </p>
+                                
+
+                                    
+                                                <div class="clearfix"></div>
+        </div>
+        </div>
+</article>
+
+            <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+                
+  
+    <article id="post-QQ音乐项目总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/12/QQ音乐项目总结/">QQ音乐项目总结</a>
+    </h1>
+  
+
+                    
+                        <a href="/2018/08/12/QQ音乐项目总结/" class="archive-article-date">
+  	<time datetime="2018-08-12T05:03:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-12</time>
+</a>
+                            
+            </header>
+            
+                <!-- 目录内容 -->
+                
+                        <!-- 目录内容结束 -->
+                        <div class="article-entry" itemprop="articleBody">
+                            
+                                                
+                                                    
+
+                                                        
+        </div>
+        <div class="article-info article-info-index">
+            
+                    
+                        
+
+                            
+                                <p class="article-more-link">
+                                    <a class="article-more-a" href="/2018/08/12/QQ音乐项目总结/">
+                                        展开全文 >></a>
+                                </p>
+                                
+
+                                    
+                                                <div class="clearfix"></div>
+        </div>
+        </div>
+</article>
+
+            <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+                
+  
     <article id="post-最美中国项目总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -247,19 +377,19 @@ var _hmt = _hmt || [];
 
                 
   
-    <article id="post-web开发常见的安全问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Web安全之XSS和CSRF" class="article article-type-post  article-index" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/11/web开发常见的安全问题/">Web安全之XSS和CSRF</a>
+      <a class="article-title" href="/2018/08/11/Web安全之XSS和CSRF/">Web安全之XSS和CSRF</a>
     </h1>
   
 
                     
-                        <a href="/2018/08/11/web开发常见的安全问题/" class="archive-article-date">
+                        <a href="/2018/08/11/Web安全之XSS和CSRF/" class="archive-article-date">
   	<time datetime="2018-08-11T00:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-11</time>
 </a>
                             
@@ -281,13 +411,13 @@ var _hmt = _hmt || [];
 <h3 id="解决防范"><a href="#解决防范" class="headerlink" title="解决防范"></a>解决防范</h3><p>我们不需要用户输入HTML也是输入纯文本，转义是个很好的方法。可以用白名单重复处理。用户输入的HTML可能有很复杂的结构，但我们并不将这些数据直接存入数据库，而是使用 HTML 解析库遍历节点，获取其中数据（之所以不使用 XML 解析库是因为 HTML要求有较强的容错性）。然后根据用户原有的标签属性，重新构建 HTML 元素树。构建的过程中，所有的标签、属性都只从白名单中拿取。这样可以确保万无一失——如果用户的某种复杂输入不能为解析器所识别</p>
 <h2 id="CSRF：cross-site-Request-Forgery"><a href="#CSRF：cross-site-Request-Forgery" class="headerlink" title="CSRF：cross-site Request Forgery"></a>CSRF：cross-site Request Forgery</h2><p>跨站请求伪造：冒充用户发起请求，完成一些违背用户真实意愿的请求~</p>
 <h2 id="CSRF可以做什么"><a href="#CSRF可以做什么" class="headerlink" title="CSRF可以做什么"></a>CSRF可以做什么</h2><p>你这可以这么理解CSRF攻击：<strong>攻击者盗用了你的身份，以你的名义发送恶意请求。</strong><br><strong>CSRF能够做的事情包括：</strong>以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
-<h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><img src="/assets/blogImg/web.png" alt="CSRF原理图"></p>
+<h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><img src="/images/web.png" alt="CSRF原理图"></p>
 <h2 id="XSS和CSRF的关系"><a href="#XSS和CSRF的关系" class="headerlink" title="XSS和CSRF的关系"></a>XSS和CSRF的关系</h2><ul>
 <li>CSRF更加强调一种形式，只要是伪造用户发起的请求都是CSRF攻击，而XSS更加强调是一种手段。 </li>
 <li>CSRF可以是XSS实现，也可以是其他形式来伪造请求，只要是伪造了请求即CSRF。<br><strong>完成CSRF需要两个步骤：</strong> </li>
 <li>1.登陆受信任的网站A，在本地生成 COOKIE </li>
 <li>2.在不登出A的情况下，或者本地 COOKIE 没有过期的情况下，访问危险网站B。(也有可能B要求访问A网站)</li>
-<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="/2018/08/11/web开发常见的安全问题/../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
+<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="/2018/08/11/Web安全之XSS和CSRF/../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>攻击者只要引导登录a的用户访问这个b网站，自动提交一个留言，这个提交到a网站的过程中，浏览器会将用户的cookie发送到服务器。</p>
@@ -320,11 +450,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web安全</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web安全 前端</a>
         		</li>
       		
 		</ul>
@@ -334,7 +460,7 @@ var _hmt = _hmt || [];
 
                             
                                 <p class="article-more-link">
-                                    <a class="article-more-a" href="/2018/08/11/web开发常见的安全问题/">
+                                    <a class="article-more-a" href="/2018/08/11/Web安全之XSS和CSRF/">
                                         展开全文 >></a>
                                 </p>
                                 
@@ -531,11 +657,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">web安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">web安全 前端</a>
               </li>
             
             <div class="clearfix"></div>
