@@ -16,13 +16,12 @@
 <meta property="og:site_name" content="小柯的博客">
 <meta property="og:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧! Web安全之XSS和CSRFXSSXSS定义跨站脚本攻击，通过客户端脚本语言在一个论坛发帖(其他input类型的输入框也可以)中发布一段恶意的JavaScript代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫XSS！ XSS跨站脚本">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://github.com/kejinzhu/kejinzhu.github.io/blob/master/images/nodeImg/img/web.png">
-<meta property="og:image" content="http://yoursite.com/2018/images/web.png">
-<meta property="og:updated_time" content="2018-08-11T14:32:09.335Z">
+<meta property="og:image" content="http://yoursite.com/2018/08/images/web.png">
+<meta property="og:updated_time" content="2018-08-12T04:15:39.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web安全之XSS和CSRF">
 <meta name="twitter:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧! Web安全之XSS和CSRFXSSXSS定义跨站脚本攻击，通过客户端脚本语言在一个论坛发帖(其他input类型的输入框也可以)中发布一段恶意的JavaScript代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫XSS！ XSS跨站脚本">
-<meta name="twitter:image" content="https://github.com/kejinzhu/kejinzhu.github.io/blob/master/images/nodeImg/img/web.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/images/web.png">
   
     <link rel="alternative" href="/atom.xml" title="小柯的博客" type="application/atom+xml">
   
@@ -243,13 +242,13 @@ var _hmt = _hmt || [];
 <h3 id="解决防范"><a href="#解决防范" class="headerlink" title="解决防范"></a>解决防范</h3><p>我们不需要用户输入HTML也是输入纯文本，转义是个很好的方法。可以用白名单重复处理。用户输入的HTML可能有很复杂的结构，但我们并不将这些数据直接存入数据库，而是使用 HTML 解析库遍历节点，获取其中数据（之所以不使用 XML 解析库是因为 HTML要求有较强的容错性）。然后根据用户原有的标签属性，重新构建 HTML 元素树。构建的过程中，所有的标签、属性都只从白名单中拿取。这样可以确保万无一失——如果用户的某种复杂输入不能为解析器所识别</p>
 <h2 id="CSRF：cross-site-Request-Forgery"><a href="#CSRF：cross-site-Request-Forgery" class="headerlink" title="CSRF：cross-site Request Forgery"></a>CSRF：cross-site Request Forgery</h2><p>跨站请求伪造：冒充用户发起请求，完成一些违背用户真实意愿的请求~</p>
 <h2 id="CSRF可以做什么"><a href="#CSRF可以做什么" class="headerlink" title="CSRF可以做什么"></a>CSRF可以做什么</h2><p>你这可以这么理解CSRF攻击：<strong>攻击者盗用了你的身份，以你的名义发送恶意请求。</strong><br><strong>CSRF能够做的事情包括：</strong>以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
-<h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><img src="https://github.com/kejinzhu/kejinzhu.github.io/blob/master/images/nodeImg/img/web.png" alt="CSRF原理图"></p>
+<h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">CSRF原理图</a></p>
 <h2 id="XSS和CSRF的关系"><a href="#XSS和CSRF的关系" class="headerlink" title="XSS和CSRF的关系"></a>XSS和CSRF的关系</h2><ul>
 <li>CSRF更加强调一种形式，只要是伪造用户发起的请求都是CSRF攻击，而XSS更加强调是一种手段。 </li>
 <li>CSRF可以是XSS实现，也可以是其他形式来伪造请求，只要是伪造了请求即CSRF。<br><strong>完成CSRF需要两个步骤：</strong> </li>
 <li>1.登陆受信任的网站A，在本地生成 COOKIE </li>
 <li>2.在不登出A的情况下，或者本地 COOKIE 没有过期的情况下，访问危险网站B。(也有可能B要求访问A网站)</li>
-<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="../../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
+<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="/2018/08/11/web开发常见的安全问题/../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>攻击者只要引导登录a的用户访问这个b网站，自动提交一个留言，这个提交到a网站的过程中，浏览器会将用户的cookie发送到服务器。</p>
@@ -376,6 +375,15 @@ var _hmt = _hmt || [];
 
     
 <nav id="article-nav">
+  
+    <a href="/2018/08/12/最美中国项目总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          最美中国项目总结
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
