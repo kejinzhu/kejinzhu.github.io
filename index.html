@@ -182,6 +182,126 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-web前端开发常用的优化技巧汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/15/web前端开发常用的优化技巧汇总/">web前端开发常用的优化技巧汇总</a>
+    </h1>
+  
+
+                    
+                        <a href="/2018/08/15/web前端开发常用的优化技巧汇总/" class="archive-article-date">
+  	<time datetime="2018-08-15T08:29:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
+</a>
+                            
+            </header>
+            
+                <!-- 目录内容 -->
+                
+                        <!-- 目录内容结束 -->
+                        <div class="article-entry" itemprop="articleBody">
+                            
+                                <p>对于一个前端工程师，不仅要写好代码，还要考虑到性能方面的优化问题，那么我们可以从哪些方面进行性能的优化？<br>首先，我们先来看看“雅虎军规”的35条：</p>
+<h1 id="“雅虎军规”35条"><a href="#“雅虎军规”35条" class="headerlink" title="“雅虎军规”35条"></a>“雅虎军规”35条</h1><ul>
+<li>尽量减少 HTTP 请求个数——须权衡</li>
+<li>使用 CDN（内容分发网络）</li>
+<li>为文件头指定 Expires 或 Cache-Control ，使内容具有缓存性。</li>
+<li>避免空的 src 和 href</li>
+<li>使用 gzip 压缩内容</li>
+<li>把 CSS 放到顶部</li>
+<li>把 JS 放到底部</li>
+<li>避免使用 CSS 表达式</li>
+<li>将 CSS 和 JS 放到外部文件中</li>
+<li>减少 DNS 查找次数</li>
+<li>精简 CSS 和 JS</li>
+<li>避免跳转</li>
+<li>剔除重复的 JS 和 CSS</li>
+<li>配置 ETags</li>
+<li>使 AJAX 可缓存</li>
+<li>尽早刷新输出缓冲</li>
+<li>使用 GET 来完成 AJAX 请求</li>
+<li>延迟加载</li>
+<li>预加载</li>
+<li>减少 DOM 元素个数</li>
+<li>根据域名划分页面内容</li>
+<li>尽量减少 iframe 的个数</li>
+<li>避免 404</li>
+<li>减少 Cookie 的大小</li>
+<li>使用无 cookie 的域</li>
+<li>减少 DOM 访问</li>
+<li>开发智能事件处理程序</li>
+<li>用 代替 @import</li>
+<li>避免使用滤镜</li>
+<li>优化图像</li>
+<li>优化 CSS Spirite</li>
+<li>不要在 HTML 中缩放图像——须权衡</li>
+<li>favicon.ico要小而且可缓存</li>
+<li>保持单个内容小于25K</li>
+<li>打包组件成复合文本</li></ul>
+                                    
+                                        <a class="article-more-a" href="/2018/08/15/web前端开发常用的优化技巧汇总/#more">
+                                            more >></a>
+                                        
+                                            
+
+                                                        
+        </div>
+        <div class="article-info article-info-index">
+            
+                    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能优化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                        
+
+                            
+                                <p class="article-more-link">
+                                    <a class="article-more-a" href="/2018/08/15/web前端开发常用的优化技巧汇总/">
+                                        展开全文 >></a>
+                                </p>
+                                
+
+                                    
+                                                <div class="clearfix"></div>
+        </div>
+        </div>
+</article>
+
+            <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+                
+  
     <article id="post-TCP-IP、http等知识梳理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -205,14 +325,47 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                
-                                                    
+                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+<h1 id="前后端通信"><a href="#前后端通信" class="headerlink" title="前后端通信"></a>前后端通信</h1><p>先从一道面试题开始：<br>在面试的时候经常被问，当我们在浏览器地址栏中输入一个URL地址,到最后看到页面,中间都经历了哪些事情?<br>我们从客户端和服务器交互模型角度来回答这个问题：<br>假设我们访问的是 <a href="https://www.baidu.com/这个地址" target="_blank" rel="noopener">https://www.baidu.com/这个地址</a> ，回车键之后，我们可以看到的百度页面</p>
+<ul>
+<li>百度页面并没用在我们自己的客户端本地，我们输入地址之后，才请求过来的</li>
+<li>输入不同的域名可以看到不同的页面</li>
+<li>有的网址是https:,有的是http(也有ftp)</li>
+<li>需要客户端联网才能完成这些事情<br>那这一过程都经历了什么事情呢？<h2 id="request请求阶段"><a href="#request请求阶段" class="headerlink" title="request请求阶段"></a>request请求阶段</h2></li>
+<li>首先根据客户端输入的域名，到DNS服务器上进行反解析(通过域名找到对应服务器的外网IP)</li>
+<li>通过找到的外网IP，找到对应的服务器</li>
+<li>通过在地址栏中输入的端口号(没有输入时因为不同协议有自己默认的端口号)找到服务器上发布的对应的项目<h2 id="response响应阶段"><a href="#response响应阶段" class="headerlink" title="response响应阶段"></a>response响应阶段</h2></li>
+<li>真正的服务器接收到响应，根据你的请求信息，进行资源的整理；并且把相应的资源通过HTTP返给客户端；(html,css，js返回的不是文件)</li>
+<li>把从服务器请求过来的数据，资源进行整理；处理成浏览器可识别的文件；<h2 id="浏览器自主渲染的过程"><a href="#浏览器自主渲染的过程" class="headerlink" title="浏览器自主渲染的过程"></a>浏览器自主渲染的过程</h2></li>
+<li>先把HTML文件进行过滤解析，形成DOM树；节点与节点之间的一个组合</li>
+<li>代码从上到下解析，形成CSS树；</li>
+<li>把DOM树和css树进行重新组合，形成render树；是真正最后渲染的树；</li></ul>
+                                    
+                                        <a class="article-more-a" href="/2018/08/15/TCP-IP、http等知识梳理/#more">
+                                            more >></a>
+                                        
+                                            
 
                                                         
         </div>
         <div class="article-info article-info-index">
             
                     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">http、TCP/IP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">前后端通信</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
                         
 
                             
@@ -270,7 +423,8 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                <h1 id="构造jQuery对象"><a href="#构造jQuery对象" class="headerlink" title="构造jQuery对象"></a>构造jQuery对象</h1><p> jQuery对象是一个类数组对象，含有连续的整形属性、length属性和大量的jQuery方法。jQuery对象右构造函数jQuery创建，$()是jQuery()的缩写<br></p>
+                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+<h1 id="构造jQuery对象"><a href="#构造jQuery对象" class="headerlink" title="构造jQuery对象"></a>构造jQuery对象</h1><p> jQuery对象是一个类数组对象，含有连续的整形属性、length属性和大量的jQuery方法。jQuery对象右构造函数jQuery创建，$()是jQuery()的缩写<br></p>
                                     
                                         <a class="article-more-a" href="/2018/08/14/jQuery源码解读2/#more">
                                             more >></a>
@@ -439,7 +593,8 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                
+                                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+
                                                     
 
                                                         
@@ -504,7 +659,8 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                
+                                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+
                                                     
 
                                                         
@@ -569,7 +725,8 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                
+                                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+
                                                     
 
                                                         
@@ -634,7 +791,9 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=474776122&auto=1&height=66"></iframe>
+                                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=474776122&auto=1&height=66"></iframe>
+
                                                     
 
                                                         
@@ -699,7 +858,8 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                                
+                                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+
                                                     
 
                                                         
@@ -764,7 +924,7 @@ var _hmt = _hmt || [];
                         <!-- 目录内容结束 -->
                         <div class="article-entry" itemprop="articleBody">
                             
-                                <p>今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!<br></p>
+                                <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span><br>今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!<br></p>
                                     
                                         <a class="article-more-a" href="/2018/08/11/Web安全之XSS和CSRF/#more">
                                             more >></a>
@@ -825,80 +985,10 @@ var _hmt = _hmt || [];
 
                 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-                    
-                        <a href="/2018/08/10/hello-world/" class="archive-article-date">
-  	<time datetime="2018-08-09T16:22:37.390Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-                            
-            </header>
-            
-                <!-- 目录内容 -->
-                
-                        <!-- 目录内容结束 -->
-                        <div class="article-entry" itemprop="articleBody">
-                            
-                                                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-                                                    
-
-                                                        
-        </div>
-        <div class="article-info article-info-index">
-            
-                    
-                        
-
-                            
-                                <p class="article-more-link">
-                                    <a class="article-more-a" href="/2018/08/10/hello-world/">
-                                        展开全文 >></a>
-                                </p>
-                                
-
-                                    
-                                                <div class="clearfix"></div>
-        </div>
-        </div>
-</article>
-
-            <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-                
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -995,6 +1085,14 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">http、TCP/IP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">前后端通信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">jQuery源码解读</a>
               </li>
              
@@ -1012,6 +1110,14 @@ var _hmt = _hmt || [];
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">web前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能优化</a>
               </li>
             
             <div class="clearfix"></div>
