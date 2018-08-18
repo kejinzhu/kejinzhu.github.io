@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,webpack," />
 
 
 
@@ -108,17 +108,20 @@
 
 
 
-<meta name="description" content="前端、笔记、技术、博客">
-<meta name="keywords" content="前端 技术 生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小柯的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。   代码转换: TypeScript 编译成 JavaSc">
+<meta name="keywords" content="前端,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack基础">
+<meta property="og:url" content="http://yoursite.com/2018/08/17/webpack/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="前端、笔记、技术、博客">
+<meta property="og:description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。   代码转换: TypeScript 编译成 JavaSc">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/08/17/webpack/logo.png">
+<meta property="og:updated_time" content="2018-08-18T01:44:22.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小柯的博客">
-<meta name="twitter:description" content="前端、笔记、技术、博客">
+<meta name="twitter:title" content="webpack基础">
+<meta name="twitter:description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。   代码转换: TypeScript 编译成 JavaSc">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/17/webpack/logo.png">
 
 
 
@@ -148,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/17/webpack/"/>
 
 
 
 
 
-  <title>小柯的博客</title>
+  <title>webpack基础 | 小柯的博客</title>
   
 
 
@@ -173,8 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
 <a href="https://github.com/kejinzhu/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -303,591 +305,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/Untitled-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/Untitled-1/" itemprop="url">未命名</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T09:02:34+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            !
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/node的REPL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/17/node的REPL/" itemprop="url">node的REPL</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-17T17:57:01+08:00">
-                2018-08-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/后端/" itemprop="url" rel="index">
-                    <span itemprop="name">后端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/17/node基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/17/node基础/" itemprop="url">node基础</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-17T15:56:44+08:00">
-                2018-08-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/后端/" itemprop="url" rel="index">
-                    <span itemprop="name">后端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,108
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="node的基本概念"><a href="#node的基本概念" class="headerlink" title="node的基本概念"></a>node的基本概念</h1><h2 id="node能够解决什么问题？"><a href="#node能够解决什么问题？" class="headerlink" title="node能够解决什么问题？"></a>node能够解决什么问题？</h2><ul>
-<li>node的首要目标是提供一种简单的，用于创建高性能的服务器的开发工具</li>
-<li>web服务器的瓶颈在于并发的用户量，对比Java和PHP的实现方式</li>
-</ul>
-<p><img src="/images/php.png" alt="PHP的实现方式"><br><img src="/images/node.png" alt="node的实现方式"></p>
-<h2 id="node是什么？"><a href="#node是什么？" class="headerlink" title="node是什么？"></a>node是什么？</h2><ul>
-<li>node.js是一个基于Chrome V8引擎的JavaScript运行环境，让JavaScript的执行效率与低端的C语言的相近的执行效率</li>
-<li>node.js使用了一个事件驱动、非阻塞式I/O的模型，使其轻量又高效</li>
-<li>node.js的包管理器npm，是全球最大的开源生态系统</li>
-</ul>
-<h2 id="node的特点"><a href="#node的特点" class="headerlink" title="node的特点"></a>node的特点</h2><h3 id="为什么JavaScript是单线程的"><a href="#为什么JavaScript是单线程的" class="headerlink" title="为什么JavaScript是单线程的"></a>为什么JavaScript是单线程的</h3><ul>
-<li>这是由JavaScript这门脚本语言的用途决定的</li>
-<li>Web Worker并没用改变JavaScript单线程的本质</li>
-</ul>
-<h3 id="浏览器模型"><a href="#浏览器模型" class="headerlink" title="浏览器模型"></a>浏览器模型</h3><ul>
-<li>用户界面包括地址栏、前进/后退按钮、书签菜单等</li>
-<li>浏览器引擎-在用户界面和呈现引擎之间传送指令</li>
-<li>呈现引擎-又称渲染引擎，也被称为浏览器内核，在线程方面又称为UI线程</li>
-<li>网络-用于网络调用，比如http请求</li>
-<li>用户界面后端-用于绘制基本的窗口小部件，UI线程和JS共用一个线程</li>
-<li>JavaScript解释器-用于解析和执行JavaScript代码</li>
-<li>数据存储-这是持久层。浏览器需要在硬盘上保存各种数据，例如Cookie</li>
-</ul>
-<h3 id="Webworker"><a href="#Webworker" class="headerlink" title="Webworker"></a>Webworker</h3><ul>
-<li>是多线程的</li>
-<li>完全受主线程控制</li>
-<li>不能操作DOM</li>
-</ul>
-<h3 id="除JS线程和UI线程之外的其他线程"><a href="#除JS线程和UI线程之外的其他线程" class="headerlink" title="除JS线程和UI线程之外的其他线程"></a>除JS线程和UI线程之外的其他线程</h3><h3 id="任务队列"><a href="#任务队列" class="headerlink" title="任务队列"></a>任务队列</h3><h3 id="Event-Loop-事件循环"><a href="#Event-Loop-事件循环" class="headerlink" title="Event Loop(事件循环)"></a>Event Loop(事件循环)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">read</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line"> setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line"> setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line"> &#125;,<span class="number">1000</span>)</span><br><span class="line"> &#125;,<span class="number">1000</span>);<span class="comment">//放到事件队列里</span></span><br><span class="line"> setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line"> &#125;,<span class="number">1000</span>)</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line">read();<span class="comment">//依次打印1 3 2 5 4</span></span><br><span class="line"><span class="comment">//JS引擎会先执行栈中的任务，再执行回调队列中的回调事件（先进先出）</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">setTimrout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//nextTick是把这个回调函数当在当前执行栈的尾部</span></span><br><span class="line">process.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">process.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">process.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;)<span class="comment">// 1 3 4 5 2 </span></span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">next();<span class="comment">//1 3 4 5 2</span></span><br></pre></td></tr></table></figure>
-<h3 id="node-js中的Event-Loop"><a href="#node-js中的Event-Loop" class="headerlink" title="node.js中的Event Loop"></a>node.js中的Event Loop</h3><ul>
-<li>V8引擎解析JavaScript脚本</li>
-<li>解析后的代码，调用node API</li>
-<li>libuv库负责node API的执行，它将不同的任务分配给不同的线程，形成一个Event Loop(事件环)，以异步的方式将任务的执行结果返回给V8引擎</li>
-<li>V8引擎再将结果返回给用户</li>
-</ul>
-<h3 id="同步与异步"><a href="#同步与异步" class="headerlink" title="同步与异步"></a>同步与异步</h3><p>同步和异步关注的是消息通知机制</p>
-<ul>
-<li>同步就是发出调用后，没有得到结果之前，该调用不返回，一旦返回，就得到返回值了，简而言之就是调用者主动等待这个调用的结果</li>
-<li>异步则相反，调用者在发出后这个调用就直接返回了，所以没有返回结果。换句话说当一个</li>
-</ul>
-<h3 id="阻塞与非阻塞"><a href="#阻塞与非阻塞" class="headerlink" title="阻塞与非阻塞"></a>阻塞与非阻塞</h3><p>阻塞和非阻塞关注的是等待结果时的状态</p>
-<ul>
-<li>阻塞调用是指调用结果返回之前</li>
-</ul>
-<h3 id="同步异步与阻塞非阻塞的区别"><a href="#同步异步与阻塞非阻塞的区别" class="headerlink" title="同步异步与阻塞非阻塞的区别"></a>同步异步与阻塞非阻塞的区别</h3><p>同步异步取决于被调用者，阻塞非阻塞取决于调用者<br>被调用者决定的是同步还是异步<br>调用者决定是阻塞还是非阻塞<br>调用者在等待的过程中不干别的，那就是调用者被阻塞了<br>调用者在等待的过程中干别的，那就是调用者不被阻塞</p>
-<h3 id="同异步与阻塞非阻塞的组合关系"><a href="#同异步与阻塞非阻塞的组合关系" class="headerlink" title="同异步与阻塞非阻塞的组合关系"></a>同异步与阻塞非阻塞的组合关系</h3><ul>
-<li>同步阻塞</li>
-</ul>
-<p>被调用者立即告诉调用者是同步的，这个等待过程中调用者不干别的，就是调用者被阻塞了。</p>
-<ul>
-<li>同步非阻塞</li>
-</ul>
-<p>被调用者立即告诉调用者是同步的，这个等待过程中调用者接着干其他的，主线程不受干扰，就是调用者不被阻塞。</p>
-<ul>
-<li>异步阻塞</li>
-</ul>
-<p>被调用者是异步的，但是这个等待过程中调用者不干别的，就调用者被阻塞了。这是异步阻塞</p>
-<ul>
-<li>异步非阻塞</li>
-</ul>
-<p>被调用者是异步的，这个等待的过程中调用者接着干其他的事情，主线程不受干扰，调用者不被阻塞，这就是异步非阻塞。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -917,9 +337,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/17/webpack/" itemprop="url">webpack基础</a></h2>
+          <h2 class="post-title" itemprop="name headline">webpack基础</h2>
         
 
         <div class="post-meta">
@@ -1022,9 +440,7 @@
       
 
       
-        
-          
-            <h1 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack?"></a>什么是webpack?</h1><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p>
+        <h1 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack?"></a>什么是webpack?</h1><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p>
 <blockquote>
 <p>构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。</p>
 </blockquote>
@@ -1217,8 +633,6 @@
 <p>devtool:’eval-source-map’</p>
 </blockquote>
 <h2 id="打包第三方类库"><a href="#打包第三方类库" class="headerlink" title="打包第三方类库"></a>打包第三方类库</h2>
-          
-        
       
     </div>
     
@@ -1226,197 +640,13 @@
     
 
     
+        <div>
+            <div>
     
-
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
     
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/web前端开发常用的优化技巧汇总/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/15/web前端开发常用的优化技巧汇总/" itemprop="url">web前端开发常用的优化技巧汇总</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-15T16:29:16+08:00">
-                2018-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,969
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  11
-                </span>
-              
-            </div>
-          
-
-          
-
+</div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>对于一个前端工程师，不仅要写好代码，还要考虑到性能方面的优化问题，那么我们可以从哪些方面进行性能的优化？<br>首先，我们先来看看“雅虎军规”的35条：</p>
-<h1 id="“雅虎军规”35条"><a href="#“雅虎军规”35条" class="headerlink" title="“雅虎军规”35条"></a>“雅虎军规”35条</h1><ul>
-<li>尽量减少 HTTP 请求个数——须权衡</li>
-<li>使用 CDN（内容分发网络）</li>
-<li>为文件头指定 Expires 或 Cache-Control ，使内容具有缓存性。</li>
-<li>避免空的 src 和 href</li>
-<li>使用 gzip 压缩内容</li>
-<li>把 CSS 放到顶部</li>
-<li>把 JS 放到底部</li>
-<li>避免使用 CSS 表达式</li>
-<li>将 CSS 和 JS 放到外部文件中</li>
-<li>减少 DNS 查找次数</li>
-<li>精简 CSS 和 JS</li>
-<li>避免跳转</li>
-<li>剔除重复的 JS 和 CSS</li>
-<li>配置 ETags</li>
-<li>使 AJAX 可缓存</li>
-<li>尽早刷新输出缓冲</li>
-<li>使用 GET 来完成 AJAX 请求</li>
-<li>延迟加载</li>
-<li>预加载</li>
-<li>减少 DOM 元素个数</li>
-<li>根据域名划分页面内容</li>
-<li>尽量减少 iframe 的个数</li>
-<li>避免 404</li>
-<li>减少 Cookie 的大小</li>
-<li>使用无 cookie 的域</li>
-<li>减少 DOM 访问</li>
-<li>开发智能事件处理程序</li>
-<li>用 代替 @import</li>
-<li>避免使用滤镜</li>
-<li>优化图像</li>
-<li>优化 CSS Spirite</li>
-<li>不要在 HTML 中缩放图像——须权衡</li>
-<li>favicon.ico要小而且可缓存</li>
-<li>保持单个内容小于25K</li>
-<li>打包组件成复合文本</li></ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/15/web前端开发常用的优化技巧汇总/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
     
     
 
@@ -1426,14 +656,42 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/15/web前端开发常用的优化技巧汇总/" rel="next" title="web前端开发常用的优化技巧汇总">
+                <i class="fa fa-chevron-left"></i> web前端开发常用的优化技巧汇总
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/17/node基础/" rel="prev" title="node基础">
+                node基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1443,14 +701,17 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7587f8bf792868" async = "async" ></script>
+</div>
 
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1458,6 +719,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1478,8 +743,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1590,6 +864,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是webpack"><span class="nav-number">1.</span> <span class="nav-text">什么是webpack?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#初始化项目"><span class="nav-number">2.</span> <span class="nav-text">初始化项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack核心知识"><span class="nav-number">3.</span> <span class="nav-text">webpack核心知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack的核心概念"><span class="nav-number">3.1.</span> <span class="nav-text">webpack的核心概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack"><span class="nav-number">3.2.</span> <span class="nav-text">配置webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建src目录"><span class="nav-number">3.3.</span> <span class="nav-text">创建src目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建dist目录"><span class="nav-number">3.4.</span> <span class="nav-text">创建dist目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本配置文件"><span class="nav-number">3.5.</span> <span class="nav-text">基本配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建dist目录下的index-html"><span class="nav-number">3.5.1.</span> <span class="nav-text">创建dist目录下的index.html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件webpack-config-js"><span class="nav-number">3.5.2.</span> <span class="nav-text">配置文件webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置开发服务器"><span class="nav-number">3.6.</span> <span class="nav-text">配置开发服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#支持加载CSS文件"><span class="nav-number">3.7.</span> <span class="nav-text">支持加载CSS文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Loader"><span class="nav-number">3.7.1.</span> <span class="nav-text">什么是Loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loader的三种写法"><span class="nav-number">3.7.2.</span> <span class="nav-text">loader的三种写法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#loader"><span class="nav-number">3.7.2.1.</span> <span class="nav-text">loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#use"><span class="nav-number">3.7.2.2.</span> <span class="nav-text">use</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#use-loader"><span class="nav-number">3.7.2.3.</span> <span class="nav-text">use+loader</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件"><span class="nav-number">3.8.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动产出html"><span class="nav-number">3.8.1.</span> <span class="nav-text">自动产出html</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装插件"><span class="nav-number">3.8.1.1.</span> <span class="nav-text">安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置webpack-config-js下的plugins"><span class="nav-number">3.8.1.2.</span> <span class="nav-text">配置webpack.config.js下的plugins</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#支持图片"><span class="nav-number">3.9.</span> <span class="nav-text">支持图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手动添加图片"><span class="nav-number">3.9.1.</span> <span class="nav-text">手动添加图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS中引入图片"><span class="nav-number">3.9.2.</span> <span class="nav-text">JS中引入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JS"><span class="nav-number">3.9.2.1.</span> <span class="nav-text">JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置webpack-config-js"><span class="nav-number">3.9.2.2.</span> <span class="nav-text">配置webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在CSS中引入图片"><span class="nav-number">3.9.3.</span> <span class="nav-text">在CSS中引入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS"><span class="nav-number">3.9.3.1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML"><span class="nav-number">3.9.3.2.</span> <span class="nav-text">HTML</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分离CSS"><span class="nav-number">3.10.</span> <span class="nav-text">分离CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖模块"><span class="nav-number">3.10.1.</span> <span class="nav-text">安装依赖模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-config-js-1"><span class="nav-number">3.10.2.</span> <span class="nav-text">配置webpack.config.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩CSS和JS"><span class="nav-number">3.10.3.</span> <span class="nav-text">压缩CSS和JS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS和image存放单独目录"><span class="nav-number">3.10.4.</span> <span class="nav-text">CSS和image存放单独目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在HTML中使用图片"><span class="nav-number">3.10.5.</span> <span class="nav-text">在HTML中使用图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#index-html文件中"><span class="nav-number">3.10.5.1.</span> <span class="nav-text">index.html文件中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在webpack-config-js文件中添加如下配置"><span class="nav-number">3.10.5.2.</span> <span class="nav-text">在webpack.config.js文件中添加如下配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编译less和sass"><span class="nav-number">3.11.</span> <span class="nav-text">编译less和sass</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装less"><span class="nav-number">3.11.1.</span> <span class="nav-text">安装less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写样式"><span class="nav-number">3.11.2.</span> <span class="nav-text">写样式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#less"><span class="nav-number">3.11.2.1.</span> <span class="nav-text">less</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sass"><span class="nav-number">3.11.2.2.</span> <span class="nav-text">sass</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wepack-config-js"><span class="nav-number">3.11.2.3.</span> <span class="nav-text">wepack.config.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理CSS3属性前缀"><span class="nav-number">3.12.</span> <span class="nav-text">处理CSS3属性前缀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#index-css"><span class="nav-number">3.12.1.</span> <span class="nav-text">index.css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-config-css"><span class="nav-number">3.12.2.</span> <span class="nav-text">配置webpack.config.css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-config-js-2"><span class="nav-number">3.12.3.</span> <span class="nav-text">配置webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义ES6-ES7-JSX"><span class="nav-number">3.13.</span> <span class="nav-text">转义ES6/ES7/JSX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖"><span class="nav-number">3.13.1.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decorator"><span class="nav-number">3.13.2.</span> <span class="nav-text">decorator</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置jsconfig-json"><span class="nav-number">3.13.2.1.</span> <span class="nav-text">配置jsconfig.json</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack-config-js"><span class="nav-number">3.13.3.</span> <span class="nav-text">webpack.config.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何调试打包后的代码"><span class="nav-number">3.14.</span> <span class="nav-text">如何调试打包后的代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打包第三方类库"><span class="nav-number">3.15.</span> <span class="nav-text">打包第三方类库</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1750,6 +1040,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

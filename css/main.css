@@ -1996,7 +1996,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6141ff;
+  background: #1dbdb4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3227,10 +3227,11 @@ img:hover {
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px solid #eee;
 }
 .post-body h4 {
   font-size: 1.2em;
+  border-bottom: 1px dotted #eee;
 }
 .post-body h5 {
   font-size: 1.07em;
@@ -3293,4 +3294,10 @@ img:hover {
   .pagination {
     margin: 8px 0 0;
   }
+}
+* {
+  cursor: url("/images/mouse.ico"), auto !important;
+}
+:active {
+  cursor: url("/images/mouse.ico"), auto !important;
 }
