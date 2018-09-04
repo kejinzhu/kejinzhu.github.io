@@ -82,13 +82,13 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
 
 
 
@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="前端、笔记、技术、博客">
+<meta name="description" content="本文总阅读量次 REPL (read eval print loop)在Node.js中为了使开发者方便测试JavaScript代码，提供了一个名为REPL的可交互式运行环境。开发者可以在该运行环境中输入任何JavaScript表达式，当用户按下回车键后，REPL运行环境将显示该表达式的运行结果。">
 <meta name="keywords" content="node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node的REPL">
 <meta property="og:url" content="http://yoursite.com/2018/08/17/node的REPL/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="前端、笔记、技术、博客">
+<meta property="og:description" content="本文总阅读量次 REPL (read eval print loop)在Node.js中为了使开发者方便测试JavaScript代码，提供了一个名为REPL的可交互式运行环境。开发者可以在该运行环境中输入任何JavaScript表达式，当用户按下回车键后，REPL运行环境将显示该表达式的运行结果。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-17T09:58:27.529Z">
+<meta property="og:updated_time" content="2018-08-19T03:06:58.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node的REPL">
-<meta name="twitter:description" content="前端、笔记、技术、博客">
+<meta name="twitter:description" content="本文总阅读量次 REPL (read eval print loop)在Node.js中为了使开发者方便测试JavaScript代码，提供了一个名为REPL的可交互式运行环境。开发者可以在该运行环境中输入任何JavaScript表达式，当用户按下回车键后，REPL运行环境将显示该表达式的运行结果。">
 
 
 
@@ -370,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/" itemprop="url" rel="index">
-                    <span itemprop="name">node</span>
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
                   </a>
                 </span>
 
@@ -381,8 +381,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/node/后端/" itemprop="url" rel="index">
-                    <span itemprop="name">后端</span>
+                  <a href="/categories/后端/node/" itemprop="url" rel="index">
+                    <span itemprop="name">node</span>
                   </a>
                 </span>
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  282
                 </span>
               
 
@@ -449,7 +449,27 @@
       
 
       
-        
+        <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+<h1 id="REPL-read-eval-print-loop"><a href="#REPL-read-eval-print-loop" class="headerlink" title="REPL (read eval print loop)"></a>REPL (read eval print loop)</h1><p>在Node.js中为了使开发者方便测试JavaScript代码，提供了一个名为REPL的可交互式运行环境。开发者可以在该运行环境中输入任何JavaScript表达式，当用户按下回车键后，REPL运行环境将显示该表达式的运行结果。<br><a id="more"></a></p>
+<h1 id="如何进入REPL"><a href="#如何进入REPL" class="headerlink" title="如何进入REPL"></a>如何进入REPL</h1><p>在DOS命令行输入node,回车就进入了node的REPL命令行</p>
+<h1 id="REPL操作"><a href="#REPL操作" class="headerlink" title="REPL操作"></a>REPL操作</h1><ul>
+<li>变量的操作，声明普通变量和对象</li>
+<li>eval</li>
+<li>函数的书写</li>
+<li>下划线访问最近使用的表达式</li>
+<li>多行书写</li>
+<li>REPL运行华宁中的上下文环境</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> repl = <span class="built_in">require</span>(<span class="string">'repl'</span>);</span><br><span class="line"><span class="keyword">let</span> con = repl.start().context;</span><br><span class="line">con.msg = <span class="string">'hello'</span>;</span><br><span class="line">con.hello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(con.msg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="REPL运行环境的基础命令"><a href="#REPL运行环境的基础命令" class="headerlink" title="REPL运行环境的基础命令"></a>REPL运行环境的基础命令</h1><ul>
+<li>.break 退出当前命令</li>
+<li>.clear 清除REPL运行环境上下文对象中保存的所有变量与函数</li>
+<li>.exit 退出REPL运行环境</li>
+<li>.save 把输入的所有表达式保存到一个文件中</li>
+<li>.load 把所有的表达式加载到REPL运行环境中</li>
+<li>.help 查看帮助命令</li>
+</ul>
+
       
     </div>
     
@@ -497,6 +517,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/18/ECharts使用过程遇到的问题汇总/" rel="prev" title="ECharts使用过程遇到的问题汇总">
+                ECharts使用过程遇到的问题汇总 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -554,8 +578,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -574,7 +607,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -585,7 +618,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -596,7 +629,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -667,6 +700,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#REPL-read-eval-print-loop"><span class="nav-number">1.</span> <span class="nav-text">REPL (read eval print loop)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何进入REPL"><span class="nav-number">2.</span> <span class="nav-text">如何进入REPL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#REPL操作"><span class="nav-number">3.</span> <span class="nav-text">REPL操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#REPL运行环境的基础命令"><span class="nav-number">4.</span> <span class="nav-text">REPL运行环境的基础命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -681,7 +730,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
   <i class="fa fa-star"></i>
     <!-- <i class="fa fa-user"></i>-->
@@ -712,7 +761,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共13.0k字</span>
+  <span class="post-count">博客全站共62.2k字</span>
 </div>
         
 
@@ -1217,5 +1266,8 @@ undefined
    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
    <script type="text/javascript" src="/js/src/fireworks.js"></script>
 
+<!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

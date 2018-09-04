@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-17T09:58:27.529Z</updated>
+  <updated>2018-09-04T01:00:32.407Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,31 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>node的REPL</title>
-    <link href="http://yoursite.com/2018/08/17/node%E7%9A%84REPL/"/>
-    <id>http://yoursite.com/2018/08/17/node的REPL/</id>
-    <published>2018-08-17T09:57:01.000Z</published>
-    <updated>2018-08-17T09:58:27.529Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="node" scheme="http://yoursite.com/categories/node/"/>
-    
-      <category term="后端" scheme="http://yoursite.com/categories/node/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node基础</title>
-    <link href="http://yoursite.com/2018/08/17/node%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2018/08/17/node基础/</id>
-    <published>2018-08-17T07:56:44.000Z</published>
-    <updated>2018-08-18T01:39:50.109Z</updated>
+    <title>week1面试题整理</title>
+    <link href="http://yoursite.com/2018/09/04/week1%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/09/04/week1面试题整理/</id>
+    <published>2018-09-04T00:52:52.000Z</published>
+    <updated>2018-09-04T01:00:32.407Z</updated>
     
     <summary type="html">
     
@@ -49,27 +29,27 @@
       
         
         
-          &lt;h1 id=&quot;node的基本概念&quot;&gt;&lt;a href=&quot;#node的基本概念&quot; class=&quot;headerlink&quot; title=&quot;node的基本概念&quot;&gt;&lt;/a&gt;node的基本概念&lt;/h1&gt;&lt;h2 id=&quot;node能够解决什么问题？&quot;&gt;&lt;a
+          &lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     
     </summary>
     
-      <category term="node" scheme="http://yoursite.com/categories/node/"/>
-    
-      <category term="后端" scheme="http://yoursite.com/categories/node/%E5%90%8E%E7%AB%AF/"/>
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="第一周面试题整理" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
     
   </entry>
   
   <entry>
-    <title>webpack基础</title>
-    <link href="http://yoursite.com/2018/08/17/webpack/"/>
-    <id>http://yoursite.com/2018/08/17/webpack/</id>
-    <published>2018-08-17T02:07:55.000Z</published>
-    <updated>2018-08-18T01:54:57.189Z</updated>
+    <title>数组去重方法汇总</title>
+    <link href="http://yoursite.com/2018/09/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2018/09/04/数组去重方法汇总/</id>
+    <published>2018-09-04T00:47:33.000Z</published>
+    <updated>2018-09-04T00:51:35.759Z</updated>
     
     <summary type="html">
     
@@ -77,303 +57,409 @@
       
         
         
-          &lt;h1 id=&quot;什么是webpack&quot;&gt;&lt;a href=&quot;#什么是webpack&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;基本方法&quot;&gt;&lt;a href=&quot;#基本方法&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
+      <category term="去重" scheme="http://yoursite.com/tags/%E5%8E%BB%E9%87%8D/"/>
     
   </entry>
   
   <entry>
-    <title>web前端开发常用的优化技巧汇总</title>
-    <link href="http://yoursite.com/2018/08/15/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/"/>
-    <id>http://yoursite.com/2018/08/15/web前端开发常用的优化技巧汇总/</id>
-    <published>2018-08-15T08:29:16.000Z</published>
-    <updated>2018-08-15T09:36:11.015Z</updated>
+    <title>Vue中watch和computed的区别</title>
+    <link href="http://yoursite.com/2018/09/03/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2018/09/03/watch和computed的区别/</id>
+    <published>2018-09-03T07:11:45.000Z</published>
+    <updated>2018-09-03T09:02:43.876Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;对于一个前端工程师，不仅要写好代码，还要考虑到性能方面的优化问题，那么我们可以从哪些方面进行性能的优化？&lt;br&gt;首先，我们先来看看“雅虎军规”的35条：&lt;/p&gt;
-&lt;h1 id=&quot;“雅虎军规”35条&quot;&gt;&lt;a href=&quot;#“雅虎军规”35条&quot; class=&quot;headerlink&quot; title=&quot;“雅虎军规”35条&quot;&gt;&lt;/a&gt;“雅虎军规”35条&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;尽量减少 HTTP 请求个数——须权衡&lt;/li&gt;
-&lt;li&gt;使用 CDN（内容分发网络）&lt;/li&gt;
-&lt;li&gt;为文件头指定 Expires 或 Cache-Control ，使内容具有缓存性。&lt;/li&gt;
-&lt;li&gt;避免空的 src 和 href&lt;/li&gt;
-&lt;li&gt;使用 gzip 压缩内容&lt;/li&gt;
-&lt;li&gt;把 CSS 放到顶部&lt;/li&gt;
-&lt;li&gt;把 JS 放到底部&lt;/li&gt;
-&lt;li&gt;避免使用 CSS 表达式&lt;/li&gt;
-&lt;li&gt;将 CSS 和 JS 放到外部文件中&lt;/li&gt;
-&lt;li&gt;减少 DNS 查找次数&lt;/li&gt;
-&lt;li&gt;精简 CSS 和 JS&lt;/li&gt;
-&lt;li&gt;避免跳转&lt;/li&gt;
-&lt;li&gt;剔除重复的 JS 和 CSS&lt;/li&gt;
-&lt;li&gt;配置 ETags&lt;/li&gt;
-&lt;li&gt;使 AJAX 可缓存&lt;/li&gt;
-&lt;li&gt;尽早刷新输出缓冲&lt;/li&gt;
-&lt;li&gt;使用 GET 来完成 AJAX 请求&lt;/li&gt;
-&lt;li&gt;延迟加载&lt;/li&gt;
-&lt;li&gt;预加载&lt;/li&gt;
-&lt;li&gt;减少 DOM 元素个数&lt;/li&gt;
-&lt;li&gt;根据域名划分页面内容&lt;/li&gt;
-&lt;li&gt;尽量减少 iframe 的个数&lt;/li&gt;
-&lt;li&gt;避免 404&lt;/li&gt;
-&lt;li&gt;减少 Cookie 的大小&lt;/li&gt;
-&lt;li&gt;使用无 cookie 的域&lt;/li&gt;
-&lt;li&gt;减少 DOM 访问&lt;/li&gt;
-&lt;li&gt;开发智能事件处理程序&lt;/li&gt;
-&lt;li&gt;用 代替 @import&lt;/li&gt;
-&lt;li&gt;避免使用滤镜&lt;/li&gt;
-&lt;li&gt;优化图像&lt;/li&gt;
-&lt;li&gt;优化 CSS Spirite&lt;/li&gt;
-&lt;li&gt;不要在 HTML 中缩放图像——须权衡&lt;/li&gt;
-&lt;li&gt;favicon.ico要小而且可缓存&lt;/li&gt;
-&lt;li&gt;保持单个内容小于25K&lt;/li&gt;
-&lt;li&gt;打包组件成复合文本&lt;/li&gt;&lt;/ul&gt;
+      
+      
+        
+        
+          &lt;h1 id=&quot;computed和watch的区别&quot;&gt;&lt;a href=&quot;#computed和watch的区别&quot; class=&quot;headerlink&quot; title=&quot;computed和watch的区别&quot;&gt;&lt;/a&gt;computed和watch的区别&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="Vue学习笔记" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="computed和watch的区别" scheme="http://yoursite.com/tags/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中watch和computed的区别</title>
+    <link href="http://yoursite.com/2018/09/03/week2%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/09/03/week2面试题整理/</id>
+    <published>2018-09-03T07:11:45.000Z</published>
+    <updated>2018-09-04T01:00:49.627Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;题目：请实现方法-parse-，作用如下：&quot;&gt;&lt;a href=&quot;#题目：请实现方法-parse-，作用如下：&quot; class=&quot;headerlink&quot; title=&quot;题目：请实现方法 parse ，作用如下：&quot;&gt;&lt;/a&gt;题目：请实现方法 parse
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="第二周面试题整理" scheme="http://yoursite.com/tags/%E7%AC%AC%E4%BA%8C%E5%91%A8%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue学习-钩子函数之生命周期</title>
+    <link href="http://yoursite.com/2018/09/03/Vue%E5%AD%A6%E4%B9%A0-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E4%B9%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>http://yoursite.com/2018/09/03/Vue学习-钩子函数之生命周期/</id>
+    <published>2018-09-03T02:32:20.000Z</published>
+    <updated>2018-09-03T02:37:30.953Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期&quot; class=&quot;headerlink&quot; title=&quot;生命周期&quot;&gt;&lt;/a&gt;生命周期&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;beforeCreate
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+      <category term="生命周期" scheme="http://yoursite.com/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue学习之-双向数据绑定原理</title>
+    <link href="http://yoursite.com/2018/09/01/Vue%E5%AD%A6%E4%B9%A0%E4%B9%8B-%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2018/09/01/Vue学习之-双向数据绑定原理/</id>
+    <published>2018-09-01T04:50:33.000Z</published>
+    <updated>2018-09-01T04:50:34.009Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
     
-      <category term="web前端" scheme="http://yoursite.com/tags/web%E5%89%8D%E7%AB%AF/"/>
+  </entry>
+  
+  <entry>
+    <title>项目细节点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/%E9%A1%B9%E7%9B%AE%E7%BB%86%E8%8A%82%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/项目细节点梳理/</id>
+    <published>2018-08-31T09:13:26.000Z</published>
+    <updated>2018-08-31T09:13:26.222Z</updated>
     
-      <category term="性能优化" scheme="http://yoursite.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <summary type="html">
+    
+    </summary>
+    
     
   </entry>
   
   <entry>
-    <title>TCP/IP、http等知识梳理</title>
-    <link href="http://yoursite.com/2018/08/15/TCP-IP%E3%80%81http%E7%AD%89%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/15/TCP-IP、http等知识梳理/</id>
-    <published>2018-08-15T00:52:51.000Z</published>
-    <updated>2018-08-15T08:23:01.894Z</updated>
+    <title>关于软技能的问题要点</title>
+    <link href="http://yoursite.com/2018/08/31/%E5%85%B3%E4%BA%8E%E8%BD%AF%E6%8A%80%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98%E8%A6%81%E7%82%B9/"/>
+    <id>http://yoursite.com/2018/08/31/关于软技能的问题要点/</id>
+    <published>2018-08-31T09:13:04.000Z</published>
+    <updated>2018-08-31T09:13:04.540Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;前后端通信&quot;&gt;&lt;a href=&quot;#前后端通信&quot; class=&quot;headerlink&quot; title=&quot;前后端通信&quot;&gt;&lt;/a&gt;前后端通信&lt;/h1&gt;&lt;p&gt;先从一道面试题开始：&lt;br&gt;在面试的时候经常被问，当我们在浏览器地址栏中输入一个URL地址,到最后看到页面,中间都经历了哪些事情?&lt;br&gt;我们从客户端和服务器交互模型角度来回答这个问题：&lt;br&gt;假设我们访问的是 &lt;a href=&quot;https://www.baidu.com/这个地址&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.baidu.com/这个地址&lt;/a&gt; ，回车键之后，我们可以看到的百度页面&lt;/p&gt;
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>开发环境知识点与高频考点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/开发环境知识点与高频考点梳理/</id>
+    <published>2018-08-31T09:12:47.000Z</published>
+    <updated>2018-08-31T09:12:47.392Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器相关知识点与高频考点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/浏览器相关知识点与高频考点梳理/</id>
+    <published>2018-08-31T09:12:23.000Z</published>
+    <updated>2018-08-31T09:12:23.663Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>从容应对算法题目</title>
+    <link href="http://yoursite.com/2018/08/31/%E4%BB%8E%E5%AE%B9%E5%BA%94%E5%AF%B9%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/"/>
+    <id>http://yoursite.com/2018/08/31/从容应对算法题目/</id>
+    <published>2018-08-31T09:12:03.000Z</published>
+    <updated>2018-08-31T09:12:03.955Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-HTML知识点与高频考点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/CSS-HTML%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/CSS-HTML知识点与高频考点梳理/</id>
+    <published>2018-08-31T09:11:40.000Z</published>
+    <updated>2018-08-31T09:11:40.393Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS-Web-API知识点与高频考点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/JS-Web-API%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/JS-Web-API知识点与高频考点梳理/</id>
+    <published>2018-08-31T09:11:22.000Z</published>
+    <updated>2018-08-31T09:11:22.353Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ES基础知识与高频考点梳理</title>
+    <link href="http://yoursite.com/2018/08/31/ES%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <id>http://yoursite.com/2018/08/31/ES基础知识与高频考点梳理/</id>
+    <published>2018-08-31T09:10:56.000Z</published>
+    <updated>2018-08-31T11:52:20.736Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;知识点梳理目录列表&quot;&gt;&lt;a href=&quot;#知识点梳理目录列表&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="ES基础知识与高频考点梳理" scheme="http://yoursite.com/tags/ES%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-react专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-react%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-react专题/</id>
+    <published>2018-08-30T15:49:26.000Z</published>
+    <updated>2018-08-30T15:49:26.272Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-跨域专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E8%B7%A8%E5%9F%9F%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-跨域专题/</id>
+    <published>2018-08-30T15:49:02.000Z</published>
+    <updated>2018-08-30T15:49:02.085Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-算法专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-算法专题/</id>
+    <published>2018-08-30T15:48:17.000Z</published>
+    <updated>2018-09-02T00:51:54.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;阐述下-JavaScript-中的变量提升&quot;&gt;&lt;a href=&quot;#阐述下-JavaScript-中的变量提升&quot; class=&quot;headerlink&quot; title=&quot;阐述下 JavaScript 中的变量提升&quot;&gt;&lt;/a&gt;阐述下 JavaScript
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-网络专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E7%BD%91%E7%BB%9C%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-网络专题/</id>
+    <published>2018-08-30T15:47:42.000Z</published>
+    <updated>2018-08-31T09:09:17.818Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;HTTP状态码知道哪些？&quot;&gt;&lt;a href=&quot;#HTTP状态码知道哪些？&quot; class=&quot;headerlink&quot; title=&quot;HTTP状态码知道哪些？&quot;&gt;&lt;/a&gt;HTTP状态码知道哪些？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;100  Continue 
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="网络专题" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E4%B8%93%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-浏览器专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-浏览器专题/</id>
+    <published>2018-08-30T15:46:59.000Z</published>
+    <updated>2018-08-31T02:57:35.670Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;介绍一下你对浏览器内核的理解？&quot;&gt;&lt;a href=&quot;#介绍一下你对浏览器内核的理解？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="浏览器专题" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%93%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-CSS专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-CSS%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-CSS专题/</id>
+    <published>2018-08-30T15:46:32.000Z</published>
+    <updated>2018-09-03T12:18:04.956Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;请解释一下为什么需要清除浮动-清除浮动有哪些方式？比较好的方式是哪一种？&quot;&gt;&lt;a href=&quot;#请解释一下为什么需要清除浮动-清除浮动有哪些方式？比较好的方式是哪一种？&quot; class=&quot;headerlink&quot; title=&quot;请解释一下为什么需要清除浮动?清除浮动有哪些方式？比较好的方式是哪一种？&quot;&gt;&lt;/a&gt;请解释一下为什么需要清除浮动?清除浮动有哪些方式？比较好的方式是哪一种？&lt;/h2&gt;&lt;p&gt;清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;百度页面并没用在我们自己的客户端本地，我们输入地址之后，才请求过来的&lt;/li&gt;
-&lt;li&gt;输入不同的域名可以看到不同的页面&lt;/li&gt;
-&lt;li&gt;有的网址是https:,有的是http(也有ftp)&lt;/li&gt;
-&lt;li&gt;需要客户端联网才能完成这些事情&lt;br&gt;那这一过程都经历了什么事情呢？&lt;h2 id=&quot;request请求阶段&quot;&gt;&lt;a href=&quot;#request请求阶段&quot; class=&quot;headerlink&quot; title=&quot;request请求阶段&quot;&gt;&lt;/a&gt;request请求阶段&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;首先根据客户端输入的域名，到DNS服务器上进行反解析(通过域名找到对应服务器的外网IP)&lt;/li&gt;
-&lt;li&gt;通过找到的外网IP，找到对应的服务器&lt;/li&gt;
-&lt;li&gt;通过在地址栏中输入的端口号(没有输入时因为不同协议有自己默认的端口号)找到服务器上发布的对应的项目&lt;h2 id=&quot;response响应阶段&quot;&gt;&lt;a href=&quot;#response响应阶段&quot; class=&quot;headerlink&quot; title=&quot;response响应阶段&quot;&gt;&lt;/a&gt;response响应阶段&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;真正的服务器接收到响应，根据你的请求信息，进行资源的整理；并且把相应的资源通过HTTP返给客户端；(html,css，js返回的不是文件)&lt;/li&gt;
-&lt;li&gt;把从服务器请求过来的数据，资源进行整理；处理成浏览器可识别的文件；&lt;h2 id=&quot;浏览器自主渲染的过程&quot;&gt;&lt;a href=&quot;#浏览器自主渲染的过程&quot; class=&quot;headerlink&quot; title=&quot;浏览器自主渲染的过程&quot;&gt;&lt;/a&gt;浏览器自主渲染的过程&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;先把HTML文件进行过滤解析，形成DOM树；节点与节点之间的一个组合&lt;/li&gt;
-&lt;li&gt;代码从上到下解析，形成CSS树；&lt;/li&gt;
-&lt;li&gt;把DOM树和css树进行重新组合，形成render树；是真正最后渲染的树；&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;父级div定义height。&lt;/li&gt;
+&lt;li&gt;结尾处加空div标签clear:both。&lt;/li&gt;
+&lt;li&gt;父级div定义伪类:after和zoom。&lt;/li&gt;
+&lt;li&gt;父级div定义overflow:hidden。&lt;/li&gt;
+&lt;li&gt;父级div定义overflow:auto。&lt;/li&gt;
+&lt;li&gt;父级div也浮动，需要定义宽度。&lt;/li&gt;
+&lt;li&gt;父级div定义display:table。&lt;/li&gt;
+&lt;li&gt;结尾处加br标签clear:both。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比较好的是第3种方式，好多网站都这么用。&lt;/p&gt;
+&lt;p&gt;原理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1) display:block 使生成的元素以块级元素显示,占满剩余空间;&lt;/li&gt;
+&lt;li&gt;2) height:0 避免生成内容破坏原有布局的高度。&lt;/li&gt;
+&lt;li&gt;3) visibility:hidden 使生成的内容不可见，并允许可能被生成内容盖住的内容可以进行点击和交互;&lt;/li&gt;
+&lt;li&gt;4）通过 content:”.”生成内容作为最后一个元素，至于content里面是点还是其他都是可以的，例如oocss里面就有经典的 content:”.”,有些版本可能content 里面内容为空,一丝冰凉是不推荐这样做的,firefox直到7.0 content:”” 仍然会产生额外的空隙；&lt;/li&gt;
+&lt;li&gt;5）zoom：1 触发IE hasLayout。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过分析发现，除了clear：both用来闭合浮动的，其他代码无非都是为了隐藏掉content生成的内容，这也就是其他版本的闭合浮动为什么会有font-size：0，line-height：0。&lt;/p&gt;
+&lt;h2 id=&quot;zoom-1的清除浮动原理&quot;&gt;&lt;a href=&quot;#zoom-1的清除浮动原理&quot; class=&quot;headerlink&quot; title=&quot;zoom:1的清除浮动原理?&quot;&gt;&lt;/a&gt;zoom:1的清除浮动原理?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;清除浮动，触发hasLayout；&lt;/li&gt;
+&lt;li&gt;Zoom属性是IE浏览器的专有属性，它可以设置或检索对象的缩放比例。解决ie下比较奇葩的bug。&lt;/li&gt;
+&lt;li&gt;譬如外边距（margin）的重叠，浮动清除，触发ie的haslayout属性等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;来龙去脉大概如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当设置了zoom的值之后，所设置的元素就会就会扩大或者缩小，高度宽度就会重新计算了，这里一旦改变zoom值时其实也会发生重新渲染，运用这个原理，也就解决了ie下子元素浮动时候父元素不随着自动扩大的问题。&lt;/li&gt;
+&lt;li&gt;Zoom属是IE浏览器的专有属性，火狐和老版本的webkit核心的浏览器都不支持这个属性。然而，zoom现在已经被逐步标准化，出现在 CSS 3.0 规范草案中。&lt;/li&gt;
+&lt;li&gt;目前非ie由于不支持这个属性，它们又是通过什么属性来实现元素的缩放呢？&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;可以通过css3里面的动画属性scale进行缩放。&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
-    
-      <category term="http、TCP/IP" scheme="http://yoursite.com/tags/http%E3%80%81TCP-IP/"/>
-    
-      <category term="前后端通信" scheme="http://yoursite.com/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery源码解读2</title>
-    <link href="http://yoursite.com/2018/08/14/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB2/"/>
-    <id>http://yoursite.com/2018/08/14/jQuery源码解读2/</id>
-    <published>2018-08-14T13:28:42.000Z</published>
-    <updated>2018-08-15T03:49:01.638Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;构造jQuery对象&quot;&gt;&lt;a href=&quot;#构造jQuery对象&quot; class=&quot;headerlink&quot; title=&quot;构造jQuery对象&quot;&gt;&lt;/a&gt;构造jQuery对象&lt;/h1&gt;&lt;p&gt; jQuery对象是一个类数组对象，含有连续的整形属性、length属性和大量的jQuery方法。jQuery对象右构造函数jQuery创建，$()是jQuery()的缩写&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="jQuery源码解读" scheme="http://yoursite.com/tags/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery源码解读1</title>
-    <link href="http://yoursite.com/2018/08/14/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB1/"/>
-    <id>http://yoursite.com/2018/08/14/jQuery源码解读1/</id>
-    <published>2018-08-14T05:50:14.000Z</published>
-    <updated>2018-08-16T13:28:31.109Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&quot;jQuery源码解读1&quot;&gt;&lt;a href=&quot;#jQuery源码解读1&quot; class=&quot;headerlink&quot; title=&quot;jQuery源码解读1&quot;&gt;&lt;/a&gt;jQuery源码解读1&lt;/h1&gt;&lt;p&gt;一万多行的jQuery源码着实让我恐惧，但是jQuery是一个优秀的JavaScript类库，里面封装的方法，jQuery源码里面把函数的三种身份变现的淋漓尽致、原型链、各种设计思想、让人不禁感叹编程之美。抱着提高编程能力和编程思想的目的，我把源码的注释删掉之后又鼓起勇气重新来看。边看边做下笔记。&lt;br&gt;先对jQuery做一下小的介绍：&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="jQuery源码解读" scheme="http://yoursite.com/tags/jQuery%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
-    
-      <category term="jQuery@1.11.3" scheme="http://yoursite.com/tags/jQuery-1-11-3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>&#39;基于ES6封装一个自己的发布订阅库&#39;</title>
-    <link href="http://yoursite.com/2018/08/13/%E5%9F%BA%E4%BA%8EES6%E5%B0%81%E8%A3%85%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E5%BA%93/"/>
-    <id>http://yoursite.com/2018/08/13/基于ES6封装一个自己的发布订阅库/</id>
-    <published>2018-08-13T12:36:39.000Z</published>
-    <updated>2018-08-15T03:49:57.083Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&#39;JS中常用的设计模式&#39;</title>
-    <link href="http://yoursite.com/2018/08/13/JS%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2018/08/13/JS中常用的设计模式/</id>
-    <published>2018-08-13T10:31:58.000Z</published>
-    <updated>2018-08-15T03:49:13.564Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>新浪APP项目总结</title>
-    <link href="http://yoursite.com/2018/08/12/%E6%96%B0%E6%B5%AAAPP%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/08/12/新浪APP项目总结/</id>
-    <published>2018-08-12T05:04:42.000Z</published>
-    <updated>2018-08-15T03:50:05.044Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>QQ音乐项目总结</title>
-    <link href="http://yoursite.com/2018/08/12/QQ%E9%9F%B3%E4%B9%90%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/08/12/QQ音乐项目总结/</id>
-    <published>2018-08-12T05:03:51.000Z</published>
-    <updated>2018-08-15T03:49:27.141Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot;
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>最美中国项目总结</title>
-    <link href="http://yoursite.com/2018/08/12/%E6%9C%80%E7%BE%8E%E4%B8%AD%E5%9B%BD%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/08/12/最美中国项目总结/</id>
-    <published>2018-08-12T04:06:12.000Z</published>
-    <updated>2018-08-15T03:50:13.107Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Web安全之XSS和CSRF</title>
-    <link href="http://yoursite.com/2018/08/11/Web%E5%AE%89%E5%85%A8%E4%B9%8BXSS%E5%92%8CCSRF/"/>
-    <id>http://yoursite.com/2018/08/11/Web安全之XSS和CSRF/</id>
-    <published>2018-08-11T00:39:49.000Z</published>
-    <updated>2018-08-15T03:49:48.803Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;&lt;br&gt;今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web安全" scheme="http://yoursite.com/tags/web%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/08/10/hello-world/"/>
-    <id>http://yoursite.com/2018/08/10/hello-world/</id>
-    <published>2018-08-09T16:22:37.390Z</published>
-    <updated>2018-08-10T02:42:24.766Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="CSS专题" scheme="http://yoursite.com/tags/CSS%E4%B8%93%E9%A2%98/"/>
     
   </entry>
   
