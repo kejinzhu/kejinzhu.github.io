@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。从实现上分析： computed的值再getter执行后是会缓存的，知识在它依赖的属性值改变之后，下一次获取computed的值才会重新调用对应的getter来计算;支持缓存 watch在每次监听的值变化时，都会执行回调。不">
+<meta name="description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。">
 <meta name="keywords" content="Vue学习笔记,computed和watch的区别">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue中watch和computed的区别">
 <meta property="og:url" content="http://yoursite.com/2018/09/03/watch和computed的区别/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。从实现上分析： computed的值再getter执行后是会缓存的，知识在它依赖的属性值改变之后，下一次获取computed的值才会重新调用对应的getter来计算;支持缓存 watch在每次监听的值变化时，都会执行回调。不">
+<meta property="og:description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-03T09:02:43.876Z">
+<meta property="og:updated_time" content="2018-09-05T01:17:26.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue中watch和computed的区别">
-<meta name="twitter:description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。从实现上分析： computed的值再getter执行后是会缓存的，知识在它依赖的属性值改变之后，下一次获取computed的值才会重新调用对应的getter来计算;支持缓存 watch在每次监听的值变化时，都会执行回调。不">
+<meta name="twitter:description" content="computed和watch的区别从属性名上分析 computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值 watch是去监听一个值的变化，然后执行相对应的函数。">
 
 
 
@@ -440,13 +440,22 @@
       
         <h1 id="computed和watch的区别"><a href="#computed和watch的区别" class="headerlink" title="computed和watch的区别"></a>computed和watch的区别</h1><h2 id="从属性名上分析"><a href="#从属性名上分析" class="headerlink" title="从属性名上分析"></a>从属性名上分析</h2><ul>
 <li>computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值</li>
-<li>watch是去监听一个值的变化，然后执行相对应的函数。<h2 id="从实现上分析："><a href="#从实现上分析：" class="headerlink" title="从实现上分析："></a>从实现上分析：</h2></li>
-<li>computed的值再getter执行后是会缓存的，知识在它依赖的属性值改变之后，下一次获取computed的值才会重新调用对应的getter来计算;支持缓存</li>
-<li>watch在每次监听的值变化时，都会执行回调。不支持缓存。<h2 id="从场景上分析："><a href="#从场景上分析：" class="headerlink" title="从场景上分析："></a>从场景上分析：</h2></li>
+<li><p>watch是去监听一个值的变化，然后执行相对应的函数。</p>
+<a id="more"></a>
+<h2 id="从实现上分析："><a href="#从实现上分析：" class="headerlink" title="从实现上分析："></a>从实现上分析：</h2></li>
+<li><p>computed的值再getter执行后是会缓存的，知识在它依赖的属性值改变之后，下一次获取computed的值才会重新调用对应的getter来计算;支持缓存</p>
+</li>
+<li>watch在每次监听的值变化时，都会执行回调。不支持缓存。</li>
+</ul>
+<h2 id="从场景上分析："><a href="#从场景上分析：" class="headerlink" title="从场景上分析："></a>从场景上分析：</h2><ul>
 <li>如果一个值依赖多个属性(多对一),用computed肯定是更加方便的</li>
-<li>如果一个值变化后会引起一系列操作，或者一个值变化会引起一系列的变化(用watch会更加方便一些)<h2 id="从计算上分析"><a href="#从计算上分析" class="headerlink" title="从计算上分析"></a>从计算上分析</h2></li>
+<li>如果一个值变化后会引起一系列操作，或者一个值变化会引起一系列的变化(用watch会更加方便一些)</li>
+</ul>
+<h2 id="从计算上分析"><a href="#从计算上分析" class="headerlink" title="从计算上分析"></a>从计算上分析</h2><ul>
 <li>computed通常就是简单的计算</li>
-<li>watch的回调里面会传入监听属性的新旧值,通过这两个值可以做一些特定的操作。<h2 id="从数据上分析："><a href="#从数据上分析：" class="headerlink" title="从数据上分析："></a>从数据上分析：</h2></li>
+<li>watch的回调里面会传入监听属性的新旧值,通过这两个值可以做一些特定的操作。</li>
+</ul>
+<h2 id="从数据上分析："><a href="#从数据上分析：" class="headerlink" title="从数据上分析："></a>从数据上分析：</h2><ul>
 <li>computed是用于定义基于数据之上的数据</li>
 <li>watch是你想在某个数据变化时做一些事情</li>
 </ul>
@@ -500,8 +509,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/03/week2面试题整理/" rel="next" title="Vue中watch和computed的区别">
-                <i class="fa fa-chevron-left"></i> Vue中watch和computed的区别
+              <a href="/2018/08/31/ES基础知识与高频考点梳理/" rel="next" title="ES基础知识与高频考点梳理">
+                <i class="fa fa-chevron-left"></i> ES基础知识与高频考点梳理
               </a>
             
           </div>
@@ -510,8 +519,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/04/数组去重方法汇总/" rel="prev" title="数组去重方法汇总">
-                数组去重方法汇总 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/03/week2面试题整理/" rel="prev" title="Vue中watch和computed的区别">
+                Vue中watch和computed的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -599,7 +608,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -610,7 +619,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -621,7 +630,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -753,7 +762,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共62.2k字</span>
+  <span class="post-count">博客全站共67.1k字</span>
 </div>
         
 

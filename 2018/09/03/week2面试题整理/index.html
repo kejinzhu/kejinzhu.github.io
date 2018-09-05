@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="小柯的博客">
 <meta property="og:description" content="题目：请实现方法 parse ，作用如下：1234567891011121314151617181920212223242526272829303132333435var object = &amp;#123;    b: &amp;#123; c: 4 &amp;#125;,    d: [&amp;#123; e: 5 &amp;#125;, &amp;#123; e: 6 &amp;#125;]&amp;#125;;console.log(parse(o">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-04T01:00:49.627Z">
+<meta property="og:updated_time" content="2018-09-05T01:29:51.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue中watch和computed的区别">
 <meta name="twitter:description" content="题目：请实现方法 parse ，作用如下：1234567891011121314151617181920212223242526272829303132333435var object = &amp;#123;    b: &amp;#123; c: 4 &amp;#125;,    d: [&amp;#123; e: 5 &amp;#125;, &amp;#123; e: 6 &amp;#125;]&amp;#125;;console.log(parse(o">
@@ -439,6 +439,7 @@
 
       
         <h2 id="题目：请实现方法-parse-，作用如下："><a href="#题目：请实现方法-parse-，作用如下：" class="headerlink" title="题目：请实现方法 parse ，作用如下："></a>题目：请实现方法 parse ，作用如下：</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> object = &#123;</span><br><span class="line">    b: &#123; <span class="attr">c</span>: <span class="number">4</span> &#125;,</span><br><span class="line">    d: [&#123; <span class="attr">e</span>: <span class="number">5</span> &#125;, &#123; <span class="attr">e</span>: <span class="number">6</span> &#125;]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'b.c'</span>) == <span class="number">4</span>) <span class="comment">//true </span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d[0].e'</span>) == <span class="number">5</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d.0.e'</span>) == <span class="number">5</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d[1].e'</span>) == <span class="number">6</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d.1.e'</span>) == <span class="number">6</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'f'</span>) == <span class="string">'undefined'</span>) <span class="comment">//true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parse</span>(<span class="params">obj, str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = str.split(<span class="string">""</span>); <span class="comment">//将字符串分割，放进数组中</span></span><br><span class="line">    arr = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(item)) &#123;</span><br><span class="line">                <span class="comment">//判断是否是数字</span></span><br><span class="line">                <span class="keyword">if</span> (arr[index - <span class="number">1</span>] != <span class="string">'['</span> &amp;&amp; arr[index + <span class="number">1</span>] != <span class="string">']'</span>) &#123;</span><br><span class="line">                    <span class="comment">//如果前后没有,则返回[item]</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="string">"["</span> + item + <span class="string">"]"</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//如果不是上述情况，则直接返回该项</span></span><br><span class="line">                    <span class="keyword">return</span> item;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//如果不是数字的情况下,.后面是数字,则需要去掉前面的.</span></span><br><span class="line">                <span class="keyword">if</span> (item === <span class="string">"."</span> &amp;&amp; !<span class="built_in">isNaN</span>(arr[index + <span class="number">1</span>])) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> item;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//将数组join方法变成字符串赋值给str</span></span><br><span class="line">    str = arr.join(<span class="string">""</span>);</span><br><span class="line">    <span class="comment">//将结果返回</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">eval</span>(<span class="string">'obj.'</span> + str) || <span class="string">'undefined'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>题解：</p>
 <ul>
 <li>1、首先，我们拿到题的时候，应该分析题目的目的。首先是一个object对象，然后通过parse传参的形式，将对象object和字符串作为参数传进去。返回值是获取object对象属性值，属性值存在的时候返回属性值，不存在的时候返回undefined。</li>
@@ -531,8 +532,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/03/Vue学习-钩子函数之生命周期/" rel="next" title="Vue学习-钩子函数之生命周期">
-                <i class="fa fa-chevron-left"></i> Vue学习-钩子函数之生命周期
+              <a href="/2018/09/03/watch和computed的区别/" rel="next" title="Vue中watch和computed的区别">
+                <i class="fa fa-chevron-left"></i> Vue中watch和computed的区别
               </a>
             
           </div>
@@ -541,8 +542,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/03/watch和computed的区别/" rel="prev" title="Vue中watch和computed的区别">
-                Vue中watch和computed的区别 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/04/数组去重方法汇总/" rel="prev" title="数组去重方法汇总">
+                数组去重方法汇总 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -630,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -641,7 +642,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -652,7 +653,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -784,7 +785,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共62.2k字</span>
+  <span class="post-count">博客全站共67.1k字</span>
 </div>
         
 

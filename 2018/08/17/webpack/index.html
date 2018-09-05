@@ -108,19 +108,19 @@
 
 
 
-<meta name="description" content="本文总阅读量次 什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。">
+<meta name="description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。">
 <meta name="keywords" content="前端,webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack基础">
 <meta property="og:url" content="http://yoursite.com/2018/08/17/webpack/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="本文总阅读量次 什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。">
+<meta property="og:description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/08/17/webpack/logo.png">
-<meta property="og:updated_time" content="2018-08-19T03:06:14.899Z">
+<meta property="og:updated_time" content="2018-09-05T01:20:56.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack基础">
-<meta name="twitter:description" content="本文总阅读量次 什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。  构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。">
+<meta name="twitter:description" content="什么是webpack?WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。">
 <meta name="twitter:image" content="http://yoursite.com/2018/08/17/webpack/logo.png">
 
 
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,955
+                  2,948
                 </span>
               
 
@@ -440,10 +440,11 @@
       
 
       
-        <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
-<h1 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack?"></a>什么是webpack?</h1><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p>
+        <h1 id="什么是webpack"><a href="#什么是webpack" class="headerlink" title="什么是webpack?"></a>什么是webpack?</h1><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p>
+<a id="more"></a>
 <blockquote>
-<p>构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。<br><a id="more"></a></p>
+<p>构建就是把源代码转换成发布到线上的可执行 JavaScrip、CSS、HTML 代码，包括如下内容。</p>
+</blockquote>
 <ul>
 <li><strong>代码转换:</strong> TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等。</li>
 <li><strong>文件优化:</strong> 压缩 JavaScript、CSS、HTML 代码，压缩合并图片等。</li>
@@ -453,7 +454,6 @@
 <li><strong>代码校验:</strong> 在代码被提交到仓库前需要校验代码是否符合规范，以及单元测试是否通过。</li>
 <li><strong>自动发布:</strong> 更新完代码后，自动构建出线上发布代码并传输给发布系统。</li>
 </ul>
-</blockquote>
 <p>构建其实是工程化、自动化思想在前端开发中的体现，把一系列流程用代码去实现，让代码自动化地执行这一系列复杂的流程。 构建给前端开发注入了更大的活力，解放了我们的生产力。</p>
 <h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack-public</span><br><span class="line">cd webpack-public</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
 <p>以上三条命令分别是：创建文件夹并命名为webpack-public，将文件夹添加进路径中，初始化npm。</p>
@@ -476,8 +476,9 @@
 <p>Webpack 启动后会从Entry里配置的Module开始递归解析 Entry 依赖的所有 Module。 每找到一个 Module， 就会根据配置的Loader去找出对应的转换规则，对 Module 进行转换后，再解析出当前 Module 依赖的 Module。 这些模块会以 Entry 为单位进行分组，一个 Entry 和其所有依赖的 Module 被分到一个组也就是一个 Chunk。最后 Webpack 会把所有 Chunk 转换成文件输出。 在整个流程中 Webpack 会在恰当的时机执行 Plugin 里定义的逻辑。</p>
 </blockquote>
 <h2 id="配置webpack"><a href="#配置webpack" class="headerlink" title="配置webpack"></a>配置webpack</h2><blockquote>
-<p>npm install webpack webpack-cli -D<br>在开发环境中安装webpack webpack-cli</p>
+<p>npm install webpack webpack-cli -D</p>
 </blockquote>
+<p>在开发环境中安装webpack webpack-cli</p>
 <h2 id="创建src目录"><a href="#创建src目录" class="headerlink" title="创建src目录"></a>创建src目录</h2><blockquote>
 <p>mkdir src</p>
 </blockquote>
@@ -496,7 +497,8 @@
 <h2 id="配置开发服务器"><a href="#配置开发服务器" class="headerlink" title="配置开发服务器"></a>配置开发服务器</h2><blockquote>
 <p>npm install webpack-dev-server -D</p>
 </blockquote>
-<p>尽量不要简写install为i,有可能会报这个错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code EINVALIDTAGNAME</span><br><span class="line">npm ERR! Invalid tag name <span class="string">"–D"</span>: Tags may not have any characters that e</span><br><span class="line">ncodeURIComponent encodes.</span><br><span class="line">npm ERR! A complete log <span class="keyword">of</span> <span class="keyword">this</span> run can be found <span class="keyword">in</span>:</span><br><span class="line">npm ERR!     C:\Users\User\AppData\Roaming\npm-cache\_logs\<span class="number">2018</span><span class="number">-08</span><span class="number">-17</span>T03_07_44_727Z-debug.log</span><br></pre></td></tr></table></figure></p>
+<p>尽量不要简写install为i,有可能会报这个错误</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code EINVALIDTAGNAME</span><br><span class="line">npm ERR! Invalid tag name <span class="string">"–D"</span>: Tags may not have any characters that e</span><br><span class="line">ncodeURIComponent encodes.</span><br><span class="line">npm ERR! A complete log <span class="keyword">of</span> <span class="keyword">this</span> run can be found <span class="keyword">in</span>:</span><br><span class="line">npm ERR!     C:\Users\User\AppData\Roaming\npm-cache\_logs\<span class="number">2018</span><span class="number">-08</span><span class="number">-17</span>T03_07_44_727Z-debug.log</span><br></pre></td></tr></table></figure>
 <p>在webpack.config.js文件中，找到devServer添加如下内容</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">        contentBase: path.resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">        host: <span class="string">'localhost'</span>,</span><br><span class="line">        compress: <span class="literal">true</span>,</span><br><span class="line">        port: <span class="number">8080</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <ul>
@@ -528,7 +530,8 @@
 <blockquote>
 <p>npm install html-webpack-plugin -D</p>
 </blockquote>
-<p>ps:如果报一下错误<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code EAI_AGAIN</span><br><span class="line">npm ERR! errno EAI_AGAIN</span><br><span class="line">npm ERR! request to https:<span class="comment">//registry.npmjs.org/html-webpack-plugin failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org registry.npmjs.org:443</span></span><br></pre></td></tr></table></figure></p>
+<p>ps:如果报一下错误</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm ERR! code EAI_AGAIN</span><br><span class="line">npm ERR! errno EAI_AGAIN</span><br><span class="line">npm ERR! request to https:<span class="comment">//registry.npmjs.org/html-webpack-plugin failed, reason: getaddrinfo EAI_AGAIN registry.npmjs.org registry.npmjs.org:443</span></span><br></pre></td></tr></table></figure>
 <p>则可以通过以下方法进行解决：切换淘宝镜像</p>
 <ul>
 <li>通过config命令</li>
@@ -564,19 +567,20 @@
 <ul>
 <li>mini-css-extract-plugin</li>
 <li>filename 打包入口文件</li>
-<li>chunkFilename用来打包import(‘module’)方法中引入的模块<h3 id="安装依赖模块"><a href="#安装依赖模块" class="headerlink" title="安装依赖模块"></a>安装依赖模块</h3><blockquote>
+<li>chunkFilename用来打包import(‘module’)方法中引入的模块</li>
+</ul>
+<h3 id="安装依赖模块"><a href="#安装依赖模块" class="headerlink" title="安装依赖模块"></a>安装依赖模块</h3><blockquote>
 <p>npm install –save-dev mini-css-extract-plugin</p>
 </blockquote>
-<h3 id="配置webpack-config-js-1"><a href="#配置webpack-config-js-1" class="headerlink" title="配置webpack.config.js"></a>配置webpack.config.js</h3></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">       <span class="comment">//参数类似于webpackOptions.output</span></span><br><span class="line">        <span class="keyword">new</span> MiniCssExtractPlugin(&#123;</span><br><span class="line">            filename: <span class="string">'[name].css'</span>,</span><br><span class="line">            chunkFilename:<span class="string">'[id].css'</span></span><br><span class="line">        &#125;),</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">        test: <span class="regexp">/\.css/</span>,</span><br><span class="line">        include: path.resolve(__dirname,<span class="string">'src'</span>),</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">        use: [&#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">        &#125;,<span class="string">'css-loader'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置webpack-config-js-1"><a href="#配置webpack-config-js-1" class="headerlink" title="配置webpack.config.js"></a>配置webpack.config.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">plugins: [</span><br><span class="line">       <span class="comment">//参数类似于webpackOptions.output</span></span><br><span class="line">        <span class="keyword">new</span> MiniCssExtractPlugin(&#123;</span><br><span class="line">            filename: <span class="string">'[name].css'</span>,</span><br><span class="line">            chunkFilename:<span class="string">'[id].css'</span></span><br><span class="line">        &#125;),</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">        test: <span class="regexp">/\.css/</span>,</span><br><span class="line">        include: path.resolve(__dirname,<span class="string">'src'</span>),</span><br><span class="line">        exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">        use: [&#123;</span><br><span class="line">            loader: MiniCssExtractPlugin.loader</span><br><span class="line">        &#125;,<span class="string">'css-loader'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="压缩CSS和JS"><a href="#压缩CSS和JS" class="headerlink" title="压缩CSS和JS"></a>压缩CSS和JS</h3><ul>
 <li><a href="https://github.com/webpack-contrib/uglifyjs-webpack-plugin" target="_blank" rel="noopener">uglifyjs-webpack-plugin</a></li>
-<li><a href="https://github.com/NMFR/optimize-css-assets-webpack-plugin" target="_blank" rel="noopener">optimize-css-assets-webpack-plugin</a><br>安装依赖<blockquote>
+<li><a href="https://github.com/NMFR/optimize-css-assets-webpack-plugin" target="_blank" rel="noopener">optimize-css-assets-webpack-plugin</a></li>
+</ul>
+<p>安装依赖</p>
+<blockquote>
 <p>npm install uglifyjs-webpack-plugin -D<br>npm install optimize-css-assets-webpack-plugin -D</p>
 </blockquote>
-</li>
-</ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> UglifyJSplugin=<span class="built_in">require</span>(<span class="string">'uglifyjs-webpack-plugin'</span>);</span><br><span class="line">+ <span class="keyword">const</span> OptimizeCssAssetsWebpackPlugin = <span class="built_in">require</span>(<span class="string">'optimize-css-assets-webpack-plugin'</span>);</span><br><span class="line"></span><br><span class="line">optimization: &#123;</span><br><span class="line">        minimizer: [            </span><br><span class="line">          <span class="keyword">new</span> UglifyJSplugin(&#123;</span><br><span class="line">                cache: <span class="literal">true</span>,<span class="comment">//启用缓存</span></span><br><span class="line">                parallel: <span class="literal">true</span>,<span class="comment">// 使用多进程运行改进编译速度               sourceMap:true//生成sourceMap映射文件</span></span><br><span class="line">          &#125;),</span><br><span class="line">          <span class="keyword">new</span> OptimizeCssAssetsWebpackPlugin(&#123;&#125;)</span><br><span class="line">      ]    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="CSS和image存放单独目录"><a href="#CSS和image存放单独目录" class="headerlink" title="CSS和image存放单独目录"></a>CSS和image存放单独目录</h3><ul>
 <li><strong>outputPath</strong> 输出路径</li>
@@ -773,7 +777,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -784,7 +788,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -795,7 +799,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -927,7 +931,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共62.2k字</span>
+  <span class="post-count">博客全站共67.1k字</span>
 </div>
         
 

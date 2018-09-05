@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="小柯的博客">
 <meta property="og:description" content="第一题123456789101112131415161718192021222324252627282930313233343536setTimeout(function() &amp;#123;    console.log(&apos;start&apos;); //第二步,打印&apos;start&apos;    new Promise(function(resolve, reject) &amp;#123;        resolve(t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-04T01:00:32.407Z">
+<meta property="og:updated_time" content="2018-09-05T01:29:37.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="week1面试题整理">
 <meta name="twitter:description" content="第一题123456789101112131415161718192021222324252627282930313233343536setTimeout(function() &amp;#123;    console.log(&apos;start&apos;); //第二步,打印&apos;start&apos;    new Promise(function(resolve, reject) &amp;#123;        resolve(t">
@@ -439,6 +439,7 @@
 
       
         <h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span>); <span class="comment">//第二步,打印'start'</span></span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        resolve(<span class="literal">true</span>); <span class="comment">//执行then中的resolve方法</span></span><br><span class="line">        reject(<span class="literal">false</span>); <span class="comment">//状态凝固了不执行</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>); <span class="comment">//prmise类是同步的,第三步打印1</span></span><br><span class="line">    &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        setTimeout(<span class="string">'var x=2;console.log(2);'</span>); <span class="comment">//放入宏任务中</span></span><br><span class="line">        <span class="built_in">console</span>.log(a); <span class="comment">//a未定义会报错,then中返回的promise实例，执行reject方法</span></span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        setTimeout(<span class="string">'var x=3;console.log(3)'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">    &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">5</span>); <span class="comment">//a报错之后执行，第四步打印5</span></span><br><span class="line">    &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">7</span>); <span class="comment">//放入宏任务中</span></span><br><span class="line">    &#125;, <span class="number">10</span>)</span><br><span class="line">    <span class="keyword">const</span> start = <span class="built_in">Date</span>.now();</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//放入宏任务中</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="built_in">Date</span>.now() - start &lt;= <span class="number">30</span>) &#123;&#125;</span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(x);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="number">8</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">13</span>)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'end'</span>); <span class="comment">//第一步,打印'end'</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>题解：</p>
 <ul>
 <li>1、首先两个定时器都放入宏任务中，先执行主任务中的代码，打印’end’</li>
@@ -537,6 +538,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/09/04/node-CommonJS规范/" rel="prev" title="node-CommonJS规范">
+                node-CommonJS规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -622,7 +627,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -633,7 +638,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -644,7 +649,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -776,7 +781,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共62.2k字</span>
+  <span class="post-count">博客全站共67.1k字</span>
 </div>
         
 

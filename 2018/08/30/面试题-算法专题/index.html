@@ -108,18 +108,18 @@
 
 
 
-<meta name="description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。 阐述下 use strict; 的作用use strict; 顾名思义也就是 JavaScript 会在所谓严格模式下执行，其一个主要的优势">
+<meta name="description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。">
 <meta name="keywords" content="面试题,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题-算法专题">
 <meta property="og:url" content="http://yoursite.com/2018/08/30/面试题-算法专题/index.html">
 <meta property="og:site_name" content="小柯的博客">
-<meta property="og:description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。 阐述下 use strict; 的作用use strict; 顾名思义也就是 JavaScript 会在所谓严格模式下执行，其一个主要的优势">
+<meta property="og:description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-02T00:51:54.353Z">
+<meta property="og:updated_time" content="2018-09-05T01:32:09.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题-算法专题">
-<meta name="twitter:description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。 阐述下 use strict; 的作用use strict; 顾名思义也就是 JavaScript 会在所谓严格模式下执行，其一个主要的优势">
+<meta name="twitter:description" content="阐述下 JavaScript 中的变量提升所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。">
 
 
 
@@ -438,7 +438,7 @@
       
 
       
-        <h2 id="阐述下-JavaScript-中的变量提升"><a href="#阐述下-JavaScript-中的变量提升" class="headerlink" title="阐述下 JavaScript 中的变量提升"></a>阐述下 JavaScript 中的变量提升</h2><p>所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。</p>
+        <h2 id="阐述下-JavaScript-中的变量提升"><a href="#阐述下-JavaScript-中的变量提升" class="headerlink" title="阐述下 JavaScript 中的变量提升"></a>阐述下 JavaScript 中的变量提升</h2><p>所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。<br><a id="more"></a></p>
 <h2 id="阐述下-use-strict-的作用"><a href="#阐述下-use-strict-的作用" class="headerlink" title="阐述下 use strict; 的作用"></a>阐述下 use strict; 的作用</h2><p>use strict; 顾名思义也就是 JavaScript 会在所谓严格模式下执行，其一个主要的优势在于能够强制开发者避免使用未声明的变量。对于老版本的浏览器或者执行引擎则会自动忽略该指令。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example of strict mode</span></span><br><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line">catchThemAll();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">catchThemAll</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  x = <span class="number">3.14</span>; <span class="comment">// Error will be thrown</span></span><br><span class="line">  <span class="keyword">return</span> x * x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="解释下什么是-Event-Bubbling-以及如何避免"><a href="#解释下什么是-Event-Bubbling-以及如何避免" class="headerlink" title="解释下什么是 Event Bubbling 以及如何避免"></a>解释下什么是 Event Bubbling 以及如何避免</h2><p>Event Bubbling 即指某个事件不仅会触发当前元素，还会以嵌套顺序传递到父元素中。直观而言就是对于某个子元素的点击事件同样会被父元素的点击事件处理器捕获。避免 Event Bubbling 的方式可以使用event.stopPropagation() 或者 IE 9 以下使用event.cancelBubble。</p>
@@ -522,8 +522,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/30/面试题-跨域专题/" rel="prev" title="面试题-跨域专题">
-                面试题-跨域专题 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/31/ES基础知识与高频考点梳理/" rel="prev" title="ES基础知识与高频考点梳理">
+                ES基础知识与高频考点梳理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +611,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -622,7 +622,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -633,7 +633,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -765,7 +765,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共62.2k字</span>
+  <span class="post-count">博客全站共67.1k字</span>
 </div>
         
 

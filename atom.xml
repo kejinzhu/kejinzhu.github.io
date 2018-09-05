@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-04T01:00:32.407Z</updated>
+  <updated>2018-09-05T01:15:47.474Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>react开篇序</title>
+    <link href="http://yoursite.com/2018/09/04/react%E5%BC%80%E7%AF%87%E5%BA%8F/"/>
+    <id>http://yoursite.com/2018/09/04/react开篇序/</id>
+    <published>2018-09-04T12:51:29.000Z</published>
+    <updated>2018-09-05T01:15:47.474Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;React 是Facebook公司研发的一款JS框架(MVC)&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+      <category term="react学习笔记(一)" scheme="http://yoursite.com/tags/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>react脚手架初步学习</title>
+    <link href="http://yoursite.com/2018/09/04/react%E8%84%9A%E6%89%8B%E6%9E%B6%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2018/09/04/react脚手架初步学习/</id>
+    <published>2018-09-04T12:28:27.000Z</published>
+    <updated>2018-09-05T01:15:35.204Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;react基础&quot;&gt;&lt;a href=&quot;#react基础&quot; class=&quot;headerlink&quot; title=&quot;react基础&quot;&gt;&lt;/a&gt;react基础&lt;/h1&gt;&lt;p&gt;react起源于Facebook的内部项目，因为该公司对市场上所有JavaScript MVC框架，都不满意，就决定自己写一套，用来架设Instagram的网站，做出来以后，发现这套东西很好用，就在2013年5月开源了.&lt;/p&gt;
+&lt;p&gt;MVC(Model View Controller)由数据控制视图的渲染&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="react" scheme="http://yoursite.com/categories/react/"/>
+    
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+      <category term="初步学习" scheme="http://yoursite.com/tags/%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node-CommonJS规范</title>
+    <link href="http://yoursite.com/2018/09/04/node-CommonJS%E8%A7%84%E8%8C%83/"/>
+    <id>http://yoursite.com/2018/09/04/node-CommonJS规范/</id>
+    <published>2018-09-04T11:05:51.000Z</published>
+    <updated>2018-09-05T01:13:43.416Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;node-初级玩家&quot;&gt;&lt;a href=&quot;#node-初级玩家&quot; class=&quot;headerlink&quot; title=&quot;node-初级玩家&quot;&gt;&lt;/a&gt;node-初级玩家&lt;/h2&gt;&lt;p&gt;node本身是基于commonJS模块规范设计的，所以模块是node的组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内置模块：node天生提供给JS调取使用的&lt;/li&gt;
+&lt;li&gt;第三方模块：别人写好的，我们可以基于npm安装使用&lt;/li&gt;
+&lt;li&gt;自定义模块：自己创建的一些模块&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="node" scheme="http://yoursite.com/categories/node/"/>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="commonJS规范" scheme="http://yoursite.com/tags/commonJS%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>week1面试题整理</title>
     <link href="http://yoursite.com/2018/09/04/week1%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2018/09/04/week1面试题整理/</id>
     <published>2018-09-04T00:52:52.000Z</published>
-    <updated>2018-09-04T01:00:32.407Z</updated>
+    <updated>2018-09-05T01:29:37.759Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
+      &lt;h2 id=&quot;第一题&quot;&gt;&lt;a href=&quot;#第一题&quot; class=&quot;headerlink&quot; title=&quot;第一题&quot;&gt;&lt;/a&gt;第一题&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;start&#39;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//第二步,打印&#39;start&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;resolve, reject&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        resolve(&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//执行then中的resolve方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        reject(&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//状态凝固了不执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//prmise类是同步的,第三步打印1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;).then(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        setTimeout(&lt;span class=&quot;string&quot;&gt;&#39;var x=2;console.log(2);&#39;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//放入宏任务中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;//a未定义会报错,then中返回的promise实例，执行reject方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        setTimeout(&lt;span class=&quot;string&quot;&gt;&#39;var x=3;console.log(3)&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;).then(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//a报错之后执行，第四步打印5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;).catch(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; timer = setInterval(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//放入宏任务中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; start = &lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;.now();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;comment&quot;&gt;//放入宏任务中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (&lt;span class=&quot;built_in&quot;&gt;Date&lt;/span&gt;.now() - start &amp;lt;= &lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;) &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        clearTimeout(timer);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125; &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (e) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;, &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;end&#39;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//第一步,打印&#39;end&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -49,17 +114,12 @@
     <link href="http://yoursite.com/2018/09/04/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/"/>
     <id>http://yoursite.com/2018/09/04/数组去重方法汇总/</id>
     <published>2018-09-04T00:47:33.000Z</published>
-    <updated>2018-09-04T00:51:35.759Z</updated>
+    <updated>2018-09-05T01:30:23.699Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;基本方法&quot;&gt;&lt;a href=&quot;#基本方法&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;基本方法&quot;&gt;&lt;a href=&quot;#基本方法&quot; class=&quot;headerlink&quot; title=&quot;基本方法&quot;&gt;&lt;/a&gt;基本方法&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;思路：创建一个新数组，遍历原数组，若遍历元素在新数组不存在就添加到数组中，反正则忽略&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
@@ -74,48 +134,14 @@
   
   <entry>
     <title>Vue中watch和computed的区别</title>
-    <link href="http://yoursite.com/2018/09/03/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://yoursite.com/2018/09/03/watch和computed的区别/</id>
-    <published>2018-09-03T07:11:45.000Z</published>
-    <updated>2018-09-03T09:02:43.876Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;computed和watch的区别&quot;&gt;&lt;a href=&quot;#computed和watch的区别&quot; class=&quot;headerlink&quot; title=&quot;computed和watch的区别&quot;&gt;&lt;/a&gt;computed和watch的区别&lt;/h1&gt;&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="Vue学习笔记" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="computed和watch的区别" scheme="http://yoursite.com/tags/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue中watch和computed的区别</title>
     <link href="http://yoursite.com/2018/09/03/week2%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2018/09/03/week2面试题整理/</id>
     <published>2018-09-03T07:11:45.000Z</published>
-    <updated>2018-09-04T01:00:49.627Z</updated>
+    <updated>2018-09-05T01:29:51.107Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;题目：请实现方法-parse-，作用如下：&quot;&gt;&lt;a href=&quot;#题目：请实现方法-parse-，作用如下：&quot; class=&quot;headerlink&quot; title=&quot;题目：请实现方法 parse ，作用如下：&quot;&gt;&lt;/a&gt;题目：请实现方法 parse
-        
-      
+      &lt;h2 id=&quot;题目：请实现方法-parse-，作用如下：&quot;&gt;&lt;a href=&quot;#题目：请实现方法-parse-，作用如下：&quot; class=&quot;headerlink&quot; title=&quot;题目：请实现方法 parse ，作用如下：&quot;&gt;&lt;/a&gt;题目：请实现方法 parse ，作用如下：&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; object = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    b: &amp;#123; &lt;span class=&quot;attr&quot;&gt;c&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    d: [&amp;#123; &lt;span class=&quot;attr&quot;&gt;e&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &amp;#125;, &amp;#123; &lt;span class=&quot;attr&quot;&gt;e&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt; &amp;#125;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;b.c&#39;&lt;/span&gt;) == &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;d[0].e&#39;&lt;/span&gt;) == &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;d.0.e&#39;&lt;/span&gt;) == &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;d[1].e&#39;&lt;/span&gt;) == &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;d.1.e&#39;&lt;/span&gt;) == &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(parse(object, &lt;span class=&quot;string&quot;&gt;&#39;f&#39;&lt;/span&gt;) == &lt;span class=&quot;string&quot;&gt;&#39;undefined&#39;&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;parse&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;obj, str&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = str.split(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;); &lt;span class=&quot;comment&quot;&gt;//将字符串分割，放进数组中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    arr = arr.map(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;item, index&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!&lt;span class=&quot;built_in&quot;&gt;isNaN&lt;/span&gt;(item)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;comment&quot;&gt;//判断是否是数字&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (arr[index - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] != &lt;span class=&quot;string&quot;&gt;&#39;[&#39;&lt;/span&gt; &amp;amp;&amp;amp; arr[index + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] != &lt;span class=&quot;string&quot;&gt;&#39;]&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;comment&quot;&gt;//如果前后没有,则返回[item]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;[&quot;&lt;/span&gt; + item + &lt;span class=&quot;string&quot;&gt;&quot;]&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;comment&quot;&gt;//如果不是上述情况，则直接返回该项&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; item;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;comment&quot;&gt;//如果不是数字的情况下,.后面是数字,则需要去掉前面的.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (item === &lt;span class=&quot;string&quot;&gt;&quot;.&quot;&lt;/span&gt; &amp;amp;&amp;amp; !&lt;span class=&quot;built_in&quot;&gt;isNaN&lt;/span&gt;(arr[index + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;])) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; item;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//将数组join方法变成字符串赋值给str&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    str = arr.join(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//将结果返回&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;eval&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;obj.&#39;&lt;/span&gt; + str) || &lt;span class=&quot;string&quot;&gt;&#39;undefined&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -129,143 +155,26 @@
   </entry>
   
   <entry>
-    <title>Vue学习-钩子函数之生命周期</title>
-    <link href="http://yoursite.com/2018/09/03/Vue%E5%AD%A6%E4%B9%A0-%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0%E4%B9%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    <id>http://yoursite.com/2018/09/03/Vue学习-钩子函数之生命周期/</id>
-    <published>2018-09-03T02:32:20.000Z</published>
-    <updated>2018-09-03T02:37:30.953Z</updated>
+    <title>Vue中watch和computed的区别</title>
+    <link href="http://yoursite.com/2018/09/03/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2018/09/03/watch和computed的区别/</id>
+    <published>2018-09-03T07:11:45.000Z</published>
+    <updated>2018-09-05T01:17:26.539Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期&quot; class=&quot;headerlink&quot; title=&quot;生命周期&quot;&gt;&lt;/a&gt;生命周期&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;beforeCreate
-        
-      
+      &lt;h1 id=&quot;computed和watch的区别&quot;&gt;&lt;a href=&quot;#computed和watch的区别&quot; class=&quot;headerlink&quot; title=&quot;computed和watch的区别&quot;&gt;&lt;/a&gt;computed和watch的区别&lt;/h1&gt;&lt;h2 id=&quot;从属性名上分析&quot;&gt;&lt;a href=&quot;#从属性名上分析&quot; class=&quot;headerlink&quot; title=&quot;从属性名上分析&quot;&gt;&lt;/a&gt;从属性名上分析&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;watch是去监听一个值的变化，然后执行相对应的函数。&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="Vue学习笔记" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+      <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="生命周期" scheme="http://yoursite.com/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue学习之-双向数据绑定原理</title>
-    <link href="http://yoursite.com/2018/09/01/Vue%E5%AD%A6%E4%B9%A0%E4%B9%8B-%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2018/09/01/Vue学习之-双向数据绑定原理/</id>
-    <published>2018-09-01T04:50:33.000Z</published>
-    <updated>2018-09-01T04:50:34.009Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>项目细节点梳理</title>
-    <link href="http://yoursite.com/2018/08/31/%E9%A1%B9%E7%9B%AE%E7%BB%86%E8%8A%82%E7%82%B9%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/31/项目细节点梳理/</id>
-    <published>2018-08-31T09:13:26.000Z</published>
-    <updated>2018-08-31T09:13:26.222Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于软技能的问题要点</title>
-    <link href="http://yoursite.com/2018/08/31/%E5%85%B3%E4%BA%8E%E8%BD%AF%E6%8A%80%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98%E8%A6%81%E7%82%B9/"/>
-    <id>http://yoursite.com/2018/08/31/关于软技能的问题要点/</id>
-    <published>2018-08-31T09:13:04.000Z</published>
-    <updated>2018-08-31T09:13:04.540Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>开发环境知识点与高频考点梳理</title>
-    <link href="http://yoursite.com/2018/08/31/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/31/开发环境知识点与高频考点梳理/</id>
-    <published>2018-08-31T09:12:47.000Z</published>
-    <updated>2018-08-31T09:12:47.392Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>浏览器相关知识点与高频考点梳理</title>
-    <link href="http://yoursite.com/2018/08/31/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/31/浏览器相关知识点与高频考点梳理/</id>
-    <published>2018-08-31T09:12:23.000Z</published>
-    <updated>2018-08-31T09:12:23.663Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>从容应对算法题目</title>
-    <link href="http://yoursite.com/2018/08/31/%E4%BB%8E%E5%AE%B9%E5%BA%94%E5%AF%B9%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE/"/>
-    <id>http://yoursite.com/2018/08/31/从容应对算法题目/</id>
-    <published>2018-08-31T09:12:03.000Z</published>
-    <updated>2018-08-31T09:12:03.955Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS-HTML知识点与高频考点梳理</title>
-    <link href="http://yoursite.com/2018/08/31/CSS-HTML%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/31/CSS-HTML知识点与高频考点梳理/</id>
-    <published>2018-08-31T09:11:40.000Z</published>
-    <updated>2018-08-31T09:11:40.393Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS-Web-API知识点与高频考点梳理</title>
-    <link href="http://yoursite.com/2018/08/31/JS-Web-API%E7%9F%A5%E8%AF%86%E7%82%B9%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
-    <id>http://yoursite.com/2018/08/31/JS-Web-API知识点与高频考点梳理/</id>
-    <published>2018-08-31T09:11:22.000Z</published>
-    <updated>2018-08-31T09:11:22.353Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
+      <category term="computed和watch的区别" scheme="http://yoursite.com/tags/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
     
   </entry>
   
@@ -274,17 +183,42 @@
     <link href="http://yoursite.com/2018/08/31/ES%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%8E%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9%E6%A2%B3%E7%90%86/"/>
     <id>http://yoursite.com/2018/08/31/ES基础知识与高频考点梳理/</id>
     <published>2018-08-31T09:10:56.000Z</published>
-    <updated>2018-08-31T11:52:20.736Z</updated>
+    <updated>2018-09-05T01:08:43.511Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;知识点梳理目录列表&quot;&gt;&lt;a href=&quot;#知识点梳理目录列表&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;知识点梳理目录列表&quot;&gt;&lt;a href=&quot;#知识点梳理目录列表&quot; class=&quot;headerlink&quot; title=&quot;知识点梳理目录列表&quot;&gt;&lt;/a&gt;知识点梳理目录列表&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;变量类型&lt;ul&gt;
+&lt;li&gt;JS的数据类型分类和判断&lt;/li&gt;
+&lt;li&gt;值类型和引用类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;原型与原型链(继承)&lt;ul&gt;
+&lt;li&gt;原型和原型链的定义&lt;/li&gt;
+&lt;li&gt;继承写法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;作用域和闭包&lt;ul&gt;
+&lt;li&gt;执行上下文&lt;/li&gt;
+&lt;li&gt;this&lt;/li&gt;
+&lt;li&gt;闭包是什么&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;异步&lt;ul&gt;
+&lt;li&gt;同步VS异步&lt;/li&gt;
+&lt;li&gt;异步和单线程&lt;/li&gt;
+&lt;li&gt;前端异步的场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ES6/7新标准的考查&lt;ul&gt;
+&lt;li&gt;箭头函数&lt;/li&gt;
+&lt;li&gt;module&lt;/li&gt;
+&lt;li&gt;class&lt;/li&gt;
+&lt;li&gt;set和map&lt;/li&gt;
+&lt;li&gt;promise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -298,49 +232,15 @@
   </entry>
   
   <entry>
-    <title>面试题-react专题</title>
-    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-react%E4%B8%93%E9%A2%98/"/>
-    <id>http://yoursite.com/2018/08/30/面试题-react专题/</id>
-    <published>2018-08-30T15:49:26.000Z</published>
-    <updated>2018-08-30T15:49:26.272Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>面试题-跨域专题</title>
-    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E8%B7%A8%E5%9F%9F%E4%B8%93%E9%A2%98/"/>
-    <id>http://yoursite.com/2018/08/30/面试题-跨域专题/</id>
-    <published>2018-08-30T15:49:02.000Z</published>
-    <updated>2018-08-30T15:49:02.085Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>面试题-算法专题</title>
     <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-%E7%AE%97%E6%B3%95%E4%B8%93%E9%A2%98/"/>
     <id>http://yoursite.com/2018/08/30/面试题-算法专题/</id>
     <published>2018-08-30T15:48:17.000Z</published>
-    <updated>2018-09-02T00:51:54.353Z</updated>
+    <updated>2018-09-05T01:32:09.669Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;阐述下-JavaScript-中的变量提升&quot;&gt;&lt;a href=&quot;#阐述下-JavaScript-中的变量提升&quot; class=&quot;headerlink&quot; title=&quot;阐述下 JavaScript 中的变量提升&quot;&gt;&lt;/a&gt;阐述下 JavaScript
-        
-      
+      &lt;h2 id=&quot;阐述下-JavaScript-中的变量提升&quot;&gt;&lt;a href=&quot;#阐述下-JavaScript-中的变量提升&quot; class=&quot;headerlink&quot; title=&quot;阐述下 JavaScript 中的变量提升&quot;&gt;&lt;/a&gt;阐述下 JavaScript 中的变量提升&lt;/h2&gt;&lt;p&gt;所谓提升，顾名思义即是 JavaScript 会将所有的声明提升到当前作用域的顶部。这也就意味着我们可以在某个变量声明前就使用该变量，不过虽然 JavaScript 会将声明提升到顶部，但是并不会执行真的初始化过程。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -460,6 +360,204 @@
       <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
       <category term="CSS专题" scheme="http://yoursite.com/tags/CSS%E4%B8%93%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-HTML专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-HTML%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-HTML专题/</id>
+    <published>2018-08-30T15:46:07.000Z</published>
+    <updated>2018-09-03T11:48:26.074Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;常用哪几种浏览器测试？有哪些内核-Layout-Engine&quot;&gt;&lt;a href=&quot;#常用哪几种浏览器测试？有哪些内核-Layout-Engine&quot; class=&quot;headerlink&quot; title=&quot;常用哪几种浏览器测试？有哪些内核(Layout Engine)?&quot;&gt;&lt;/a&gt;常用哪几种浏览器测试？有哪些内核(Layout Engine)?&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt; 浏览器：&lt;/strong&gt;IE,Chrome,FireFox,Safari,Opera&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt; 内核：&lt;/strong&gt;Trident,Gecko,Presto,Webkit。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt; 详细介绍 &lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trident内核代表产品Internet Explorer，又称其为IE内核。Trident（又称为MSHTML），是微软开发的一种排版引擎。使用Trident渲染引擎的浏览器包括：IE、傲游、世界之窗浏览器、Avant、腾讯TT、Netscape 8、NetCaptor、Sleipnir、GOSURF、GreenBrowser和KKman等。&lt;/li&gt;
+&lt;li&gt;Gecko内核代表作品Mozilla FirefoxGecko是一套开放源代码的、以C++编写的网页排版引擎。Gecko是最流行的排版引擎之一，仅次于Trident。使用它的最著名浏览器有Firefox、Netscape6至9。&lt;/li&gt;
+&lt;li&gt;WebKit内核代表作品Safari、Chromewebkit 是一个开源项目，包含了来自KDE项目和苹果公司的一些组件，主要用于Mac OS系统，它的特点在于源码结构清晰、渲染速度极快。缺点是对网页代码的兼容性不高，导致一些编写不标准的网页无法正常显示。主要代表作品有Safari和Google的浏览器Chrome。&lt;/li&gt;
+&lt;li&gt;Presto内核代表作品OperaPresto是由Opera Software开发的浏览器排版引擎，供Opera 7.0及以上使用。它取代了旧版Opera 4至6版本使用的Elektra排版引擎，包括加入动态功能，例如网页或其部分可随着DOM及Script语法的事件而重新排版。&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="HTML专题" scheme="http://yoursite.com/tags/HTML%E4%B8%93%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题-JavaScript专题</title>
+    <link href="http://yoursite.com/2018/08/30/%E9%9D%A2%E8%AF%95%E9%A2%98-JavaScript%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/30/面试题-JavaScript专题/</id>
+    <published>2018-08-30T15:45:52.000Z</published>
+    <updated>2018-09-03T14:33:09.521Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;介绍js的基本数据类型&quot;&gt;&lt;a href=&quot;#介绍js的基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;介绍js的基本数据类型&quot;&gt;&lt;/a&gt;介绍js的基本数据类型&lt;/h2&gt;&lt;p&gt;undefined、null、boolean、number、string&lt;/p&gt;
+&lt;h2 id=&quot;js有哪些内置对象？&quot;&gt;&lt;a href=&quot;#js有哪些内置对象？&quot; class=&quot;headerlink&quot; title=&quot;js有哪些内置对象？&quot;&gt;&lt;/a&gt;js有哪些内置对象？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;数据封装类对象：Object、Array、Boolean、Number 和 String&lt;/li&gt;
+&lt;li&gt;其他对象：Function、Arguments、Math、Date、RegExp、Error&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;this对象的理解&quot;&gt;&lt;a href=&quot;#this对象的理解&quot; class=&quot;headerlink&quot; title=&quot;this对象的理解&quot;&gt;&lt;/a&gt;this对象的理解&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;this总是指向函数的直接调用者（而非间接调用者）；&lt;/li&gt;
+&lt;li&gt;如果有new关键字，this指向new出来的那个对象；&lt;/li&gt;
+&lt;li&gt;在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+      <category term="JavaScript专题" scheme="http://yoursite.com/tags/JavaScript%E4%B8%93%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组常见方法的使用及其封装</title>
+    <link href="http://yoursite.com/2018/08/26/%E6%95%B0%E7%BB%84%E5%B8%B8%E8%A7%81%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%85%B6%E5%B0%81%E8%A3%85/"/>
+    <id>http://yoursite.com/2018/08/26/数组常见方法的使用及其封装/</id>
+    <published>2018-08-26T01:31:47.000Z</published>
+    <updated>2018-09-05T01:30:10.926Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;push&quot;&gt;&lt;a href=&quot;#push&quot; class=&quot;headerlink&quot; title=&quot;push&quot;&gt;&lt;/a&gt;push&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;向数组末尾新增一项；&lt;/li&gt;
+&lt;li&gt;参数是新增的那一项;可以传多个；&lt;/li&gt;
+&lt;li&gt;新数组的数组成员的个数；&lt;/li&gt;
+&lt;li&gt;原有数组发生改变；&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="数组" scheme="http://yoursite.com/categories/%E6%95%B0%E7%BB%84/"/>
+    
+    
+      <category term="数组方法" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/"/>
+    
+      <category term="封装" scheme="http://yoursite.com/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端经典面试题</title>
+    <link href="http://yoursite.com/2018/08/21/%E5%89%8D%E7%AB%AF%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/08/21/前端经典面试题/</id>
+    <published>2018-08-21T08:12:26.000Z</published>
+    <updated>2018-08-21T09:29:24.710Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h1&gt;&lt;h2 id=&quot;原型&quot;&gt;&lt;a href=&quot;#原型&quot; class=&quot;headerlink&quot; title=&quot;原型&quot;&gt;&lt;/a&gt;原型&lt;/h2&gt;&lt;p&gt;我们创建的每一个函数，都可以有一个prototype属性，该属性指向一个对象。这个对象，就是原型。 当我们在创建对象时，可以根据自己的需求，选择性的将一些属性和方法通过prototype属性，挂载在原型对象上。而每一个new出来的实例，都有一个proto属性，该属性指向构造函数的原型对象，通过这个属性，让实例对象也能够访问原型对象上的方法。因此，当所有的实例都能够通过proto访问到原型对象时，原型对象的方法与属性就变成了共有方法与属性。&lt;br&gt;// 声明构造函数 &lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Person&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;name, age&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name = name; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.age = age; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;// 通过prototye属性，将方法挂载到原型对象上 &lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Person.prototype.getName = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p1 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Person(&lt;span class=&quot;string&quot;&gt;&#39;tim&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;); &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p2 = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Person(&lt;span class=&quot;string&quot;&gt;&#39;jak&#39;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(p1.getName === p2.getName); &lt;span class=&quot;comment&quot;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;通过图示我们可以看出，构造函数的prototype与所有实例对象的proto都指向原型对象。而原型对象的constructor指向构造函数。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端 面试题" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF-%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试题" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git常用命令清单</title>
+    <link href="http://yoursite.com/2018/08/18/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95/"/>
+    <id>http://yoursite.com/2018/08/18/git常用命令清单/</id>
+    <published>2018-08-18T15:43:00.000Z</published>
+    <updated>2018-09-05T01:11:56.389Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git有几十上百个命令，但是我们经常用到的也就那么几个基本的,要想真正熟练，还要记住更多的命令。下面基于常用的命令做一下总结。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git&amp;github" scheme="http://yoursite.com/categories/git-github/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECharts使用过程遇到的问题汇总</title>
+    <link href="http://yoursite.com/2018/08/18/ECharts%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>http://yoursite.com/2018/08/18/ECharts使用过程遇到的问题汇总/</id>
+    <published>2018-08-18T03:18:30.000Z</published>
+    <updated>2018-09-05T01:07:58.656Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;获取ECharts&quot;&gt;&lt;a href=&quot;#获取ECharts&quot; class=&quot;headerlink&quot; title=&quot;获取ECharts&quot;&gt;&lt;/a&gt;获取ECharts&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;npm install echarts –save&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="前端 ECharts" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF-ECharts/"/>
+    
+    
+      <category term="ECharts" scheme="http://yoursite.com/tags/ECharts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node基础</title>
+    <link href="http://yoursite.com/2018/08/17/node%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/08/17/node基础/</id>
+    <published>2018-08-17T07:56:44.000Z</published>
+    <updated>2018-09-05T01:14:41.416Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;node的基本概念&quot;&gt;&lt;a href=&quot;#node的基本概念&quot; class=&quot;headerlink&quot; title=&quot;node的基本概念&quot;&gt;&lt;/a&gt;node的基本概念&lt;/h1&gt;&lt;h2 id=&quot;node能够解决什么问题？&quot;&gt;&lt;a href=&quot;#node能够解决什么问题？&quot; class=&quot;headerlink&quot; title=&quot;node能够解决什么问题？&quot;&gt;&lt;/a&gt;node能够解决什么问题？&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;node的首要目标是提供一种简单的，用于创建高性能的服务器的开发工具&lt;/li&gt;
+&lt;li&gt;web服务器的瓶颈在于并发的用户量，对比Java和PHP的实现方式&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="node" scheme="http://yoursite.com/categories/node/"/>
+    
+      <category term="后端" scheme="http://yoursite.com/categories/node/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack基础</title>
+    <link href="http://yoursite.com/2018/08/17/webpack/"/>
+    <id>http://yoursite.com/2018/08/17/webpack/</id>
+    <published>2018-08-17T02:07:55.000Z</published>
+    <updated>2018-09-05T01:20:56.054Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;什么是webpack&quot;&gt;&lt;a href=&quot;#什么是webpack&quot; class=&quot;headerlink&quot; title=&quot;什么是webpack?&quot;&gt;&lt;/a&gt;什么是webpack?&lt;/h1&gt;&lt;p&gt;WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
     
   </entry>
   
