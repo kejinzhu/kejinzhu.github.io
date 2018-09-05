@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-05T01:15:47.474Z</updated>
+  <updated>2018-09-05T05:01:50.020Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue学习笔记之组件(一)</title>
+    <link href="http://yoursite.com/2018/09/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%BB%84%E4%BB%B6(%E4%B8%80)/"/>
+    <id>http://yoursite.com/2018/09/05/Vue学习笔记之组件(一)/</id>
+    <published>2018-09-05T04:54:23.000Z</published>
+    <updated>2018-09-05T05:01:50.020Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;组件&quot;&gt;&lt;a href=&quot;#组件&quot; class=&quot;headerlink&quot; title=&quot;组件&quot;&gt;&lt;/a&gt;组件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;组件：把页面中公共部分提炼出来，可以进行复用&lt;/li&gt;
+&lt;li&gt;每一个组件都是一个Vue实例;那么具有生命周期;并且也有data、computed、methods、watch这些属性，每个组件都有自己独立维护的数据;&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="组件" scheme="http://yoursite.com/tags/%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue学习笔记之生命周期</title>
+    <link href="http://yoursite.com/2018/09/05/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>http://yoursite.com/2018/09/05/Vue学习笔记之生命周期/</id>
+    <published>2018-09-05T02:36:04.000Z</published>
+    <updated>2018-09-05T04:48:52.190Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期&quot; class=&quot;headerlink&quot; title=&quot;生命周期&quot;&gt;&lt;/a&gt;生命周期&lt;/h2&gt;&lt;p&gt;概念：&lt;/p&gt;
+&lt;p&gt;生命周期：Vue的实例具有生命周期;Vue实例在生成时,会经历一系列的初始化过程;数据的监听,编译模板,实例挂载DOM元素,或者数据更新DOM更新;在执行的过程中,会运行一些叫做 &lt;code&gt;生命周期&lt;/code&gt; 的钩子函数;在Vue实例生命周期中的特定的时间点内,执行的函数&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="生命周期" scheme="http://yoursite.com/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>react开篇序</title>
@@ -92,7 +139,7 @@
     <link href="http://yoursite.com/2018/09/04/week1%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2018/09/04/week1面试题整理/</id>
     <published>2018-09-04T00:52:52.000Z</published>
-    <updated>2018-09-05T01:29:37.759Z</updated>
+    <updated>2018-09-05T07:17:56.534Z</updated>
     
     <summary type="html">
     
@@ -133,11 +180,11 @@
   </entry>
   
   <entry>
-    <title>Vue中watch和computed的区别</title>
+    <title>week2面试题</title>
     <link href="http://yoursite.com/2018/09/03/week2%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/"/>
     <id>http://yoursite.com/2018/09/03/week2面试题整理/</id>
     <published>2018-09-03T07:11:45.000Z</published>
-    <updated>2018-09-05T01:29:51.107Z</updated>
+    <updated>2018-09-05T07:19:00.179Z</updated>
     
     <summary type="html">
     
@@ -156,10 +203,10 @@
   
   <entry>
     <title>Vue中watch和computed的区别</title>
-    <link href="http://yoursite.com/2018/09/03/watch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://yoursite.com/2018/09/03/watch和computed的区别/</id>
+    <link href="http://yoursite.com/2018/09/03/Vue%E4%B8%ADwatch%E5%92%8Ccomputed%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://yoursite.com/2018/09/03/Vue中watch和computed的区别/</id>
     <published>2018-09-03T07:11:45.000Z</published>
-    <updated>2018-09-05T01:17:26.539Z</updated>
+    <updated>2018-09-05T04:55:55.660Z</updated>
     
     <summary type="html">
     
@@ -169,7 +216,7 @@
     
     </summary>
     
-      <category term="Vue学习笔记" scheme="http://yoursite.com/categories/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
     
     
       <category term="Vue学习笔记" scheme="http://yoursite.com/tags/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
@@ -512,52 +559,6 @@
     
     
       <category term="ECharts" scheme="http://yoursite.com/tags/ECharts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node基础</title>
-    <link href="http://yoursite.com/2018/08/17/node%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2018/08/17/node基础/</id>
-    <published>2018-08-17T07:56:44.000Z</published>
-    <updated>2018-09-05T01:14:41.416Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;node的基本概念&quot;&gt;&lt;a href=&quot;#node的基本概念&quot; class=&quot;headerlink&quot; title=&quot;node的基本概念&quot;&gt;&lt;/a&gt;node的基本概念&lt;/h1&gt;&lt;h2 id=&quot;node能够解决什么问题？&quot;&gt;&lt;a href=&quot;#node能够解决什么问题？&quot; class=&quot;headerlink&quot; title=&quot;node能够解决什么问题？&quot;&gt;&lt;/a&gt;node能够解决什么问题？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;node的首要目标是提供一种简单的，用于创建高性能的服务器的开发工具&lt;/li&gt;
-&lt;li&gt;web服务器的瓶颈在于并发的用户量，对比Java和PHP的实现方式&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="node" scheme="http://yoursite.com/categories/node/"/>
-    
-      <category term="后端" scheme="http://yoursite.com/categories/node/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>webpack基础</title>
-    <link href="http://yoursite.com/2018/08/17/webpack/"/>
-    <id>http://yoursite.com/2018/08/17/webpack/</id>
-    <published>2018-08-17T02:07:55.000Z</published>
-    <updated>2018-09-05T01:20:56.054Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;什么是webpack&quot;&gt;&lt;a href=&quot;#什么是webpack&quot; class=&quot;headerlink&quot; title=&quot;什么是webpack?&quot;&gt;&lt;/a&gt;什么是webpack?&lt;/h1&gt;&lt;p&gt;WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="webpack" scheme="http://yoursite.com/tags/webpack/"/>
     
   </entry>
   

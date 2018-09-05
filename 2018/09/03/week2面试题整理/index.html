@@ -111,14 +111,14 @@
 <meta name="description" content="题目：请实现方法 parse ，作用如下：1234567891011121314151617181920212223242526272829303132333435var object = &amp;#123;    b: &amp;#123; c: 4 &amp;#125;,    d: [&amp;#123; e: 5 &amp;#125;, &amp;#123; e: 6 &amp;#125;]&amp;#125;;console.log(parse(o">
 <meta name="keywords" content="面试题,第二周面试题整理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue中watch和computed的区别">
+<meta property="og:title" content="week2面试题">
 <meta property="og:url" content="http://yoursite.com/2018/09/03/week2面试题整理/index.html">
 <meta property="og:site_name" content="小柯的博客">
 <meta property="og:description" content="题目：请实现方法 parse ，作用如下：1234567891011121314151617181920212223242526272829303132333435var object = &amp;#123;    b: &amp;#123; c: 4 &amp;#125;,    d: [&amp;#123; e: 5 &amp;#125;, &amp;#123; e: 6 &amp;#125;]&amp;#125;;console.log(parse(o">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-05T01:29:51.107Z">
+<meta property="og:updated_time" content="2018-09-05T07:19:00.179Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue中watch和computed的区别">
+<meta name="twitter:title" content="week2面试题">
 <meta name="twitter:description" content="题目：请实现方法 parse ，作用如下：1234567891011121314151617181920212223242526272829303132333435var object = &amp;#123;    b: &amp;#123; c: 4 &amp;#125;,    d: [&amp;#123; e: 5 &amp;#125;, &amp;#123; e: 6 &amp;#125;]&amp;#125;;console.log(parse(o">
 
 
@@ -155,7 +155,7 @@
 
 
 
-  <title>Vue中watch和computed的区别 | 小柯的博客</title>
+  <title>week2面试题 | 小柯的博客</title>
   
 
 
@@ -335,7 +335,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Vue中watch和computed的区别</h2>
+          <h2 class="post-title" itemprop="name headline">week2面试题</h2>
         
 
         <div class="post-meta">
@@ -445,17 +445,16 @@
 <li>1、首先，我们拿到题的时候，应该分析题目的目的。首先是一个object对象，然后通过parse传参的形式，将对象object和字符串作为参数传进去。返回值是获取object对象属性值，属性值存在的时候返回属性值，不存在的时候返回undefined。</li>
 <li>2、获取属性值有两种方式：object[属性名]或者object.属性名，但是属性名是数字的时候只能采用第一种方式。所以我们要对这种情况进行讨论。</li>
 <li>3、下面我们要讨论的就是数字这种情况的，分析数字前后有没有[]，如果有，那么我们不需要做什么，直接返回，如果数字前后没有[],那么我们是需要手动给数字前后加上[],并且把前面的’.’去掉。</li>
-<li><p>4、分析好上述情况之后，我们代码实现：首先传入obj,str</p>
-<ul>
+<li>4、分析好上述情况之后，我们代码实现：首先传入obj,str<ul>
 <li>4.1、我们将str.split(“”)，放入数组中，然后采用数组的map方法进行遍历，分两种情况，是数字，和不是数字</li>
 <li>4.2、是数字中，又分为数字前后有没有[],没有就添加上再返回，有就直接返回</li>
 <li>4.3、不是数字的话，如果是’.’,则需要判断’.’后面是否是数字，如果是数字，就返回空字符串</li>
 <li>4.4、将map映射后的数组重新赋值给arr，最后用arr.join(“”)拼接之后转字符串再赋值给str</li>
 <li>4.5、最后我们需要运算之后，将属性值返回来，字符串的运算，我们采用eval来运算。</li>
 </ul>
-<h2 id="题目：请写出如下输出值-并写出把注释掉的代码取消注释的值，并解释为什么？"><a href="#题目：请写出如下输出值-并写出把注释掉的代码取消注释的值，并解释为什么？" class="headerlink" title="题目：请写出如下输出值,并写出把注释掉的代码取消注释的值，并解释为什么？"></a>题目：请写出如下输出值,并写出把注释掉的代码取消注释的值，并解释为什么？</h2></li>
+</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.a = <span class="number">20</span>; <span class="comment">//给window新增一个属性a,并赋给属性值20</span></span><br><span class="line"><span class="keyword">var</span> test = &#123;</span><br><span class="line">    a: <span class="number">40</span>,</span><br><span class="line">    init: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">//箭头函数没有this，会向上级作用域找，上级作用域是window，所以这里打印的this.a其实是window.a，打出属性值20</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">go</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//this.a = 60;</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">//this指向实例,因为是new执行的,原型上有a=50，打印50。如果解开注释的话，自己私有属性有，就找自己私有属性，打印60</span></span><br><span class="line">        &#125;</span><br><span class="line">        go.prototype.a = <span class="number">50</span>;</span><br><span class="line">        <span class="keyword">return</span> go;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//var p = test.init();</span></span><br><span class="line"><span class="comment">//p();//这里执行的话，go中的this指向window，</span></span><br><span class="line"><span class="keyword">new</span>(test.init())();</span><br></pre></td></tr></table></figure>
+<h2 id="题目：请写出如下输出值-并写出把注释掉的代码取消注释的值，并解释为什么？"><a href="#题目：请写出如下输出值-并写出把注释掉的代码取消注释的值，并解释为什么？" class="headerlink" title="题目：请写出如下输出值,并写出把注释掉的代码取消注释的值，并解释为什么？"></a>题目：请写出如下输出值,并写出把注释掉的代码取消注释的值，并解释为什么？</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.a = <span class="number">20</span>; <span class="comment">//给window新增一个属性a,并赋给属性值20</span></span><br><span class="line"><span class="keyword">var</span> test = &#123;</span><br><span class="line">    a: <span class="number">40</span>,</span><br><span class="line">    init: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">//箭头函数没有this，会向上级作用域找，上级作用域是window，所以这里打印的this.a其实是window.a，打出属性值20</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">go</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//this.a = 60;</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">//this指向实例,因为是new执行的,原型上有a=50，打印50。如果解开注释的话，自己私有属性有，就找自己私有属性，打印60</span></span><br><span class="line">        &#125;</span><br><span class="line">        go.prototype.a = <span class="number">50</span>;</span><br><span class="line">        <span class="keyword">return</span> go;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//var p = test.init();</span></span><br><span class="line"><span class="comment">//p();//这里执行的话，go中的this指向window，</span></span><br><span class="line"><span class="keyword">new</span>(test.init())();</span><br></pre></td></tr></table></figure>
 <p>我们从上到下一行一行分析：</p>
 <ul>
 <li>1、this.a当前作用域是window，所以执行这句话的时候相当于给window新增了键值对a:20</li>
@@ -532,7 +531,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/03/watch和computed的区别/" rel="next" title="Vue中watch和computed的区别">
+              <a href="/2018/09/03/Vue中watch和computed的区别/" rel="next" title="Vue中watch和computed的区别">
                 <i class="fa fa-chevron-left"></i> Vue中watch和computed的区别
               </a>
             
@@ -631,7 +630,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +652,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -785,7 +784,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共67.1k字</span>
+  <span class="post-count">博客全站共68.0k字</span>
 </div>
         
 
