@@ -242,6 +242,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -304,191 +314,6 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/axios学习笔记一/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/15/axios学习笔记一/" itemprop="url">axios学习笔记一</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-15T20:50:33+08:00">
-                2018-09-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/axios/" itemprop="url" rel="index">
-                    <span itemprop="name">axios</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  285
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="axios基础语法"><a href="#axios基础语法" class="headerlink" title="axios基础语法"></a>axios基础语法</h2><p>axios:它是一个类库,基于promise管理的ajax库</p>
-<p>1、提供了对应请求方式的方法(axios.get/post/delete/head/put/options…)<br>axios.get()向服务器发送一个请求，基于的是get方式<br>2、支持的参数配置</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">axios.get([url],[options]);</span><br><span class="line">axios.get(<span class="string">''</span>,&#123;</span><br><span class="line">    params:&#123;<span class="comment">//=&gt;get请求中，会把params中的键值对拼接成urlencode格式的字符串,然后以问号传参的方式,传递给服务器,类似于JQ-ajax中的data,或者自己基于url后面拼接也可以,不用params</span></span><br><span class="line">        name:<span class="string">''</span>,</span><br><span class="line">        age:<span class="number">9</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">axios.post(<span class="string">''</span>,&#123;</span><br><span class="line">    <span class="comment">//配置项中传递的内容都相当于基于请求主体专递给服务器,但是传递给服务器的内容格式是raw(json格式的字符串),不是X-WWW-FROM-URLENCODED</span></span><br><span class="line">    name:<span class="string">''</span>,</span><br><span class="line">    age:<span class="number">9</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>3、基于get/post发送请求,返回的结果都是promise实例</p>
-<ul>
-<li>data=&gt;从服务器获取的响应主体内容</li>
-<li>headers:从服务器获取的响应头信息</li>
-<li>request:ajax实例</li>
-<li>status:状态码</li>
-<li>statusText:状态码的描述</li>
-<li>config:基于axios发送请求的时候做的配置项</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
     
       
 
@@ -817,6 +642,191 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/axios学习笔记一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小柯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaoke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柯的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/15/axios学习笔记一/" itemprop="url">axios学习笔记一</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-15T20:50:33+08:00">
+                2018-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/axios/" itemprop="url" rel="index">
+                    <span itemprop="name">axios</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  285
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="axios基础语法"><a href="#axios基础语法" class="headerlink" title="axios基础语法"></a>axios基础语法</h2><p>axios:它是一个类库,基于promise管理的ajax库</p>
+<p>1、提供了对应请求方式的方法(axios.get/post/delete/head/put/options…)<br>axios.get()向服务器发送一个请求，基于的是get方式<br>2、支持的参数配置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">axios.get([url],[options]);</span><br><span class="line">axios.get(<span class="string">''</span>,&#123;</span><br><span class="line">    params:&#123;<span class="comment">//=&gt;get请求中，会把params中的键值对拼接成urlencode格式的字符串,然后以问号传参的方式,传递给服务器,类似于JQ-ajax中的data,或者自己基于url后面拼接也可以,不用params</span></span><br><span class="line">        name:<span class="string">''</span>,</span><br><span class="line">        age:<span class="number">9</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">axios.post(<span class="string">''</span>,&#123;</span><br><span class="line">    <span class="comment">//配置项中传递的内容都相当于基于请求主体专递给服务器,但是传递给服务器的内容格式是raw(json格式的字符串),不是X-WWW-FROM-URLENCODED</span></span><br><span class="line">    name:<span class="string">''</span>,</span><br><span class="line">    age:<span class="number">9</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>3、基于get/post发送请求,返回的结果都是promise实例</p>
+<ul>
+<li>data=&gt;从服务器获取的响应主体内容</li>
+<li>headers:从服务器获取的响应头信息</li>
+<li>request:ajax实例</li>
+<li>status:状态码</li>
+<li>statusText:状态码的描述</li>
+<li>config:基于axios发送请求的时候做的配置项</li>
+</ul>
+
+          
         
       
     </div>
@@ -1527,8 +1537,6 @@
   
 
 
-  
-
 
 
 
@@ -1567,11 +1575,6 @@
   
   
     <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
   
 
 
@@ -1977,10 +1980,6 @@
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
 undefined
-
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
 
 <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  

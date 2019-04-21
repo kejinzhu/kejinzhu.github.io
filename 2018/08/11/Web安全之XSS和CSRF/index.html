@@ -95,7 +95,7 @@
 
 
 
-  <meta name="keywords" content="web安全,前端," />
+  <meta name="keywords" content="前端,web安全," />
 
 
 
@@ -109,7 +109,7 @@
 
 
 <meta name="description" content="今天听了一节web安全的课程，对这个模块不是很熟悉，找了几篇博客总结一下知识点，方便以后复习，这也是我今天搭建博客之后的第一篇博客，鼓励自己多写多记吧!">
-<meta name="keywords" content="web安全,前端">
+<meta name="keywords" content="前端,web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web安全之XSS和CSRF">
 <meta property="og:url" content="http://yoursite.com/2018/08/11/Web安全之XSS和CSRF/index.html">
@@ -241,6 +241,16 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -492,9 +502,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web安全/" rel="tag"><i class="fa fa-tag"></i> web安全</a>
-          
             <a href="/tags/前端/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          
+            <a href="/tags/web安全/" rel="tag"><i class="fa fa-tag"></i> web安全</a>
           
         </div>
       
@@ -708,7 +718,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web安全之XSS和CSRF"><span class="nav-number">1.</span> <span class="nav-text">Web安全之XSS和CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS"><span class="nav-number">1.1.</span> <span class="nav-text">XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">XSS定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS跨站脚本攻击-Cross-site-Scipting"><span class="nav-number">1.1.2.</span> <span class="nav-text">XSS跨站脚本攻击 Cross site Scipting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比如通过location-hash"><span class="nav-number">1.1.3.</span> <span class="nav-text">比如通过location.hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个网页的评论有漏洞-没有转义"><span class="nav-number">1.1.4.</span> <span class="nav-text">一个网页的评论有漏洞(没有转义)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决防范"><span class="nav-number">1.1.5.</span> <span class="nav-text">解决防范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF：cross-site-Request-Forgery"><span class="nav-number">1.2.</span> <span class="nav-text">CSRF：cross-site Request Forgery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF可以做什么"><span class="nav-number">1.3.</span> <span class="nav-text">CSRF可以做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF原理图"><span class="nav-number">1.4.</span> <span class="nav-text">CSRF原理图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS和CSRF的关系"><span class="nav-number">1.5.</span> <span class="nav-text">XSS和CSRF的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">1.5.1.</span> <span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三种攻击模式"><span class="nav-number">1.6.</span> <span class="nav-text">三种攻击模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用POST来完成敏感操作（更新数据）"><span class="nav-number">1.6.1.</span> <span class="nav-text">使用POST来完成敏感操作（更新数据）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#node-js"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只使用POST请求，只处理POST请求体的数据"><span class="nav-number">1.7.</span> <span class="nav-text">只使用POST请求，只处理POST请求体的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源于web的身份验证机制"><span class="nav-number">1.8.</span> <span class="nav-text">源于web的身份验证机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防御机制"><span class="nav-number">1.9.</span> <span class="nav-text">防御机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端进行CSRF防御"><span class="nav-number">1.9.1.</span> <span class="nav-text">服务端进行CSRF防御</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证码"><span class="nav-number">1.9.2.</span> <span class="nav-text">验证码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token"><span class="nav-number">1.9.3.</span> <span class="nav-text">token</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web安全之XSS和CSRF"><span class="nav-text">Web安全之XSS和CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS"><span class="nav-text">XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS定义"><span class="nav-text">XSS定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS跨站脚本攻击-Cross-site-Scipting"><span class="nav-text">XSS跨站脚本攻击 Cross site Scipting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比如通过location-hash"><span class="nav-text">比如通过location.hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个网页的评论有漏洞-没有转义"><span class="nav-text">一个网页的评论有漏洞(没有转义)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决防范"><span class="nav-text">解决防范</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF：cross-site-Request-Forgery"><span class="nav-text">CSRF：cross-site Request Forgery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF可以做什么"><span class="nav-text">CSRF可以做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF原理图"><span class="nav-text">CSRF原理图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS和CSRF的关系"><span class="nav-text">XSS和CSRF的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三种攻击模式"><span class="nav-text">三种攻击模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用POST来完成敏感操作（更新数据）"><span class="nav-text">使用POST来完成敏感操作（更新数据）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#node-js"><span class="nav-text">node.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#只使用POST请求，只处理POST请求体的数据"><span class="nav-text">只使用POST请求，只处理POST请求体的数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源于web的身份验证机制"><span class="nav-text">源于web的身份验证机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防御机制"><span class="nav-text">防御机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端进行CSRF防御"><span class="nav-text">服务端进行CSRF防御</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证码"><span class="nav-text">验证码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token"><span class="nav-text">token</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -806,8 +816,6 @@
   
 
 
-  
-
 
 
 
@@ -846,11 +854,6 @@
   
   
     <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
   
 
 
@@ -1260,10 +1263,6 @@
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
 undefined
-
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/src/fireworks.js"></script>
 
 <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
