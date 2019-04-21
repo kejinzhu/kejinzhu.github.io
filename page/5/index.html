@@ -834,7 +834,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/react学习笔记(四)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/react学习笔记(七)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小柯">
@@ -853,7 +853,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/react学习笔记(四)/" itemprop="url">react学习笔记(四)</a></h2>
+                <a class="post-title-link" href="/2018/09/07/react学习笔记(七)/" itemprop="url">react学习笔记(七)</a></h2>
         
 
         <div class="post-meta">
@@ -919,7 +919,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  846
+                  398
                 </span>
               
 
@@ -935,7 +935,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -957,35 +957,14 @@
 
       
         
-          
-            <h2 id="react组件"><a href="#react组件" class="headerlink" title="react组件"></a>react组件</h2><p>不管是Vue还是react框架,设计之初都是期望我们按照”组件/模块管理”的方式来构建程序的，也就是把一个程序划分为一个个的组件来单独处理</p>
-<h3 id="优势-："><a href="#优势-：" class="headerlink" title="[优势]："></a>[优势]：</h3><ul>
-<li>1、有助于多人协作开发</li>
-<li>2、我们开发的组件可以被复用</li>
-</ul>
-<p>…</p>
-<h3 id="react中创建组件有两种方式："><a href="#react中创建组件有两种方式：" class="headerlink" title="react中创建组件有两种方式："></a>react中创建组件有两种方式：</h3><ul>
-<li>1、函数声明式组件</li>
-</ul>
-<p>component/Dialog.js</p>
-<p>每一个组件中都要导入react,因为需要基于它的createElement把JSX进行解析渲染</p>
-<p>1.函数执行的返回结果是一个新的JSX(也就是当前组件的JSX结构)<br>2.props变量存储的值是一个对象,包含了调取组件时候传递的属性值(不传递是一个空对象)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//=&gt;每一个组件中都要导入react,因为需要基于它的createElement把JSX进行解析渲染</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 函数式声明组件</span></span><br><span class="line"><span class="comment"> * 1.函数执行的返回结果是一个新的JSX(也就是当前组件的JSX结构)</span></span><br><span class="line"><span class="comment"> * 2.props变量存储的值是一个对象,包含了调取组件时候传递的属性值(不传递是一个空对象)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">Dialog</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> &#123; con, lx = <span class="number">0</span> ,children&#125; = props,</span><br><span class="line">        title = lx === <span class="number">0</span> ? <span class="string">'系统提示'</span> : <span class="string">'系统警告'</span>;</span><br><span class="line">    <span class="comment">//=&gt;children:可能有可能没有,可能只是一个值,也可能每一项是一个字符串,也可能是一个对象等(都代表双闭合组件中的子元素)    </span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;title&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;con&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">        &#123;/*把属性中传递的子元素放到组件中的指定位置*/&#125;</span></span><br><span class="line"><span class="xml">        &#123;/* &#123;&#123;children&#125;&#125; */&#125;</span></span><br><span class="line"><span class="xml">        &#123;/*也可以基于react中提供的专门遍历children的方法来完成遍历操作*/&#125;</span></span><br><span class="line"><span class="xml">        &#123;</span></span><br><span class="line"><span class="xml">            React.Children.map(children,item=&gt;item)</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>index.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="keyword">import</span> Dialog <span class="keyword">from</span> <span class="string">"./component/Dialog"</span>;</span><br><span class="line"><span class="comment">//从react-dom当中导入一个ReactDOM,逗号后面的内容时把ReactDOM这个对象进行解构import &#123;render&#125; from 'react-dom';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// React.createElement(type,props,children)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> root = <span class="built_in">document</span>.querySelector(<span class="string">"#root"</span>);</span><br><span class="line">ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    &#123;/*加注释：调取组件,只需要把组件当做一个标签调取使用即可</span></span><br><span class="line"><span class="xml">    单闭合和双闭合都可以*/&#125;</span></span><br><span class="line">    &lt;Dialog con='哈哈哈'/&gt;</span><br><span class="line">    &lt;Dialog con='嘿嘿嘿' lx=&#123;2&#125;&gt;&#123;/*属性值不是字符串，我们需要使用大括号包起来*/&#125;</span><br><span class="line">    &lt;span&gt;1&lt;/span&gt;&lt;span&gt;2&lt;/span&gt;&lt;/Dialog&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>,root);</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>2、基于继承component类来创建组件</li>
-</ul>
-<p>src-&gt;component：这个文件夹中存放的就是开发的组件</p>
-<h3 id="函数式组件的渲染机制"><a href="#函数式组件的渲染机制" class="headerlink" title="函数式组件的渲染机制"></a>函数式组件的渲染机制</h3><p>知识点：createElement在处理的时候,遇到一个组件,返回的对象中：type就不再是字符串标签名了,而是一个函数(类),但是属性还是存在props中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    type:Dialog,</span><br><span class="line">    props:&#123;</span><br><span class="line">        lx:<span class="number">1</span>,</span><br><span class="line">        con:<span class="string">'xxx'</span>,</span><br><span class="line">        children:一个值或者一个数组</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>render渲染的时候，我们需要做处理：</p>
-</blockquote>
-<p>首先判断type的类型,如果是字符串,就创建一个元素标签,如果函数或者类,就把函数执行，把props中的每一项(包含children)传递给函数</p>
-<p>在执行函数的时候，把函数中return的JSX转换为新的对象(通过createElement),把这个对象返回;紧接着render按照以往的渲染方式,创建DOM元素,插入到指定的容器中即可</p>
-
-          
+          <p>介绍react中的属性管理<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/07/react学习笔记(七)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1033,7 +1012,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/react学习笔记(十)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/react学习笔记(八)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小柯">
@@ -1052,7 +1031,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/react学习笔记(十)/" itemprop="url">react学习笔记(十)</a></h2>
+                <a class="post-title-link" href="/2018/09/07/react学习笔记(八)/" itemprop="url">react学习笔记(八)</a></h2>
         
 
         <div class="post-meta">
@@ -1118,7 +1097,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  196
+                  921
                 </span>
               
 
@@ -1134,7 +1113,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -1156,10 +1135,18 @@
 
       
         
-          <p>Vue：[MVVM]数据更改视图跟着更改，视图更改数据也跟着更改(双向数据绑定)<br>react：[MVC]数据更改视图跟着更改(原本是单向的数据绑定,但是我们可以构建出双向的效果)<br></p>
+          <p>react中的组件有两个非常重要的概念：</p>
+<ul>
+<li>1、组件的属性：(只读)调取组件的时候传递进来的属性</li>
+<li>2、组件的状态：[读写]自己在组件中设定和规划的(只有类声明式组件才有状态的管控，函数式组件声明不存在状态管理)<ul>
+<li>组件状态类似于Vue中的数据驱动：我们数据绑定的时候是基于状态值绑定，当修改组件状态后，对应的JSX元素也会跟着重新渲染(差异渲染：只把数据改变的部分重新渲染;基于DOM-DIFF算法完成)</li>
+<li>当代框架最核心的思想就是：“数据操控视图(视图影响数据)”,让我们告别别JQ手动操作DOM的时代，我们以后只需要改变数据，框架会帮我们重新渲染视图,从而减少直接操作DOM(提高性能，也有助于开发效率)</li>
+</ul>
+</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/07/react学习笔记(十)/#more" rel="contents">
+            <a class="btn" href="/2018/09/07/react学习笔记(八)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1878,10 +1865,10 @@
 
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-undefined
+
 
 <!-- 代码块复制功能 -->
   <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
   <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>
