@@ -306,6 +306,28 @@
   
   <entry>
     <title>axios学习笔记一</title>
+    <link href="http://yoursite.com/2018/09/15/axios%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/"/>
+    <id>http://yoursite.com/2018/09/15/axios学习笔记三/</id>
+    <published>2018-09-15T12:50:33.000Z</published>
+    <updated>2018-09-15T14:22:20.635Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;fetch&quot;&gt;&lt;a href=&quot;#fetch&quot; class=&quot;headerlink&quot; title=&quot;fetch&quot;&gt;&lt;/a&gt;fetch&lt;/h2&gt;&lt;p&gt;fetch:不是ajax，它诞生的目的是为了ajax,它是JS 中内置的API;基于fetch可以实现客户端和服务器端的信息通信&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
+    
+    
+      <category term="axios" scheme="http://yoursite.com/tags/axios/"/>
+    
+      <category term="fetch中的基础语法" scheme="http://yoursite.com/tags/fetch%E4%B8%AD%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>axios学习笔记一</title>
     <link href="http://yoursite.com/2018/09/15/axios%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/"/>
     <id>http://yoursite.com/2018/09/15/axios学习笔记二/</id>
     <published>2018-09-15T12:50:33.000Z</published>
@@ -329,28 +351,6 @@
       <category term="axios" scheme="http://yoursite.com/tags/axios/"/>
     
       <category term="请求合并以及参数配置" scheme="http://yoursite.com/tags/%E8%AF%B7%E6%B1%82%E5%90%88%E5%B9%B6%E4%BB%A5%E5%8F%8A%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>axios学习笔记一</title>
-    <link href="http://yoursite.com/2018/09/15/axios%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/"/>
-    <id>http://yoursite.com/2018/09/15/axios学习笔记三/</id>
-    <published>2018-09-15T12:50:33.000Z</published>
-    <updated>2018-09-15T14:22:20.635Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;fetch&quot;&gt;&lt;a href=&quot;#fetch&quot; class=&quot;headerlink&quot; title=&quot;fetch&quot;&gt;&lt;/a&gt;fetch&lt;/h2&gt;&lt;p&gt;fetch:不是ajax，它诞生的目的是为了ajax,它是JS 中内置的API;基于fetch可以实现客户端和服务器端的信息通信&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="axios" scheme="http://yoursite.com/categories/axios/"/>
-    
-    
-      <category term="axios" scheme="http://yoursite.com/tags/axios/"/>
-    
-      <category term="fetch中的基础语法" scheme="http://yoursite.com/tags/fetch%E4%B8%AD%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
